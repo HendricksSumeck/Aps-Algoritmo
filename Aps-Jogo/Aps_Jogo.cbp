@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Aps-Jogo" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Option virtualFolders="gerar_monstro\;monstros\;aventureiro\;Funçoes_batalha\;" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/Aps-Jogo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/Aps-Jogo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Unit filename="Monstros.h" />
+		<Unit filename="Personagem.h" />
+		<Unit filename="aleatorio.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="aventureiro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
+		</Unit>
+		<Unit filename="batalha.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Funçoes_batalha/" />
+		</Unit>
+		<Unit filename="criar_personagem.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
+		</Unit>
+		<Unit filename="decisao_monstro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Funçoes_batalha/" />
+		</Unit>
+		<Unit filename="decisao_player.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Funçoes_batalha/" />
+		</Unit>
+		<Unit filename="gerar_monstro.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="gerar_ogro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="gerar_monstro/" />
+		</Unit>
+		<Unit filename="historia.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="main.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ogro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="monstros/" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
