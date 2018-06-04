@@ -22,9 +22,9 @@ int main(){
 
     //inicio();
 
-    meu_aventureiro = criar_personagem();//Função
+    //meu_aventureiro = criar_personagem();//Função
 
-    //meu_aventureiro = new_aventureiro("Hendrick", "Guerreiro", 1, 14, 5, 3, 5, 5);
+    meu_aventureiro = new_aventureiro("Hendrick", "Guerreiro", 1, 14, 5, 3, 5, 5);
 
     //meu_aventureiro->aventureiro_nome(meu_aventureiro);//Função
 

@@ -11,7 +11,7 @@
 void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
 
         int escolha;
-        int Dano_aventureiro;
+        int Dano_aventureiro, resistencia_armadura;
         int flag = 0;
 
         while(flag == 0){
@@ -26,11 +26,16 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
             }
 
             if(escolha != 5){
+
                 Dano_aventureiro = escolha_ataque(escolha, aventureiro);
+                resistencia_armadura = (monstro->armadura * 50) / 100;
+                Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
+
                 if(Dano_aventureiro >= 0){
 
                     monstro->HP = monstro->HP - Dano_aventureiro;
                     printf("%s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
+
 
                 }else flag = 0;
 
