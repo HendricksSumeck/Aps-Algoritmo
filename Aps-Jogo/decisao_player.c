@@ -21,6 +21,16 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
             scanf("%d", &escolha);
             printf("\n");
 
+            while(escolha > 5 || escolha < 1){
+
+                printf("Nao existe esta opcao!!!\n");
+                printf("Escolha uma opcao valida\n");
+                aventureiro->aventureiro_menu(aventureiro);
+                scanf("%d", &escolha);
+                printf("\n");
+
+            }
+
             if(escolha == 5){
                 aventureiro->descansar(aventureiro);
             }
@@ -28,16 +38,18 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
             if(escolha != 5){
 
                 Dano_aventureiro = escolha_ataque(escolha, aventureiro);
-                resistencia_armadura = (monstro->armadura * 50) / 100;
-                Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
 
                 if(Dano_aventureiro >= 0){
 
+                    resistencia_armadura = (monstro->armadura * 50) / 100;
+                    Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
                     monstro->HP = monstro->HP - Dano_aventureiro;
                     printf("%s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
 
 
-                }else flag = 0;
+                }else{
+                    flag = 0;
+                }
 
             }
         }

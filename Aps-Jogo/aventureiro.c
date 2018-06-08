@@ -98,7 +98,7 @@ static int aventureiro_ataque_fraco(struct personagem *aventureiro){
         return -1;
     }
 
-    if(aventureiro->staminia > 2){
+    if(aventureiro->staminia >= 2){
 
         X = 1 + rand() % aventureiro->forca;
 
@@ -121,7 +121,7 @@ static int aventureiro_ataque_forte(struct personagem *aventureiro){
 
     }
 
-    if(aventureiro->staminia > 2){
+    if(aventureiro->staminia >= 2){
 
     X = aventureiro->armadura + rand() % aventureiro->forca;
 
@@ -146,7 +146,7 @@ static int aventureiro_magia1(struct personagem *aventureiro){
 
     }
 
-    if(aventureiro->staminia > 2){
+    if(aventureiro->staminia >= 2){
 
     X = rand() % aventureiro->forca;
 
@@ -171,7 +171,7 @@ static int aventureiro_magia2(struct personagem *aventureiro){
 
     }
 
-    if(aventureiro->staminia > 1){
+    if(aventureiro->staminia >= 1){
 
     X = rand() % aventureiro->forca;
 

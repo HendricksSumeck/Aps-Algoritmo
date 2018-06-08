@@ -342,7 +342,7 @@
 
 1525897468 c:\users\hendr\desktop\aps-algoritmo\aps-jogo\personagem.h
 
-1526340934 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\aventureiro.c
+1528479214 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\aventureiro.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -357,7 +357,7 @@
 	<string.h>
 	"Personagem.h"
 
-1526050812 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
+1528482045 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -409,6 +409,12 @@
 	<time.h>
 	<string.h>
 	<windows.h>
+	"Monstros.h"
+	"Personagem.h"
+
+1528064595 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_monstro.c
+	<stdio.h>
+	<stdlib.h>
 	"Monstros.h"
 	"Personagem.h"
 
