@@ -67,7 +67,7 @@ static void menu_guerreiro(struct personagem *guerreiro){
     printf("1-Espadada\t");
     printf("3-Bola de fogo\n");
     printf("2-Escudada\t");
-    printf("4-Jogar lanca\n");
+    printf("4-Jogar lança\n");
     printf("5-Descansar\n");
     printf("\n");
 
@@ -175,7 +175,7 @@ static int guerreiro_magia2(struct personagem *guerreiro){
 
     X = rand() % guerreiro->forca;
 
-    printf("Jogar lanca = %d\n", X);
+    printf("Jogar lança = %d\n", X);
 
     guerreiro->staminia = guerreiro->staminia - 1;
 

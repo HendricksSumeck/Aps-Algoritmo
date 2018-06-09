@@ -10,12 +10,14 @@
 #include <stdlib.h>
 #include <time.h>
 #include <string.h>
+#include <locale.h>
 #include "Monstros.h"
 #include "Personagem.h"
 
 int main(){
 
     srand((unsigned) time(NULL));
+    setlocale(LC_ALL,"");
 
     PERSONAGEM *meu_aventureiro;
     Monstro *meus_monstros[2];
