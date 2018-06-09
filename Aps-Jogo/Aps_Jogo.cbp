@@ -37,10 +37,6 @@
 		<Unit filename="aleatorio.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="aventureiro.c">
-			<Option compilerVar="CC" />
-			<Option virtualFolder="aventureiro/" />
-		</Unit>
 		<Unit filename="batalha.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="Funçoes_batalha/" />
@@ -64,8 +60,20 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="gerar_monstro/" />
 		</Unit>
+		<Unit filename="guerreiro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
+		</Unit>
 		<Unit filename="historia.c">
 			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="ladino.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
+		</Unit>
+		<Unit filename="mago.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
 		</Unit>
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
@@ -73,6 +81,10 @@
 		<Unit filename="ogro.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="monstros/" />
+		</Unit>
+		<Unit filename="paladino.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
 		</Unit>
 		<Extensions>
 			<code_completion />
