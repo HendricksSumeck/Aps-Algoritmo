@@ -4,7 +4,7 @@
  batalhando com os mais diversos tipos de monstros unicos que o jogo possuira.
 
 */
-Alo
+
 
 #include <stdio.h>
 #include <stdlib.h>
