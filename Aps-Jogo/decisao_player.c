@@ -46,9 +46,12 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
                     resistencia_armadura = (monstro->armadura * 50) / 100;
                     Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
                     printf("%s: Defendeu %d de dano\n", monstro->nome, resistencia_armadura);
-                    monstro->HP = monstro->HP - Dano_aventureiro;
-                    printf("%s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
-
+                    if(Dano_aventureiro <= 0){
+                        printf("%s: nao sofreu dano\n", monstro->nome);
+                    }else{
+                        monstro->HP = monstro->HP - Dano_aventureiro;
+                        printf("%s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
+                    }
 
                 }else{
                     flag = 0;

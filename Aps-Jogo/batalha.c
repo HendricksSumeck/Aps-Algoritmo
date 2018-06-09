@@ -109,7 +109,7 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
 }
 
 
-void *iniciar_batalha(struct personagem *aventureiro, struct monstros *monstro){
+void iniciar_batalha(struct personagem *aventureiro, struct monstros *monstro){
 
     if(monstro->agilidade > aventureiro->agilidade){
 
