@@ -12,7 +12,7 @@ PERSONAGEM *criar_personagem(){
 
     NOME = (char*) malloc(sizeof(char) * 20);//Criar estaticamente não funçiona
 
-    int x;
+    char x;
 
     printf("Qual o seu nome?: \n");
     scanf(" %[^\n]", NOME);
@@ -20,25 +20,44 @@ PERSONAGEM *criar_personagem(){
     printf("Escolha sua classe: \n");
     printf("1-Guerreiro\n");
     printf("2-Mago\n");
-    printf("3-Ladrao\n");
+    printf("3-Ladino\n");
+    printf("4-Paladino\n");
 
-    scanf("%d", &x);
+    printf("Digite sua escolha: ");
+    x = getch();
+    printf("\n");
 
-    if(x == 1){
+    while(x <  49 || x > 52){
 
-       meu_aventureiro = new_aventureiro(NOME, "Guerreiro", 1, 14, 5, 3, 3 ,3);
+            printf("Nao existe esta opcao!!!\n");
+            printf("Digite sua escolha: ");
+            x = getch();
+            printf("\n");
 
     }
 
-    if(x == 2){
 
-        meu_aventureiro = new_aventureiro(NOME, "Mago", 1, 6, 12, 4, 6, 6);
+    if(x == '1'){
+
+       meu_aventureiro = new_guerreiro(NOME, "Guerreiro", 1, 14, 5, 3, 3 ,3);
 
     }
 
-    if(x == 3){
+    if(x == '2'){
 
-       meu_aventureiro = new_aventureiro(NOME, "Ladrao", 1, 8, 6, 6, 4, 4);
+        meu_aventureiro = new_mago(NOME, "Mago", 1, 6, 12, 4, 6, 6);
+
+    }
+
+    if(x == '3'){
+
+       meu_aventureiro = new_ladino(NOME, "Ladino", 1, 8, 6, 6, 4, 4);
+
+    }
+
+    if(x == '4'){
+
+       meu_aventureiro = new_paladino(NOME, "Paladino", 1, 8, 6, 6, 4, 4);
 
     }
 
