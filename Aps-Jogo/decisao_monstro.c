@@ -38,7 +38,7 @@ void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
             resistencia_armadura = (aventureiro->armadura * 50) / 100;
             Dano_monstro = Dano_monstro - resistencia_armadura;
             aventureiro->HP = aventureiro->HP - Dano_monstro;
-
+            printf("%s: Defendeu %d de dano\n", aventureiro->nome,resistencia_armadura);
             printf("%s: Sofreu %d de dano\n\n", aventureiro->nome, Dano_monstro);
 
         }else monstro->monstro_descanso(monstro);

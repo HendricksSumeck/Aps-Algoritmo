@@ -357,7 +357,7 @@
 	<string.h>
 	"Personagem.h"
 
-1528482045 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
+1528507213 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -403,7 +403,7 @@
 	<stdlib.h>
 	"Monstros.h"
 
-1526749747 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
+1528506542 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -412,7 +412,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1528064595 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_monstro.c
+1528507278 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_monstro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"

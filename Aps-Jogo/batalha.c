@@ -6,23 +6,23 @@
 #include "Monstros.h"
 #include "Personagem.h"
 
-int escolha_ataque(int A, struct personagem *aventureiro){
+int escolha_ataque(char A, struct personagem *aventureiro){
 
         int X;
 
-        if(A == 1){
+        if(A == '1'){
            X = aventureiro->ataque_fraco(aventureiro);
         }
 
-        if(A == 2){
+        if(A == '2'){
            X = aventureiro->ataque_forte(aventureiro);
         }
 
-        if(A == 3){
+        if(A == '3'){
           X = aventureiro->aventureiro_magia1(aventureiro);
         }
 
-        if(A == 4){
+        if(A == '4'){
           X = aventureiro->aventureiro_magia2(aventureiro);
         }
 
