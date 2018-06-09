@@ -58,7 +58,6 @@ void *ataque1_monstro(struct personagem *aventureiro, struct monstros *monstro){
     int i = 1, escolha;
     int Dano_aventureiro, Dano_monstro;
     int X;
-    char A;
     while(aventureiro->HP > 0 && monstro->HP > 0){
         printf("Turno: %d\n\n", i);
         printf("Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
@@ -66,18 +65,7 @@ void *ataque1_monstro(struct personagem *aventureiro, struct monstros *monstro){
         verifica_passiva(aventureiro, monstro);
         decisao_monstro(aventureiro, monstro);//Monstro
         decisao_player(aventureiro, monstro);
-        printf("Precione enter para o proximo turno\n");
-        A = getch();
-        if(A == 13){
-            system("cls");
-        }
-        while(A != 13){
-            printf("Precione enter para passar o turno!!!\n");
-            A = getch();
-            if(A == 13){
-            system("cls");
-            }
-        }
+        limpa_tela();
         i++;
         }
 }
@@ -92,20 +80,25 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
         verifica_passiva(aventureiro, monstro);
         decisao_player(aventureiro, monstro);
         decisao_monstro(aventureiro, monstro);//Monstro
-        printf("Precione enter para o proximo turno\n");
-        A = getch();
-        if(A == 13){
-            system("cls");
-        }
-        while(A != 13){
-            printf("Precione enter para passar o turno!!!\n");
-            A = getch();
-            if(A == 13){
-            system("cls");
-            }
-        }
+        limpa_tela();
         i++;
         }
+}
+
+void limpa_tela(void){
+    char A;
+    printf("Precione enter para o proximo turno\n");
+    A = getch();
+    if(A == 13){
+        system("cls");
+    }
+    while(A != 13){
+        printf("Precione enter para passar o turno!!!\n");
+        A = getch();
+        if(A == 13){
+        system("cls");
+        }
+    }
 }
 
 
