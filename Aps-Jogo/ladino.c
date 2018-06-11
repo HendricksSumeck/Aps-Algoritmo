@@ -113,7 +113,7 @@ static int ladino_ataque_fraco(struct personagem *ladino){
 
         X = 1 + rand() % ladino->forca;
 
-        printf("Espadada na cara = %d\n", X);
+        printf("Golpe Rápido com Adaga = %d\n", X);
 
         ladino->staminia = ladino->staminia - 2;
 
@@ -136,7 +136,7 @@ static int ladino_ataque_forte(struct personagem *ladino){
 
     X = ladino->armadura + rand() % ladino->forca;
 
-    printf("Escudada = %d\n", X);
+    printf("Flechas Rápidas = %d\n", X);
 
     ladino->staminia = ladino->staminia - 2;
 
@@ -161,7 +161,7 @@ static int ladino_magia1(struct personagem *ladino){
 
     X = rand() % ladino->forca;
 
-    printf("Bola de fogo = %d\n", X);
+    printf("Chuva de Flechas = %d\n", X);
 
     ladino->staminia = ladino->staminia - 2;
 
@@ -186,7 +186,7 @@ static int ladino_magia2(struct personagem *ladino){
 
     X = rand() % ladino->forca;
 
-    printf("Jogar lanca = %d\n", X);
+    printf("Corte Mortal = %d\n", X);
 
     ladino->staminia = ladino->staminia - 1;
 
@@ -198,25 +198,9 @@ static int ladino_magia2(struct personagem *ladino){
 
 static void ladino_passiva(struct personagem *ladino, struct monstros *monstro){
 
-    static int cont = 0;
-    static int X, Y;
 
-    if(cont == 0){
-        X = (ladino->HP*30)/100;
-        Y = (ladino->HP*50)/100;
-        cont++;
-    }
 
-    if(ladino->HP <= X && cont == 1){
-        ladino->HP = ladino->HP + Y;
-        printf("Beseker ativado!!!\n");
-        printf("%s possui agora de %d vida \n", ladino->nome, ladino->HP);
-        cont++;
-    }
 
-    if(monstro->HP <= 0){
-        cont = 0;
-    }
 }
 
 static void ladino_descanso(struct personagem *ladino){

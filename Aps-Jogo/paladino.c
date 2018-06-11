@@ -77,7 +77,7 @@ static void menu_paladino(struct personagem *paladino){
     printf("Escolha o seu ataque:\n");
     printf("1-Curar\t");
     printf("3-Lança Solar\n");
-    printf("2-Bnção dos Ceus\t");
+    printf("2-Benção dos Ceus\t");
     printf("4-Punição Divina\n");
     printf("5-Descansar\n");
     printf("\n");
@@ -113,7 +113,7 @@ static int paladino_ataque_fraco(struct personagem *paladino){
 
         X = 1 + rand() % paladino->forca;
 
-        printf("Espadada na cara = %d\n", X);
+        printf("Curar = %d\n", X);
 
         paladino->staminia = paladino->staminia - 2;
 
@@ -136,7 +136,7 @@ static int paladino_ataque_forte(struct personagem *paladino){
 
     X = paladino->armadura + rand() % paladino->forca;
 
-    printf("Escudada = %d\n", X);
+    printf("Lança Solar = %d\n", X);
 
     paladino->staminia = paladino->staminia - 2;
 
@@ -161,7 +161,7 @@ static int paladino_magia1(struct personagem *paladino){
 
     X = rand() % paladino->forca;
 
-    printf("Bola de fogo = %d\n", X);
+    printf("Benção dos Ceus = %d\n", X);
 
     paladino->staminia = paladino->staminia - 2;
 
@@ -186,7 +186,7 @@ static int paladino_magia2(struct personagem *paladino){
 
     X = rand() % paladino->forca;
 
-    printf("Jogar lanca = %d\n", X);
+    printf("Punição Divina = %d\n", X);
 
     paladino->staminia = paladino->staminia - 1;
 
@@ -198,25 +198,8 @@ static int paladino_magia2(struct personagem *paladino){
 
 static void paladino_passiva(struct personagem *paladino, struct monstros *monstro){
 
-    static int cont = 0;
-    static int X, Y;
 
-    if(cont == 0){
-        X = (paladino->HP*30)/100;
-        Y = (paladino->HP*50)/100;
-        cont++;
-    }
 
-    if(paladino->HP <= X && cont == 1){
-        paladino->HP = paladino->HP + Y;
-        printf("Beseker ativado!!!\n");
-        printf("%s possui agora de %d vida \n", paladino->nome, paladino->HP);
-        cont++;
-    }
-
-    if(monstro->HP <= 0){
-        cont = 0;
-    }
 }
 
 static void paladino_descanso(struct personagem *paladino){

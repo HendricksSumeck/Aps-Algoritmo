@@ -78,7 +78,7 @@ static void menu_mago(struct personagem *mago){
     printf("1-Bola de fogo\t");
     printf("2-Inferno\n");
     printf("3-Meteoro arcano\t");
-    printf("4- Suspiro do Dragão\n");
+    printf("4-Suspiro do Dragão\n");
     printf("5-Descansar\n");
     printf("\n");
 
@@ -111,9 +111,9 @@ static int mago_ataque_fraco(struct personagem *mago){
 
     if(mago->staminia >= 2){
 
-        X = 1 + rand() % mago->forca;
+        X = rand() % mago->inteligencia;
 
-        printf("Espadada na cara = %d\n", X);
+        printf("Bola de Fogo = %d\n", X);
 
         mago->staminia = mago->staminia - 2;
 
@@ -125,20 +125,20 @@ static int mago_ataque_forte(struct personagem *mago){
 
     int X;
 
-    if(mago->staminia < 2){
+    if(mago->staminia < 4){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(mago->staminia >= 2){
+    if(mago->staminia >= 4){
 
-    X = mago->armadura + rand() % mago->forca;
+    X = mago->forca + rand() % mago->inteligencia;
 
-    printf("Escudada = %d\n", X);
+    printf("Área Infernal = %d\n", X);
 
-    mago->staminia = mago->staminia - 2;
+    mago->staminia = mago->staminia - 4;
 
     return X;
 
@@ -148,22 +148,45 @@ static int mago_ataque_forte(struct personagem *mago){
 
 static int mago_magia1(struct personagem *mago){
 
-    int X;
+    int X, Y, Z;
 
-    if(mago->staminia < 2){
+    if(mago->staminia <= 0){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(mago->staminia >= 2){
+    if(mago->staminia == 1){
 
-    X = rand() % mago->forca;
+        X = mago->lvl + rand() % 4;
+        printf("1 Meteoros Arcanos = %d\n", X);
+        mago->staminia = mago->staminia - 1;
+        return X;
 
-    printf("Bola de fogo = %d\n", X);
+    }
 
-    mago->staminia = mago->staminia - 2;
+    if(mago->staminia == 2){
+
+        X = mago->lvl + rand() % 4;
+        Y = mago->lvl + rand() % 3;
+        printf("2 Meteoros Arcanos = %d\n", X);
+        mago->staminia = mago->staminia - 2;
+        return X + Y;
+
+    }
+
+    if(mago->staminia >= 3){
+
+    X = mago->lvl + rand() % 4;
+    Y = mago->lvl + rand() % 3;
+    Z = mago->lvl + rand() % 2;
+
+    X = X + Y + Z;
+
+    printf("3 Meteoros Arcanos = %d\n", X);
+
+    mago->staminia = mago->staminia - 3;
 
     return X;
 
@@ -175,20 +198,20 @@ static int mago_magia2(struct personagem *mago){
 
     int X;
 
-    if(mago->staminia < 1){
+    if(mago->staminia < 5){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(mago->staminia >= 1){
+    if(mago->staminia >= 5){
 
-    X = rand() % mago->forca;
+    X = rand() % mago->inteligencia * mago->lvl;
 
-    printf("Jogar lanca = %d\n", X);
+    printf("Suspiro do Dragão = %d\n", X);
 
-    mago->staminia = mago->staminia - 1;
+    mago->staminia = mago->staminia - 5;
 
     return X;
 
@@ -198,25 +221,8 @@ static int mago_magia2(struct personagem *mago){
 
 static void mago_passiva(struct personagem *mago, struct monstros *monstro){
 
-    static int cont = 0;
-    static int X, Y;
 
-    if(cont == 0){
-        X = (mago->HP*30)/100;
-        Y = (mago->HP*50)/100;
-        cont++;
-    }
 
-    if(mago->HP <= X && cont == 1){
-        mago->HP = mago->HP + Y;
-        printf("Beseker ativado!!!\n");
-        printf("%s possui agora de %d vida \n", mago->nome, mago->HP);
-        cont++;
-    }
-
-    if(monstro->HP <= 0){
-        cont = 0;
-    }
 }
 
 static void mago_descanso(struct personagem *mago){
