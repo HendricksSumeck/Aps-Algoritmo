@@ -76,8 +76,8 @@ static void menu_paladino(struct personagem *paladino){
     printf("Seu turno \n\n");
     printf("Escolha o seu ataque:\n");
     printf("1-Curar\t");
-    printf("3-Lança Solar\n");
-    printf("2-Benção dos Ceus\t");
+    printf("2-Lança Solar\n");
+    printf("3-Benção dos Ceus\t");
     printf("4-Punição Divina\n");
     printf("5-Descansar\n");
     printf("\n");
@@ -103,21 +103,22 @@ static int paladino_ataque_fraco(struct personagem *paladino){
 
     int X;
 
-    if(paladino->staminia < 2){
+    if(paladino->staminia < 3){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("Voce nao conseguiu se curar\n");
         return -1;
     }
 
-    if(paladino->staminia >= 2){
+    if(paladino->staminia >= 3){
 
-        X = 1 + rand() % paladino->forca;
+        X = 3 + paladino->lvl;
+        paladino->HP = paladino->HP + X;
 
-        printf("Curar = %d\n", X);
+        printf("Você se Curou em = %d de HP\n", X);
 
-        paladino->staminia = paladino->staminia - 2;
+        paladino->staminia = paladino->staminia - 3;
 
-        return X;
+        return 0;
     }
 }
 
@@ -125,20 +126,20 @@ static int paladino_ataque_forte(struct personagem *paladino){
 
     int X;
 
-    if(paladino->staminia < 2){
+    if(paladino->staminia < 3){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(paladino->staminia >= 2){
+    if(paladino->staminia >= 3){
 
-    X = paladino->armadura + rand() % paladino->forca;
+    X = rand() % paladino->forca + paladino->inteligencia;
 
     printf("Lança Solar = %d\n", X);
 
-    paladino->staminia = paladino->staminia - 2;
+    paladino->staminia = paladino->staminia - 3;
 
     return X;
 
@@ -149,23 +150,43 @@ static int paladino_ataque_forte(struct personagem *paladino){
 static int paladino_magia1(struct personagem *paladino){
 
     int X;
+    char z;
 
-    if(paladino->staminia < 2){
+    if(paladino->staminia < 4){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(paladino->staminia >= 2){
+    if(paladino->staminia >= 4){
 
-    X = rand() % paladino->forca;
+    printf("Escolha um atributo para ser abençoado em +1 ponto\n");
+    printf("1- em força\n");
+    printf("2- em inteligencia\n");
+    z = getch();
 
-    printf("Benção dos Ceus = %d\n", X);
+    while(z <  49 || z > 50){
 
-    paladino->staminia = paladino->staminia - 2;
+        printf("Nao existe esta opcao!!!\n");
+        printf("Escolha uma opcao valida\n");
+        z = getch();
+        printf("\n");
 
-    return X;
+    }
+
+    if(z == '1'){
+    paladino->forca = paladino->forca + 1;
+    printf("Benção dos Ceus agraciou vc com +1 em força\n");
+    }
+    if(z == '2'){
+    paladino->inteligencia = paladino->inteligencia + 1;
+    printf("Benção dos Ceus agraciou vc com +1 em inteligencia\n");
+    }
+
+    paladino->staminia = paladino->staminia - 4;
+
+    return 0;
 
     }
 }
@@ -175,20 +196,20 @@ static int paladino_magia2(struct personagem *paladino){
 
     int X;
 
-    if(paladino->staminia < 1){
+    if(paladino->staminia < 4){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(paladino->staminia >= 1){
+    if(paladino->staminia >= 4){
 
-    X = rand() % paladino->forca;
+    X = paladino->inteligencia * 2;
 
     printf("Punição Divina = %d\n", X);
 
-    paladino->staminia = paladino->staminia - 1;
+    paladino->staminia = paladino->staminia - 4;
 
     return X;
 
