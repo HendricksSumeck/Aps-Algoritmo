@@ -6,7 +6,8 @@
 static void subir_lvl_paladino(struct personagem *paladino){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, pontos, numeroDeUps = 5;
+    int i, numeroDeUps = 5;
+    char escolha;
 
     paladino->lvl++;
     paladino->HP = 14 + hp;
@@ -26,36 +27,46 @@ static void subir_lvl_paladino(struct personagem *paladino){
         printf("4- Mais 1 de inteligencia\n");
         printf("5- Mais 1 de agilidade\n");
 
-        scanf("%d", &pontos);
+        printf("Digite sua escolha: ");
+        escolha = getch();
+        printf("\n");
 
-        if(pontos == 1){
+        while(escolha <  49 || escolha > 53){
+
+            printf("Nao existe esta opcao!!!\n");
+            printf("Escolha uma opcao valida\n");
+            escolha = getch();
+            printf("\n");
+
+        }
+
+        if(escolha == '1'){
             paladino->HP++;
             printf("\nHP = %d\n", paladino->HP);
             hp++;
         }
-        if(pontos == 2){
+        if(escolha == '2'){
             paladino->forca++;
             printf("\nForca = %d\n", paladino->forca);
             dano++;
         }
-        if(pontos == 3){
+        if(escolha == '3'){
             paladino->armadura++;
             printf("\nArmadura = %d\n", paladino->armadura);
             armor++;
         }
-        if(pontos == 4){
+        if(escolha == '4'){
             paladino->inteligencia++;
             printf("\nIntelifencia = %d\n", paladino->inteligencia);
             inte++;
         }
-        if(pontos == 5){
+        if(escolha == '5'){
             paladino->agilidade++;
             printf("\aAgilidade = %d\n", paladino->agilidade);
             agili++;
         }
         numeroDeUps--;
-        system("PAUSE");
-        system("cls");
+        limpa_tela();
     }
     paladino->aventureiro_nome(paladino);
 }
@@ -64,10 +75,10 @@ static void menu_paladino(struct personagem *paladino){
 
     printf("Seu turno \n\n");
     printf("Escolha o seu ataque:\n");
-    printf("1-Espadada\t");
-    printf("3-Bola de fogo\n");
-    printf("2-Escudada\t");
-    printf("4-Jogar lanca\n");
+    printf("1-Curar\t");
+    printf("3-Lança Solar\n");
+    printf("2-Bnção dos Ceus\t");
+    printf("4-Punição Divina\n");
     printf("5-Descansar\n");
     printf("\n");
 

@@ -87,13 +87,13 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
 
 void limpa_tela(void){
     char A;
-    printf("Precione enter para o proximo turno\n");
+    printf("Precione enter para continuar\n");
     A = getch();
     if(A == 13){
         system("cls");
     }
     while(A != 13){
-        printf("Precione enter para passar o turno!!!\n");
+        printf("Precione enter para continuar!!!\n");
         A = getch();
         if(A == 13){
         system("cls");

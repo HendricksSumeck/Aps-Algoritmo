@@ -6,7 +6,8 @@
 static void subir_lvl_guerreiro(struct personagem *guerreiro){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, pontos, numeroDeUps = 5;
+    int i, numeroDeUps = 5;
+    char escolha;
 
     guerreiro->lvl++;
     guerreiro->HP = 14 + hp;
@@ -26,36 +27,46 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
         printf("4- Mais 1 de inteligencia\n");
         printf("5- Mais 1 de agilidade\n");
 
-        scanf("%d", &pontos);
+        printf("Digite sua escolha: ");
+        escolha = getch();
+        printf("\n");
 
-        if(pontos == 1){
+        while(escolha <  49 || escolha > 53){
+
+            printf("Nao existe esta opcao!!!\n");
+            printf("Escolha uma opcao valida\n");
+            escolha = getch();
+            printf("\n");
+
+        }
+
+        if(escolha == '1'){
             guerreiro->HP++;
             printf("\nHP = %d\n", guerreiro->HP);
             hp++;
         }
-        if(pontos == 2){
+        if(escolha == '2'){
             guerreiro->forca++;
             printf("\nForca = %d\n", guerreiro->forca);
             dano++;
         }
-        if(pontos == 3){
+        if(escolha == '3'){
             guerreiro->armadura++;
             printf("\nArmadura = %d\n", guerreiro->armadura);
             armor++;
         }
-        if(pontos == 4){
+        if(escolha == '4'){
             guerreiro->inteligencia++;
             printf("\nIntelifencia = %d\n", guerreiro->inteligencia);
             inte++;
         }
-        if(pontos == 5){
+        if(escolha == '5'){
             guerreiro->agilidade++;
             printf("\aAgilidade = %d\n", guerreiro->agilidade);
             agili++;
         }
         numeroDeUps--;
-        system("PAUSE");
-        system("cls");
+        limpa_tela();
     }
     guerreiro->aventureiro_nome(guerreiro);
 }
@@ -65,9 +76,9 @@ static void menu_guerreiro(struct personagem *guerreiro){
     printf("Seu turno \n\n");
     printf("Escolha o seu ataque:\n");
     printf("1-Espadada\t");
-    printf("3-Bola de fogo\n");
-    printf("2-Escudada\t");
-    printf("4-Jogar lança\n");
+    printf("3-Golpe com escudo\n");
+    printf("2-Golpe Devastador\t");
+    printf("4-Ataque do Dragão\n");
     printf("5-Descansar\n");
     printf("\n");
 
@@ -100,9 +111,9 @@ static int guerreiro_ataque_fraco(struct personagem *guerreiro){
 
     if(guerreiro->staminia >= 2){
 
-        X = 1 + rand() % guerreiro->forca;
+        X = 2 + rand() % guerreiro->forca;
 
-        printf("Espadada na cara = %d\n", X);
+        printf("Golpe com a espada = %d\n", X);
 
         guerreiro->staminia = guerreiro->staminia - 2;
 
@@ -114,20 +125,20 @@ static int guerreiro_ataque_forte(struct personagem *guerreiro){
 
     int X;
 
-    if(guerreiro->staminia < 2){
+    if(guerreiro->staminia < 3){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(guerreiro->staminia >= 2){
+    if(guerreiro->staminia >= 3){
 
     X = guerreiro->armadura + rand() % guerreiro->forca;
 
     printf("Escudada = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 2;
+    guerreiro->staminia = guerreiro->staminia - 3;
 
     return X;
 
@@ -139,20 +150,21 @@ static int guerreiro_magia1(struct personagem *guerreiro){
 
     int X;
 
-    if(guerreiro->staminia < 2){
+    if(guerreiro->staminia < 4){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(guerreiro->staminia >= 2){
+    if(guerreiro->staminia >= 4){
 
     X = rand() % guerreiro->forca;
+    X = X * 2;
 
-    printf("Bola de fogo = %d\n", X);
+    printf("Golpe devastador = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 2;
+    guerreiro->staminia = guerreiro->staminia - 4;
 
     return X;
 
@@ -164,20 +176,21 @@ static int guerreiro_magia2(struct personagem *guerreiro){
 
     int X;
 
-    if(guerreiro->staminia < 1){
+    if(guerreiro->staminia < 7){
 
         printf("Voce nao conseguiu atacar\n");
         return -1;
 
     }
 
-    if(guerreiro->staminia >= 1){
+    if(guerreiro->staminia >= 7){
 
-    X = rand() % guerreiro->forca;
+    X = 1 + rand() % guerreiro->forca;
+    X = X * guerreiro->forca;
 
-    printf("Jogar lança = %d\n", X);
+    printf("Ataque do Dragão = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 1;
+    guerreiro->staminia = guerreiro->staminia - 7;
 
     return X;
 
@@ -192,7 +205,7 @@ static void guerreiro_passiva(struct personagem *guerreiro, struct monstros *mon
 
     if(cont == 0){
         X = (guerreiro->HP*30)/100;
-        Y = (guerreiro->HP*50)/100;
+        Y = (guerreiro->HP*70)/100;
         cont++;
     }
 

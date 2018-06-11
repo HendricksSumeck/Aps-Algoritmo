@@ -6,7 +6,8 @@
 static void subir_lvl_ladino(struct personagem *ladino){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, pontos, numeroDeUps = 5;
+    int i, numeroDeUps = 5;
+    char escolha;
 
     ladino->lvl++;
     ladino->HP = 14 + hp;
@@ -26,36 +27,46 @@ static void subir_lvl_ladino(struct personagem *ladino){
         printf("4- Mais 1 de inteligencia\n");
         printf("5- Mais 1 de agilidade\n");
 
-        scanf("%d", &pontos);
+        printf("Digite sua escolha: ");
+        escolha = getch();
+        printf("\n");
 
-        if(pontos == 1){
+        while(escolha <  49 || escolha > 53){
+
+            printf("Nao existe esta opcao!!!\n");
+            printf("Escolha uma opcao valida\n");
+            escolha = getch();
+            printf("\n");
+
+        }
+
+        if(escolha == '1'){
             ladino->HP++;
             printf("\nHP = %d\n", ladino->HP);
             hp++;
         }
-        if(pontos == 2){
+        if(escolha == '2'){
             ladino->forca++;
             printf("\nForca = %d\n", ladino->forca);
             dano++;
         }
-        if(pontos == 3){
+        if(escolha == '3'){
             ladino->armadura++;
             printf("\nArmadura = %d\n", ladino->armadura);
             armor++;
         }
-        if(pontos == 4){
+        if(escolha == '4'){
             ladino->inteligencia++;
             printf("\nIntelifencia = %d\n", ladino->inteligencia);
             inte++;
         }
-        if(pontos == 5){
+        if(escolha == '5'){
             ladino->agilidade++;
             printf("\aAgilidade = %d\n", ladino->agilidade);
             agili++;
         }
         numeroDeUps--;
-        system("PAUSE");
-        system("cls");
+        limpa_tela();
     }
     ladino->aventureiro_nome(ladino);
 }
@@ -64,10 +75,10 @@ static void menu_ladino(struct personagem *ladino){
 
     printf("Seu turno \n\n");
     printf("Escolha o seu ataque:\n");
-    printf("1-Espadada\t");
-    printf("3-Bola de fogo\n");
-    printf("2-Escudada\t");
-    printf("4-Jogar lanca\n");
+    printf("1-Golpe Rápido com Adaga\t");
+    printf("3-Flechas Rápidas\n");
+    printf("2-Chuva de Flechas\t");
+    printf("4-Corte Mortal\n");
     printf("5-Descansar\n");
     printf("\n");
 

@@ -51,13 +51,13 @@ PERSONAGEM *criar_personagem(){
 
     if(x == '3'){
 
-       meu_aventureiro = new_ladino(NOME, "Ladino", 1, 8, 6, 6, 4, 4);
+        meu_aventureiro = new_ladino(NOME, "Ladino", 1, 6, 12, 4, 6, 6);
 
     }
 
     if(x == '4'){
 
-       meu_aventureiro = new_paladino(NOME, "Paladino", 1, 8, 6, 6, 4, 4);
+        meu_aventureiro = new_paladino(NOME, "Paladino", 1, 6, 12, 4, 6, 6);
 
     }
 
