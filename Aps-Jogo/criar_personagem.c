@@ -14,16 +14,16 @@ PERSONAGEM *criar_personagem(){
 
     char x;
 
-    printf("Qual o seu nome?: \n");
+    printf("\n");
     scanf(" %[^\n]", NOME);
 
-    printf("Escolha sua classe: \n");
+    printf("Quem é você?\n");
     printf("1-Guerreiro\n");
     printf("2-Mago\n");
     printf("3-Ladino\n");
     printf("4-Paladino\n");
 
-    printf("Digite sua escolha: ");
+    printf("Qual e o seu passado: ");
     x = getch();
     printf("\n");
 

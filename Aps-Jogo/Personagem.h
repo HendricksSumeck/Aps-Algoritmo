@@ -29,6 +29,7 @@ PERSONAGEM *new_guerreiro(char *nome, char *classe, int lvl, int HP, int forca, 
 PERSONAGEM *new_mago(char *nome, char *classe, int lvl, int HP, int forca, int armadura, int inteligencia, int agilidade);
 PERSONAGEM *new_ladino(char *nome, char *classe, int lvl, int HP, int forca, int armadura, int inteligencia, int agilidade);
 PERSONAGEM *new_paladino(char *nome, char *classe, int lvl, int HP, int forca, int armadura, int inteligencia, int agilidade);
+PERSONAGEM *new_muriel(char *nome, char *classe, int lvl, int HP, int forca, int armadura, int inteligencia, int agilidade);
 PERSONAGEM *criar_personagem();
 double randomico_gausiano (double mu, double sigma);
 
