@@ -382,7 +382,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1528898985 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\historia.c
+1528900991 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\historia.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -390,7 +390,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1528900603 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
+1528901173 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

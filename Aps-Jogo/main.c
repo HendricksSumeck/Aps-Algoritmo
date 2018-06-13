@@ -18,10 +18,11 @@
 
 int main(){
 
-keybd_event(VK_MENU  , 0x36, 0, 0);
-keybd_event(VK_RETURN, 0x1C, 0, 0);
-keybd_event(VK_RETURN, 0x1C, KEYEVENTF_KEYUP, 0);
-keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_MENU  , 0x36, 0, 0);
+    keybd_event(VK_RETURN, 0x1C, 0, 0);
+    keybd_event(VK_RETURN, 0x1C, KEYEVENTF_KEYUP, 0);
+    keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
+    system("color 80");
 
     srand((unsigned) time(NULL));
     setlocale(LC_ALL,"");
@@ -29,7 +30,6 @@ keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
     PERSONAGEM *meu_aventureiro;
     Monstro *meus_monstros[2];
 
-    system("color 80");
     inicio();
 
     //meu_aventureiro = criar_personagem();//Função
@@ -43,7 +43,7 @@ keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
 
     //meus_monstros[0]->nome_monstro(meus_monstros[0]);//Função
 
-    iniciar_batalha(meu_aventureiro, meus_monstros[0]);//Função
+    //iniciar_batalha(meu_aventureiro, meus_monstros[0]);//Função
     //iniciar_batalha(meu_aventureiro, meus_monstros[1]);//Função
 
     //meu_aventureiro->subir_lvl(meu_aventureiro);
