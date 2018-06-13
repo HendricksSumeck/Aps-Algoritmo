@@ -78,7 +78,7 @@ static void menu_muriel(struct personagem *muriel){
     printf("1-Rasengan\t");
     printf("2-Chidori\n");
     printf("3-Magykyo Sharingan\t");
-    printf("4-Katsu - Biribinha do Satam\n");
+    printf("4-Katsu - Biribinha do Demonio\n");
     printf("5-Descansar\n");
     printf("\n");
 
