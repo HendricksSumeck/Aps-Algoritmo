@@ -75,10 +75,10 @@ static void menu_muriel(struct personagem *muriel){
 
     printf("Seu turno \n\n");
     printf("Escolha o seu ataque:\n");
-    printf("1-Curar\t");
-    printf("2-Lança Solar\n");
-    printf("3-Benção dos Ceus\t");
-    printf("4-Punição Divina\n");
+    printf("1-Rasengan\t");
+    printf("2-Chidori\n");
+    printf("3-Magykyo Sharingan\t");
+    printf("4-Katsu - Biribinha do Satam\n");
     printf("5-Descansar\n");
     printf("\n");
 

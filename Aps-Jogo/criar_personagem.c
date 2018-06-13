@@ -9,13 +9,22 @@ PERSONAGEM *criar_personagem(){
     PERSONAGEM *meu_aventureiro;
 
     char *NOME;
+    char Muriel[10] = "Muriel";
 
     NOME = (char*) malloc(sizeof(char) * 20);//Criar estaticamente não funçiona
 
     char x;
 
-    printf("\n");
+    printf("Qual o seu nome\n");
     scanf(" %[^\n]", NOME);
+
+    if(strcmp(NOME, Muriel) == 0){
+
+        meu_aventureiro = new_muriel(NOME, "Ninja", 1, 10, 10, 10, 10 ,10);
+
+        return meu_aventureiro;
+
+    }
 
     printf("Quem é você?\n");
     printf("1-Guerreiro\n");
