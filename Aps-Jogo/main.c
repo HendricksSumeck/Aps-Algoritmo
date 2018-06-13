@@ -22,7 +22,8 @@ int main(){
     PERSONAGEM *meu_aventureiro;
     Monstro *meus_monstros[2];
 
-    //inicio();
+    system("color 80");
+    inicio();
 
     meu_aventureiro = criar_personagem();//Função
 
