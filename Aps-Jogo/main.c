@@ -32,14 +32,14 @@ keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
     system("color 80");
     inicio();
 
-    meu_aventureiro = criar_personagem();//Função
+    //meu_aventureiro = criar_personagem();//Função
 
     //meu_aventureiro = new_guerreiro("Hendrick", "Guerreiro", 1, 14, 5, 3, 5, 5);
 
     //meu_aventureiro->aventureiro_nome(meu_aventureiro);//Função
 
 
-    meus_monstros[0] = gerar_monstro(meu_aventureiro);
+    //meus_monstros[0] = gerar_monstro(meu_aventureiro);
 
     //meus_monstros[0]->nome_monstro(meus_monstros[0]);//Função
 
