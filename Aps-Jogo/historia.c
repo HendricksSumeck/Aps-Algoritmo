@@ -5,20 +5,20 @@
 #include "Monstros.h"
 #include "Personagem.h"
 
-void inicio(void){
+void historia_incio(void){
 
-    //FILE *arquivo1;
+    FILE *arquivo1;
 
-    //char frase[1000];
+    char frase[1000];
 
-    //arquivo1 = fopen("textos/Ola.txt", "r");
+    arquivo1 = fopen("textos/historia_inicio.txt", "r");
 
-    //while(fscanf(arquivo1,"%[^\n]s",frase) > 0){k
+    while(fscanf(arquivo1,"%[^\n]s",frase) > 0){
 
-        //printf("%s\n",frase);
+        printf("%s\n",frase);
 
-    //}
+    }
 
-    //fclose(arquivo1);
+    fclose(arquivo1);
 
 }

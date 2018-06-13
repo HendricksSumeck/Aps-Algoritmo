@@ -31,6 +31,7 @@ int main(){
     Monstro *meus_monstros[2];
 
     inicio();
+    historia_incio();
 
     //meu_aventureiro = criar_personagem();//Função
 
