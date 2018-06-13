@@ -78,6 +78,10 @@
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="muriel.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="aventureiro/" />
+		</Unit>
 		<Unit filename="ogro.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="monstros/" />

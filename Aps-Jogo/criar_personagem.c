@@ -8,6 +8,7 @@ PERSONAGEM *criar_personagem(){
 
     PERSONAGEM *meu_aventureiro;
 
+
     char *NOME;
     char Muriel[10] = "Muriel";
 
