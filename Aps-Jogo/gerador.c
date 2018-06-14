@@ -270,11 +270,11 @@ Monstro *gerar_demonio(struct personagem *aventureiro){
 
     };
 
-    X = rand() % 3;
+    X = rand() % 6;
 
     demonio_nome = (char*) malloc(sizeof(char) * strlen(nomes_demonio[X]));
 
-    strcpy(demonio, demonio[X]);
+    strcpy(demonio_nome, nomes_demonio[X]);
 
     meus_monstros = new_demonio(demonio_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
 

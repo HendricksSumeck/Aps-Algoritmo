@@ -53,12 +53,12 @@
 			<Option compilerVar="CC" />
 			<Option virtualFolder="Funçoes_batalha/" />
 		</Unit>
-		<Unit filename="gerar_monstro.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="gerar_ogro.c">
+		<Unit filename="gerador.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="gerar_monstro/" />
+		</Unit>
+		<Unit filename="gerar_monstro.c">
+			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="guerreiro.c">
 			<Option compilerVar="CC" />
@@ -86,6 +86,10 @@
 			<Option virtualFolder="aventureiro/" />
 		</Unit>
 		<Unit filename="ogro.c">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="monstros/" />
+		</Unit>
+		<Unit filename="orcs.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="monstros/" />
 		</Unit>
