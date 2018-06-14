@@ -53,7 +53,7 @@ Monstro *gerar_orc(struct personagem *aventureiro){
 
     strcpy(orc_nome, nomes_orc[X]);
 
-    meus_monstros = new_orc(orc_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_orcs(orc_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -310,7 +310,7 @@ Monstro *gerar_animais(struct personagem *aventureiro){
 
     strcpy(animais_nome, nomes_animais[X]);
 
-    meus_monstros = new_animais(animais_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_animal(animais_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
