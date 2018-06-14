@@ -7,19 +7,6 @@
 
 void inicio(void){
 
-    //FILE *arquivo1;
-
-    //char frase[1000];
-
-    //arquivo1 = fopen("textos/Ola.txt", "r");
-
-    //while(fscanf(arquivo1,"%[^\n]s",frase) > 0){k
-
-        //printf("%s\n",frase);
-
-    //}
-
-    //fclose(arquivo1);
     printf("\n\n\n\n\n\n\n\n\n");
 
 printf("                                   ллллллллллл    ллллллл    ллллллллллл   ллллллллллл   лллллллллл    лллллл   ллллл лллллллллл   ллллллллл  ллллллллллл     ллллллллл\n"

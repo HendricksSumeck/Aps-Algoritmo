@@ -67,6 +67,9 @@
 		<Unit filename="historia.c">
 			<Option compilerVar="CC" />
 		</Unit>
+		<Unit filename="inicio.c">
+			<Option compilerVar="CC" />
+		</Unit>
 		<Unit filename="ladino.c">
 			<Option compilerVar="CC" />
 			<Option virtualFolder="aventureiro/" />
