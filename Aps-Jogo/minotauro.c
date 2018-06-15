@@ -95,12 +95,6 @@ static int minotauro_magia2(struct monstros *minotauro){
 
 }
 
-static int minotauro_passiva(struct monstros *minotauro){
-
-
-
-}
-
 static void minotauro_descanso(struct monstros *minotauro){
 
     if(minotauro->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_minotauro(char *nome, int lvl, int HP, int forca, int armadura, int
     minotauro->ataque_forte = minotauro_ataque_forte;
     minotauro->monstro_magia1 = minotauro_magia1;
     minotauro->monstro_magia2 = minotauro_magia2;
-    minotauro->monstro_passiva = minotauro_passiva;
     minotauro->monstro_descanso = minotauro_descanso;
     minotauro->monstro_menu = minotauro_menu;
     minotauro->monstro_muda_staminia = minotauro_muda_staminia;

@@ -95,12 +95,6 @@ static int goblin_magia2(struct monstros *goblin){
 
 }
 
-static int goblin_passiva(struct monstros *goblin){
-
-
-
-}
-
 static void goblin_descanso(struct monstros *goblin){
 
     if(goblin->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_goblin(char *nome, int lvl, int HP, int forca, int armadura, int in
     goblin->ataque_forte = goblin_ataque_forte;
     goblin->monstro_magia1 = goblin_magia1;
     goblin->monstro_magia2 = goblin_magia2;
-    goblin->monstro_passiva = goblin_passiva;
     goblin->monstro_descanso = goblin_descanso;
     goblin->monstro_menu = goblin_menu;
     goblin->monstro_muda_staminia = goblin_muda_staminia;

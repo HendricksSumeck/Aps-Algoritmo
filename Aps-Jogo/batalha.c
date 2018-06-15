@@ -50,7 +50,6 @@ int verifica_passiva(struct personagem *aventureiro, struct monstros *monstro){
 
     aventureiro->aventureiro_passiva(aventureiro, monstro);
 
-    monstro->monstro_passiva(monstro);
 
 }
 

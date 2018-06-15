@@ -95,12 +95,6 @@ static int pirata_magia2(struct monstros *pirata){
 
 }
 
-static int pirata_passiva(struct monstros *pirata){
-
-
-
-}
-
 static void pirata_descanso(struct monstros *pirata){
 
     if(pirata->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_pirata(char *nome, int lvl, int HP, int forca, int armadura, int in
     pirata->ataque_forte = pirata_ataque_forte;
     pirata->monstro_magia1 = pirata_magia1;
     pirata->monstro_magia2 = pirata_magia2;
-    pirata->monstro_passiva = pirata_passiva;
     pirata->monstro_descanso = pirata_descanso;
     pirata->monstro_menu = pirata_menu;
     pirata->monstro_muda_staminia = pirata_muda_staminia;

@@ -95,12 +95,6 @@ static int dragao_magia2(struct monstros *dragao){
 
 }
 
-static int dragao_passiva(struct monstros *dragao){
-
-
-
-}
-
 static void dragao_descanso(struct monstros *dragao){
 
     if(dragao->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_dragao(char *nome, int lvl, int HP, int forca, int armadura, int in
     dragao->ataque_forte = dragao_ataque_forte;
     dragao->monstro_magia1 = dragao_magia1;
     dragao->monstro_magia2 = dragao_magia2;
-    dragao->monstro_passiva = dragao_passiva;
     dragao->monstro_descanso = dragao_descanso;
     dragao->monstro_menu = dragao_menu;
     dragao->monstro_muda_staminia = dragao_muda_staminia;
