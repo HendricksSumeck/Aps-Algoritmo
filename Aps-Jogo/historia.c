@@ -8,14 +8,15 @@
 void historia_incio(void){
 
     FILE *arquivo1;
+    char f;
 
     char frase[1000];
 
     arquivo1 = fopen("textos/historia_inicio.txt", "r");
 
-    while(fscanf(arquivo1,"%[^\n]s",frase) > 0){
+    while(fscanf(arquivo1, "%c", &f) != EOF){
 
-        printf("%s\n",frase);
+        printf("%c", f);
 
     }
 

@@ -366,7 +366,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1528583192 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gerar_monstro.c
+1529034857 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gerar_monstro.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -558,7 +558,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1528994165 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gerador.c
+1529007942 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gerador.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
