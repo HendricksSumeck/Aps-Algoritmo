@@ -7,6 +7,7 @@
 
 void inicio(void)
 {
+    system("color 06");
     FILE *txt;
     char t;
 
@@ -23,9 +24,5 @@ void inicio(void)
     fclose(txt);
 
 
-
-
-//int fclose(FILE *txt);
-
-    // limpa_tela();
+    limpa_tela();
 }

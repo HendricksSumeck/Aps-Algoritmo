@@ -86,7 +86,7 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
 
 void limpa_tela(void){
     char A;
-    printf("Precione enter para continuar\n");
+    printf("Press enter...\n");
     A = getch();
     if(A == 13){
         system("cls");

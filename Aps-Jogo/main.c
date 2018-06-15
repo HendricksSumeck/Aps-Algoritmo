@@ -22,7 +22,7 @@ int main(){
     keybd_event(VK_RETURN, 0x1C, 0, 0);
     keybd_event(VK_RETURN, 0x1C, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
-    system("color 80");
+
 
     srand((unsigned) time(NULL));
     setlocale(LC_ALL,"");
