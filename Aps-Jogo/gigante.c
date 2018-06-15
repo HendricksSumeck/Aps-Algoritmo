@@ -95,12 +95,6 @@ static int gigante_magia2(struct monstros *gigante){
 
 }
 
-static int gigante_passiva(struct monstros *gigante){
-
-
-
-}
-
 static void gigante_descanso(struct monstros *gigante){
 
     if(gigante->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_gigante(char *nome, int lvl, int HP, int forca, int armadura, int i
     gigante->ataque_forte = gigante_ataque_forte;
     gigante->monstro_magia1 = gigante_magia1;
     gigante->monstro_magia2 = gigante_magia2;
-    gigante->monstro_passiva = gigante_passiva;
     gigante->monstro_descanso = gigante_descanso;
     gigante->monstro_menu = gigante_menu;
     gigante->monstro_muda_staminia = gigante_muda_staminia;

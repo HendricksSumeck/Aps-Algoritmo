@@ -95,12 +95,6 @@ static int djinn_magia2(struct monstros *djinn){
 
 }
 
-static int djinn_passiva(struct monstros *djinn){
-
-
-
-}
-
 static void djinn_descanso(struct monstros *djinn){
 
     if(djinn->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_djinn(char *nome, int lvl, int HP, int forca, int armadura, int int
     djinn->ataque_forte = djinn_ataque_forte;
     djinn->monstro_magia1 = djinn_magia1;
     djinn->monstro_magia2 = djinn_magia2;
-    djinn->monstro_passiva = djinn_passiva;
     djinn->monstro_descanso = djinn_descanso;
     djinn->monstro_menu = djinn_menu;
     djinn->monstro_muda_staminia = djinn_muda_staminia;

@@ -95,12 +95,6 @@ static int ogro_magia2(struct monstros *ogro){
 
 }
 
-static int ogro_passiva(struct monstros *ogro){
-
-
-
-}
-
 static void ogro_descanso(struct monstros *ogro){
 
     if(ogro->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_ogro(char *nome, int lvl, int HP, int forca, int armadura, int inte
     ogro->ataque_forte = ogro_ataque_forte;
     ogro->monstro_magia1 = ogro_magia1;
     ogro->monstro_magia2 = ogro_magia2;
-    ogro->monstro_passiva = ogro_passiva;
     ogro->monstro_descanso = ogro_descanso;
     ogro->monstro_menu = ogro_menu;
     ogro->monstro_muda_staminia = ogro_muda_staminia;

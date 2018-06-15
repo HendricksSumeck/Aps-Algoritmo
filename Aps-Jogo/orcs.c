@@ -95,12 +95,6 @@ static int orcs_magia2(struct monstros *orcs){
 
 }
 
-static int orcs_passiva(struct monstros *orcs){
-
-
-
-}
-
 static void orcs_descanso(struct monstros *orcs){
 
     if(orcs->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_orcs(char *nome, int lvl, int HP, int forca, int armadura, int inte
     orcs->ataque_forte = orcs_ataque_forte;
     orcs->monstro_magia1 = orcs_magia1;
     orcs->monstro_magia2 = orcs_magia2;
-    orcs->monstro_passiva = orcs_passiva;
     orcs->monstro_descanso = orcs_descanso;
     orcs->monstro_menu = orcs_menu;
     orcs->monstro_muda_staminia = orcs_muda_staminia;

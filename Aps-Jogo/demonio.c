@@ -95,12 +95,6 @@ static int demonio_magia2(struct monstros *demonio){
 
 }
 
-static int demonio_passiva(struct monstros *demonio){
-
-
-
-}
-
 static void demonio_descanso(struct monstros *demonio){
 
     if(demonio->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_demonio(char *nome, int lvl, int HP, int forca, int armadura, int i
     demonio->ataque_forte = demonio_ataque_forte;
     demonio->monstro_magia1 = demonio_magia1;
     demonio->monstro_magia2 = demonio_magia2;
-    demonio->monstro_passiva = demonio_passiva;
     demonio->monstro_descanso = demonio_descanso;
     demonio->monstro_menu = demonio_menu;
     demonio->monstro_muda_staminia = demonio_muda_staminia;

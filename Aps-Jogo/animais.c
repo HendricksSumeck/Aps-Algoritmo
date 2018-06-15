@@ -95,12 +95,6 @@ static int animal_magia2(struct monstros *animal){
 
 }
 
-static int animal_passiva(struct monstros *animal){
-
-
-
-}
-
 static void animal_descanso(struct monstros *animal){
 
     if(animal->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_animal(char *nome, int lvl, int HP, int forca, int armadura, int in
     animal->ataque_forte = animal_ataque_forte;
     animal->monstro_magia1 = animal_magia1;
     animal->monstro_magia2 = animal_magia2;
-    animal->monstro_passiva = animal_passiva;
     animal->monstro_descanso = animal_descanso;
     animal->monstro_menu = animal_menu;
     animal->monstro_muda_staminia = animal_muda_staminia;

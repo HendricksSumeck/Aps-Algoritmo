@@ -17,7 +17,6 @@ typedef struct monstros{
     int (*ataque_forte)(struct monstros *);
     int (*monstro_magia1)(struct monstros *);
     int (*monstro_magia2)(struct monstros *);
-    int (*monstro_passiva)();
     void (*monstro_descanso)(struct monstros *);
     void (*monstro_menu)(int , int);
     void (*monstro_muda_staminia)(struct monstros *, int);

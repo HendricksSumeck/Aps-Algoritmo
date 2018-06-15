@@ -95,12 +95,6 @@ static int troll_magia2(struct monstros *troll){
 
 }
 
-static int troll_passiva(struct monstros *troll){
-
-
-
-}
-
 static void troll_descanso(struct monstros *troll){
 
     if(troll->staminia == 10){
@@ -190,7 +184,6 @@ Monstro *new_troll(char *nome, int lvl, int HP, int forca, int armadura, int int
     troll->ataque_forte = troll_ataque_forte;
     troll->monstro_magia1 = troll_magia1;
     troll->monstro_magia2 = troll_magia2;
-    troll->monstro_passiva = troll_passiva;
     troll->monstro_descanso = troll_descanso;
     troll->monstro_menu = troll_menu;
     troll->monstro_muda_staminia = troll_muda_staminia;
