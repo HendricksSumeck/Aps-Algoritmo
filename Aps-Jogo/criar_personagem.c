@@ -48,25 +48,25 @@ PERSONAGEM *criar_personagem(){
 
     if(x == '1'){
 
-       meu_aventureiro = new_guerreiro(NOME, "Guerreiro", 1, 14, 5, 3, 3 ,3);
+       meu_aventureiro = new_guerreiro(NOME, "Guerreiro", 1, 15, 4, 7, 4 ,4);
 
     }
 
     if(x == '2'){
 
-        meu_aventureiro = new_mago(NOME, "Mago", 1, 6, 12, 4, 6, 6);
+        meu_aventureiro = new_mago(NOME, "Mago", 1, 6, 2, 7, 10, 3);
 
     }
 
     if(x == '3'){
 
-        meu_aventureiro = new_ladino(NOME, "Ladino", 1, 6, 12, 4, 6, 6);
+        meu_aventureiro = new_ladino(NOME, "Ladino", 1, 10, 4, 5, 4, 10);
 
     }
 
     if(x == '4'){
 
-        meu_aventureiro = new_paladino(NOME, "Paladino", 1, 6, 12, 4, 6, 6);
+        meu_aventureiro = new_paladino(NOME, "Paladino", 1, 12, 6, 6, 6, 6);
 
     }
 

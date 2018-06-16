@@ -92,7 +92,7 @@ void limpa_tela(void){
         system("cls");
     }
     while(A != 13){
-        printf("Precione enter para continuar!!!\n");
+        printf("Press enter...\n");
         A = getch();
         if(A == 13){
         system("cls");

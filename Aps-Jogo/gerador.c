@@ -53,7 +53,7 @@ Monstro *gerar_orc(struct personagem *aventureiro){
 
     strcpy(orc_nome, nomes_orc[X]);
 
-    meus_monstros = new_orcs(orc_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_orcs(orc_nome, 1 + aventureiro->lvl, 8 +  (1 * aventureiro->lvl), 5 + (2 * aventureiro->lvl), 10, 4 + (1 * aventureiro->lvl) ,4 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -81,7 +81,7 @@ Monstro *gerar_gigante(struct personagem *aventureiro){
 
     strcpy(gigante_nome, nomes_gigante[X]);
 
-    meus_monstros = new_gigante(gigante_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_gigante(gigante_nome, 1 + aventureiro->lvl, 15 +  (2 * aventureiro->lvl), 9 + (1 * aventureiro->lvl), 7, 2 + (1 * aventureiro->lvl) ,2 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -108,7 +108,7 @@ Monstro *gerar_goblin(struct personagem *aventureiro){
 
     strcpy(goblin_nome, nomes_goblin[X]);
 
-    meus_monstros = new_goblin(goblin_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_goblin(goblin_nome, aventureiro->lvl, 5 +  (2 * aventureiro->lvl), 4 + (1 * aventureiro->lvl), 4, 4 + (1 * aventureiro->lvl) ,7 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -136,7 +136,7 @@ Monstro *gerar_troll(struct personagem *aventureiro){
 
     strcpy(troll_nome, nomes_troll[X]);
 
-    meus_monstros = new_troll(troll_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_troll(troll_nome, aventureiro->lvl, 6 +  (2 * aventureiro->lvl), 4 + (2 * aventureiro->lvl), 5, 3 + (2 * aventureiro->lvl) ,5 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -164,7 +164,7 @@ Monstro *gerar_minotauro(struct personagem *aventureiro){
 
     strcpy(minotauro_nome, nomes_minotauro[X]);
 
-    meus_monstros = new_minotauro(minotauro_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_minotauro(minotauro_nome, 2 + aventureiro->lvl, 10 +  (4 * aventureiro->lvl), 4 + (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4 + (1 * aventureiro->lvl) ,2 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -192,7 +192,7 @@ Monstro *gerar_pirata(struct personagem *aventureiro){
 
     strcpy(pirata_nome, nomes_pirata[X]);
 
-    meus_monstros = new_pirata(pirata_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_pirata(pirata_nome, aventureiro->lvl, 5 +  (1 * aventureiro->lvl), 4 + (1 * aventureiro->lvl), 4 + (1 * aventureiro->lvl), 6 + (1 * aventureiro->lvl) ,4 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -219,7 +219,7 @@ Monstro *gerar_djinn(struct personagem *aventureiro){
 
     strcpy(djinn_nome, nomes_djinn[X]);
 
-    meus_monstros = new_djinn(djinn_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_djinn(djinn_nome, aventureiro->lvl, 4 +  (4 * aventureiro->lvl), 2 + (1 * aventureiro->lvl), 5, 8 + (1 * aventureiro->lvl) ,2 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -247,7 +247,7 @@ Monstro *gerar_dragao(struct personagem *aventureiro){
 
     strcpy(dragao_nome, nomes_dragao[X]);
 
-    meus_monstros = new_dragao(dragao_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_dragao(dragao_nome, 2 + aventureiro->lvl, 11 +  (2 * aventureiro->lvl), 5 + (1 * aventureiro->lvl), 5 + (1 * aventureiro->lvl), 5 + (1 * aventureiro->lvl) ,5 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -276,7 +276,7 @@ Monstro *gerar_demonio(struct personagem *aventureiro){
 
     strcpy(demonio_nome, nomes_demonio[X]);
 
-    meus_monstros = new_demonio(demonio_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_demonio(demonio_nome, 2 + aventureiro->lvl, 12 +  (3 * aventureiro->lvl), 5 + (2 * aventureiro->lvl), 4 + (1 * aventureiro->lvl), 6 + (1 * aventureiro->lvl) ,4 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
@@ -310,7 +310,7 @@ Monstro *gerar_animais(struct personagem *aventureiro){
 
     strcpy(animais_nome, nomes_animais[X]);
 
-    meus_monstros = new_animal(animais_nome, 1 + aventureiro->lvl, 10 +  (2 * aventureiro->lvl), 3 + (1 * aventureiro->lvl), 4, 3 + (1 * aventureiro->lvl) ,3 + (1 * aventureiro->lvl));
+    meus_monstros = new_animal(animais_nome, 1 + aventureiro->lvl, 7 +  (1 * aventureiro->lvl), 3 + (2 * aventureiro->lvl), 5, 4 ,6 + (1 * aventureiro->lvl));
 
     return meus_monstros;
 
