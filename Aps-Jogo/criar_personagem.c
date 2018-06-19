@@ -54,7 +54,7 @@ PERSONAGEM *criar_personagem(){
 
     if(x == '2'){
 
-        meu_aventureiro = new_mago(NOME, "Mago", 1, 6, 2, 7, 10, 3);
+        meu_aventureiro = new_mago(NOME, "Mago", 1, 8, 2, 7, 10, 3);
 
     }
 

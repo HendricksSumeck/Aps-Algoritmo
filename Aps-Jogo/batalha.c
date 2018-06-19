@@ -46,39 +46,41 @@ void verifica_death(struct personagem *aventureiro, struct monstros *monstro){
 
 }
 
-int verifica_passiva(struct personagem *aventureiro, struct monstros *monstro){
-
-    aventureiro->aventureiro_passiva(aventureiro, monstro);
-
-
-}
-
 void *ataque1_monstro(struct personagem *aventureiro, struct monstros *monstro){
-    int i = 1, escolha;
+    int i = 1, X = 0;
     int Dano_aventureiro, Dano_monstro;
-    int X;
     while(aventureiro->HP > 0 && monstro->HP > 0){
         printf("Turno: %d\n\n", i);
         printf("Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
         printf("Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
-        verifica_passiva(aventureiro, monstro);
-        decisao_monstro(aventureiro, monstro);//Monstro
-        decisao_player(aventureiro, monstro);
+        X = aventureiro->aventureiro_passiva(aventureiro, monstro);
+        if(aventureiro->HP > 0 && monstro->HP > 0){
+            decisao_monstro(aventureiro, monstro);//Monstro
+            if(X==0){
+                decisao_player(aventureiro, monstro);
+            }
+        }
+        verifica_death(aventureiro, monstro);
         limpa_tela();
         i++;
         }
 }
 
 void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
-    int i = 1;
+    int i = 1, X = 0;
     char A;
     while(aventureiro->HP > 0 && monstro->HP > 0){
         printf("Turno: %d\n\n", i);
         printf("Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
         printf("Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
-        verifica_passiva(aventureiro, monstro);
-        decisao_player(aventureiro, monstro);
-        decisao_monstro(aventureiro, monstro);//Monstro
+        X = aventureiro->aventureiro_passiva(aventureiro, monstro);
+        if(aventureiro->HP > 0 && monstro->HP > 0){
+            if(X==0){
+                decisao_player(aventureiro, monstro);
+            }
+            decisao_monstro(aventureiro, monstro);//Monstro
+        }
+        verifica_death(aventureiro, monstro);
         limpa_tela();
         i++;
         }
@@ -115,7 +117,7 @@ void iniciar_batalha(struct personagem *aventureiro, struct monstros *monstro){
 
     }
 
-    verifica_passiva(aventureiro, monstro);
+    aventureiro->aventureiro_passiva(aventureiro, monstro);
 
     if(monstro->HP <= 0){
         aventureiro->subir_lvl(aventureiro);

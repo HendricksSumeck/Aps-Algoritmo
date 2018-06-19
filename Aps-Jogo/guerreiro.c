@@ -10,11 +10,11 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
     char escolha;
 
     guerreiro->lvl++;
-    guerreiro->HP = 14 + hp;
-    guerreiro->forca = 5 + dano;
-    guerreiro->armadura = 3 + armor;
-    guerreiro->inteligencia = 5 + inte;
-    guerreiro->agilidade = 5 + agili;
+    guerreiro->HP = 15 + hp;
+    guerreiro->forca = 4 + dano;
+    guerreiro->armadura = 7 + armor;
+    guerreiro->inteligencia = 4 + inte;
+    guerreiro->agilidade = 4 + agili;
     guerreiro->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
@@ -135,13 +135,13 @@ static int guerreiro_ataque_forte(struct personagem *guerreiro){
 
     if(guerreiro->staminia >= 3){
 
-    X = guerreiro->armadura + rand() % guerreiro->forca;
+        X = guerreiro->armadura + rand() % guerreiro->forca;
 
-    printf("Escudada = %d\n", X);
+        printf("Escudada = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 3;
+        guerreiro->staminia = guerreiro->staminia - 3;
 
-    return X;
+        return X;
 
     }
 
@@ -160,14 +160,14 @@ static int guerreiro_magia1(struct personagem *guerreiro){
 
     if(guerreiro->staminia >= 4){
 
-    X = rand() % guerreiro->forca;
-    X = X * 2;
+        X = rand() % guerreiro->forca;
+        X = X * 2;
 
-    printf("Golpe devastador = %d\n", X);
+        printf("Golpe devastador = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 4;
+        guerreiro->staminia = guerreiro->staminia - 4;
 
-    return X;
+        return X;
 
     }
 }
@@ -186,20 +186,20 @@ static int guerreiro_magia2(struct personagem *guerreiro){
 
     if(guerreiro->staminia >= 7){
 
-    X = 1 + rand() % guerreiro->forca;
-    X = X * guerreiro->forca;
+        X = 1 + rand() % guerreiro->forca;
+        X = X * guerreiro->forca;
 
-    printf("Ataque do Dragão = %d\n", X);
+        printf("Ataque do Dragão = %d\n", X);
 
-    guerreiro->staminia = guerreiro->staminia - 7;
+        guerreiro->staminia = guerreiro->staminia - 7;
 
-    return X;
+        return X;
 
     }
 
 }
 
-static void guerreiro_passiva(struct personagem *guerreiro, struct monstros *monstro){
+static int guerreiro_passiva(struct personagem *guerreiro, struct monstros *monstro){
 
     static int cont = 0;
     static int X, Y;
@@ -210,7 +210,7 @@ static void guerreiro_passiva(struct personagem *guerreiro, struct monstros *mon
         cont++;
     }
 
-    if(guerreiro->HP <= X && cont == 1){
+    if(monstro->HP > 0 && guerreiro->HP <= X && cont == 1){
         guerreiro->HP = guerreiro->HP + Y;
         printf("Beseker ativado!!!\n");
         printf("%s possui agora de %d vida \n", guerreiro->nome, guerreiro->HP);
@@ -220,6 +220,8 @@ static void guerreiro_passiva(struct personagem *guerreiro, struct monstros *mon
     if(monstro->HP <= 0){
         cont = 0;
     }
+
+    return 0;
 }
 
 static void guerreiro_descanso(struct personagem *guerreiro){

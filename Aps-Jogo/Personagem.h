@@ -20,7 +20,7 @@ typedef struct personagem{
     int (*ataque_forte)(struct personagem *);
     int (*aventureiro_magia1)(struct personagem *);
     int (*aventureiro_magia2)(struct personagem *);
-    void (*aventureiro_passiva)(struct personagem *, struct monstros *);
+    int (*aventureiro_passiva)(struct personagem *, struct monstros *);
     void (*descansar)(struct personagem *);
 
 } PERSONAGEM;

@@ -47,8 +47,6 @@ void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
 
         }else monstro->monstro_descanso(monstro);
 
-        verifica_death(aventureiro, monstro);
-
     }
 }
 

@@ -25,10 +25,7 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
 
             while(escolha <  49 || escolha > 53){
 
-                printf("Nao existe esta opcao!!!\n");
-                printf("Escolha uma opcao valida\n");
-                aventureiro->aventureiro_menu(aventureiro);
-                printf("Digite sua escolha: ");
+                printf("Digite um valor valido");
                 escolha = getch();
                 printf("\n");
             }
@@ -59,7 +56,5 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
 
             }
         }
-
-        verifica_death(aventureiro, monstro);
 
 }

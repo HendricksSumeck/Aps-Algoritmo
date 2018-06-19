@@ -10,11 +10,11 @@ static void subir_lvl_paladino(struct personagem *paladino){
     char escolha;
 
     paladino->lvl++;
-    paladino->HP = 14 + hp;
-    paladino->forca = 5 + dano;
-    paladino->armadura = 3 + armor;
-    paladino->inteligencia = 5 + inte;
-    paladino->agilidade = 5 + agili;
+    paladino->HP = 12 + hp;
+    paladino->forca = 6 + dano;
+    paladino->armadura = 6 + armor;
+    paladino->inteligencia = 6 + inte;
+    paladino->agilidade = 6 + agili;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
@@ -217,9 +217,32 @@ static int paladino_magia2(struct personagem *paladino){
 
 }
 
-static void paladino_passiva(struct personagem *paladino, struct monstros *monstro){
+static int paladino_passiva(struct personagem *paladino, struct monstros *monstro){
 
+    static int cont = 0;
+    static int X;
+    int Z;
 
+    if(cont == 0){
+        X = (paladino->HP*30)/100;
+        cont++;
+    }
+
+    if(monstro->HP > 0 && cont == 1 && paladino->HP <= X){
+
+        printf("Sunshine\n");
+        printf("Sofra o poder da minha magia gloriosa\n");
+        Z = paladino->inteligencia + paladino->forca + paladino->lvl;
+        monstro->HP = monstro->HP - Z;
+        printf("%s sofreu %d de dano\n", monstro->nome, Z);
+
+    }
+
+    if(monstro->HP <= 0){
+        cont = 0;
+    }
+
+    return 0;
 
 }
 
