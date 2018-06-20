@@ -23,7 +23,7 @@ PERSONAGEM *criar_personagem(){
     char x;
 
 
-    printf("\n\n\n\n                      Qual o seu nome?\n");
+    printf("\n\n\n\n                      Qual o seu nome? :");
     scanf(" %[^\n]", NOME);
 
     if(strcmp(NOME, nomes[0]) == 0 || strcmp(NOME, nomes[1]) == 0){
@@ -40,15 +40,15 @@ PERSONAGEM *criar_personagem(){
     printf("                      3-Ladino\n");
     printf("                      4-Paladino\n");
 
-    printf("Qual e o seu passado: ");
+    printf("                      Qual e o seu passado: ");
     x = getch();
     printf("\n");
 
     while(x <  49 || x > 52){
 
-            printf("Nao existe esta opcao!!!\n");
+            printf("                      Nao existe esta opcao!!!");
             x = getch();
-
+            printf("\n");
     }
 
 

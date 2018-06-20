@@ -19,13 +19,13 @@ static int troll_ataque_fraco(struct monstros *troll){
 
     int X;
 
-    if(troll->staminia < 1){
+    if(troll->staminia < 2){
 
         return -1;
 
     }
 
-    if(troll->staminia >= 1){
+    if(troll->staminia >= 2){
 
         X = rand() % troll->forca;
 
@@ -47,7 +47,7 @@ static int troll_ataque_forte(struct monstros *troll){
 
     if(troll->staminia >= 2){
 
-        X = rand() % troll->forca;
+        X = rand() % troll->agilidade;
 
         return X;
 
@@ -59,15 +59,15 @@ static int troll_magia1(struct monstros *troll){
 
     int X;
 
-    if(troll->staminia < 3){
+    if(troll->staminia < 4){
 
         return -1;
 
     }
 
-    if(troll->staminia >= 3){
+    if(troll->staminia >= 4){
 
-        X = rand() % troll->forca;
+        X = rand() % troll->forca + troll->agilidade;
 
         return X;
 
@@ -87,7 +87,7 @@ static int troll_magia2(struct monstros *troll){
 
     if(troll->staminia >= 4){
 
-        X = rand() % troll->forca;
+        X = 2 + rand() % troll->forca;
 
         return X;
 
@@ -117,13 +117,13 @@ static void troll_menu(int A, int X){
         printf("Soco = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Esmagar = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Agarramento = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Espancar = %d\n", X);
     }
 
 }
@@ -131,13 +131,13 @@ static void troll_menu(int A, int X){
 static void troll_muda_staminia(struct monstros *troll, int A){
 
     if(A == 0){
-        troll->staminia = troll->staminia - 1;
+        troll->staminia = troll->staminia - 2;
     }
     if(A == 1){
         troll->staminia = troll->staminia - 2;
     }
     if(A == 2){
-        troll->staminia = troll->staminia - 3;
+        troll->staminia = troll->staminia - 4;
     }
     if(A == 3){
         troll->staminia = troll->staminia - 4;
@@ -152,13 +152,13 @@ static int troll_verifica_staminia(struct monstros *troll, int A){
     }
 
     if(A == 0){
-        return 1;
+        return 2;
     }
     if(A == 1){
         return 2;
     }
     if(A == 2){
-        return 3;
+        return 4;
     }
     if(A == 3){
         return 4;

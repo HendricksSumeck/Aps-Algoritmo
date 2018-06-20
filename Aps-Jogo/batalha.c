@@ -133,7 +133,7 @@ void torre_negra(struct personagem *aventureiro){
 
     static int i;
     i = 0;
-    Monstro *meus_monstros[9];
+    Monstro *meus_monstros[11];
 
     meus_monstros[i] = gerar_monstro(aventureiro);
     iniciar_batalha(aventureiro, meus_monstros[i]);//Função

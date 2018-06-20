@@ -82,16 +82,16 @@ static int orcs_magia2(struct monstros *orcs){
 
     int X, Y;
 
-    if(orcs->staminia < 4){
+    if(orcs->staminia < 5){
 
         return -1;
 
     }
 
-    if(orcs->staminia >= 4){
+    if(orcs->staminia >= 5){
 
-        X = rand() % orcs->forca + orcs->agilidade;
-        Y = rand() % orcs->forca + orcs->agilidade;
+        X = rand() % orcs->agilidade;
+        Y = rand() % orcs->forca;
 
         X = X + Y;
 

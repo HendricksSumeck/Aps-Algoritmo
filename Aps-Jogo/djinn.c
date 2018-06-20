@@ -19,15 +19,15 @@ static int djinn_ataque_fraco(struct monstros *djinn){
 
     int X;
 
-    if(djinn->staminia < 1){
+    if(djinn->staminia < 4){
 
         return -1;
 
     }
 
-    if(djinn->staminia >= 1){
+    if(djinn->staminia >= 4){
 
-        X = rand() % djinn->forca;
+        X = rand() % djinn->inteligencia;
 
         return X;
 
@@ -39,15 +39,15 @@ static int djinn_ataque_forte(struct monstros *djinn){
 
     int X;
 
-    if(djinn->staminia < 2){
+    if(djinn->staminia < 4){
 
         return -1;
 
     }
 
-    if(djinn->staminia >= 2){
+    if(djinn->staminia >= 4){
 
-        X = rand() % djinn->forca;
+        X = 1 + rand() % djinn->inteligencia;
 
         return X;
 
@@ -59,15 +59,15 @@ static int djinn_magia1(struct monstros *djinn){
 
     int X;
 
-    if(djinn->staminia < 3){
+    if(djinn->staminia < 5){
 
         return -1;
 
     }
 
-    if(djinn->staminia >= 3){
+    if(djinn->staminia >= 5){
 
-        X = rand() % djinn->forca;
+        X = 2 + rand() % djinn->inteligencia;
 
         return X;
 
@@ -79,15 +79,15 @@ static int djinn_magia2(struct monstros *djinn){
 
     int X;
 
-    if(djinn->staminia < 4){
+    if(djinn->staminia < 6){
 
         return -1;
 
     }
 
-    if(djinn->staminia >= 4){
+    if(djinn->staminia >= 6){
 
-        X = rand() % djinn->forca;
+        X = djinn->inteligencia / 2;
 
         return X;
 
@@ -114,16 +114,16 @@ static void djinn_descanso(struct monstros *djinn){
 static void djinn_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Choque Psíquico = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Raio Psíquico = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Poder Cósmico = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Comedor de Sonhos = %d\n", X);
     }
 
 }
@@ -131,16 +131,16 @@ static void djinn_menu(int A, int X){
 static void djinn_muda_staminia(struct monstros *djinn, int A){
 
     if(A == 0){
-        djinn->staminia = djinn->staminia - 1;
+        djinn->staminia = djinn->staminia - 4;
     }
     if(A == 1){
-        djinn->staminia = djinn->staminia - 2;
+        djinn->staminia = djinn->staminia - 4;
     }
     if(A == 2){
-        djinn->staminia = djinn->staminia - 3;
+        djinn->staminia = djinn->staminia - 5;
     }
     if(A == 3){
-        djinn->staminia = djinn->staminia - 4;
+        djinn->staminia = djinn->staminia - 6;
     }
 
 }
@@ -148,20 +148,20 @@ static void djinn_muda_staminia(struct monstros *djinn, int A){
 static int djinn_verifica_staminia(struct monstros *djinn, int A){
 
     if(A == 10){
-        return 4;
+        return 6;
     }
 
     if(A == 0){
-        return 1;
+        return 4;
     }
     if(A == 1){
-        return 2;
+        return 4;
     }
     if(A == 2){
-        return 3;
+        return 5;
     }
     if(A == 3){
-        return 4;
+        return 6;
     }
 
 }

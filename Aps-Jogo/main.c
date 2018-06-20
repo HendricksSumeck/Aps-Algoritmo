@@ -23,19 +23,21 @@ int main(){
     keybd_event(VK_RETURN, 0x1C, KEYEVENTF_KEYUP, 0);
     keybd_event(VK_MENU  , 0x38, KEYEVENTF_KEYUP, 0);
 
-
     srand((unsigned) time(NULL));
     setlocale(LC_ALL,"");
 
     PERSONAGEM *meu_aventureiro;
 
-    inicio();
-    historia_incio();
+    //inicio();
+    //historia_incio();
 
     meu_aventureiro = criar_personagem();//Função
 
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);
+
+    //ver_monstros(meu_aventureiro);
+
 
     return 0;
 

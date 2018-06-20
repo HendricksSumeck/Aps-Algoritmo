@@ -20,5 +20,6 @@ void historia_incio(void){
 
     }
  fclose(texto);
+ limpa_tela();
 
 }

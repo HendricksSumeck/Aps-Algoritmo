@@ -181,7 +181,7 @@ Monstro *gerar_pirata(struct personagem *aventureiro){
         "Bucaneiro",
         "Corsario",
         "Pirata Esqueleto",
-        "Barba Negra"
+        "Barba Negra",
         "Jack Sparrow"
 
     };

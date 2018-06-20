@@ -88,9 +88,9 @@ static int pirata_magia2(struct monstros *pirata){
 
     if(pirata->staminia >= 6){
 
-        X = rand() % pirata->forca;
-        Y = rand() % pirata->agilidade;
-        Z = rand() % pirata->inteligencia;
+        X = pirata->forca / 2;
+        Y = pirata->agilidade / 2;
+        Z = pirata->inteligencia / 2;
 
         X = X + Y + Z;
 
