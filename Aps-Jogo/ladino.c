@@ -6,7 +6,7 @@
 static void subir_lvl_ladino(struct personagem *ladino){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, numeroDeUps = 5;
+    int i, numeroDeUps = 4;
     char escolha;
 
     ladino->lvl++;
@@ -15,10 +15,11 @@ static void subir_lvl_ladino(struct personagem *ladino){
     ladino->armadura = 5 + armor;
     ladino->inteligencia = 4 + inte;
     ladino->agilidade = 10 + agili;
+    ladino->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 4; i++){
 
         printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("1- Mais 1 de HP\n");
@@ -34,9 +35,7 @@ static void subir_lvl_ladino(struct personagem *ladino){
         while(escolha <  49 || escolha > 53){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Escolha uma opcao valida\n");
             escolha = getch();
-            printf("\n");
 
         }
 
@@ -235,8 +234,7 @@ static int ladino_magia2(struct personagem *ladino){
 
         if(Z == 3){
 
-            X = rand() % ladino->agilidade;
-            X = X * 5;
+            X = ladino->agilidade;
             X = X * 2;
 
             printf("Corte Mortal Critico = %d\n", X);
@@ -247,8 +245,7 @@ static int ladino_magia2(struct personagem *ladino){
 
         }
 
-    X = rand() % ladino->agilidade;
-    X = X * 5;
+    X = ladino->agilidade;
 
     printf("Corte Mortal = %d\n", X);
 

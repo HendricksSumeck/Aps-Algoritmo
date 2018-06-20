@@ -6,7 +6,7 @@
 static void subir_lvl_mago(struct personagem *mago){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, numeroDeUps = 5;
+    int i, numeroDeUps = 4;
     char escolha;
 
     mago->lvl++;
@@ -15,10 +15,11 @@ static void subir_lvl_mago(struct personagem *mago){
     mago->armadura = 7 + armor;
     mago->inteligencia = 10 + inte;
     mago->agilidade = 3 + agili;
+    mago->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 4; i++){
 
         printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("1- Mais 1 de HP\n");
@@ -34,9 +35,7 @@ static void subir_lvl_mago(struct personagem *mago){
         while(escolha <  49 || escolha > 53){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Escolha uma opcao valida\n");
             escolha = getch();
-            printf("\n");
 
         }
 
@@ -159,7 +158,7 @@ static int mago_magia1(struct personagem *mago){
 
     if(mago->staminia == 1){
 
-        X = mago->lvl + rand() % 4;
+        X = mago->lvl + rand() % 2;
         printf("1 Meteoro Arcano = %d\n", X);
         mago->staminia = mago->staminia - 1;
         return X;
@@ -168,7 +167,7 @@ static int mago_magia1(struct personagem *mago){
 
     if(mago->staminia == 2){
 
-        X = mago->lvl + rand() % 4;
+        X = mago->lvl + rand() % 2;
         Y = mago->lvl + rand() % 3;
         printf("2 Meteoros Arcanos = %d\n", X);
         mago->staminia = mago->staminia - 2;
@@ -178,9 +177,9 @@ static int mago_magia1(struct personagem *mago){
 
     if(mago->staminia >= 3){
 
-    X = mago->lvl + rand() % 4;
+    X = mago->lvl + rand() % 2;
     Y = mago->lvl + rand() % 3;
-    Z = mago->lvl + rand() % 2;
+    Z = mago->lvl + rand() % 4;
 
     X = X + Y + Z;
 
@@ -228,7 +227,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
 
         printf("Ele puxa uma faca de seu bolso\n");
         printf("Você quer usar uma magia de sangue?\n");
-        printf("0- Sair\n");
+        printf("0- Não\n");
         printf("1- Drenar Vida\n");
         printf("2- Amaterasu\n");
         printf("3- Toque Demoniaco\n");
@@ -239,7 +238,6 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
 
             printf("Nao existe esta opcao!!!\n");
             z = getch();
-            printf("\n");
 
         }
 
@@ -247,8 +245,8 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
             return 0;
         }
         if(z == '1'){
-            A = rand() % mago->inteligencia;
-            if(A < (mago->inteligencia*50)/100){
+            A = mago->inteligencia - monstro->inteligencia;
+            if(A <= 0){
                 printf("Você e muito fraco, não consegue drenar vida\n");
                 printf("Você sofreu 2 de dano\n");
                 mago->HP = mago->HP - 2;
@@ -264,7 +262,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
             A = mago->inteligencia - monstro->inteligencia;
             printf("Amaterasu esta queimando %s sofreu %d de dano\n", monstro->nome, A);
             printf("Você sofreu 3 de dano\n");
-            mago->HP = mago->HP - 4;
+            mago->HP = mago->HP - 3;
             monstro->HP = monstro->HP - A;
             return 1;
         }
@@ -272,7 +270,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
             A = mago->inteligencia;
             printf("%s foi tocado por um demonio sofrendo %d de dano\n", monstro->nome, A);
             printf("Você sofreu 5 de dano\n");
-            mago->HP = mago->HP - 6;
+            mago->HP = mago->HP - 5;
             monstro->HP = monstro->HP - A;
             return 1;
         }

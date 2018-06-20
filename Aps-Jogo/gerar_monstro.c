@@ -8,7 +8,8 @@
 Monstro *gerar_monstro(struct personagem *aventureiro){
 
     int X;
-    X = rand() % 10;
+    X = rand() % 11;
+
     Monstro *meus_monstros;
 
     if(X == 0){

@@ -19,15 +19,15 @@ static int pirata_ataque_fraco(struct monstros *pirata){
 
     int X;
 
-    if(pirata->staminia < 1){
+    if(pirata->staminia < 2){
 
         return -1;
 
     }
 
-    if(pirata->staminia >= 1){
+    if(pirata->staminia >= 2){
 
-        X = rand() % pirata->forca;
+        X = rand() % pirata->agilidade;
 
         return X;
 
@@ -48,6 +48,7 @@ static int pirata_ataque_forte(struct monstros *pirata){
     if(pirata->staminia >= 2){
 
         X = rand() % pirata->forca;
+        X = X/2;
 
         return X;
 
@@ -67,7 +68,7 @@ static int pirata_magia1(struct monstros *pirata){
 
     if(pirata->staminia >= 3){
 
-        X = rand() % pirata->forca;
+        X = 2 + rand() % pirata->forca;
 
         return X;
 
@@ -77,17 +78,21 @@ static int pirata_magia1(struct monstros *pirata){
 
 static int pirata_magia2(struct monstros *pirata){
 
-    int X;
+    int X, Y, Z;
 
-    if(pirata->staminia < 4){
+    if(pirata->staminia < 6){
 
         return -1;
 
     }
 
-    if(pirata->staminia >= 4){
+    if(pirata->staminia >= 6){
 
         X = rand() % pirata->forca;
+        Y = rand() % pirata->agilidade;
+        Z = rand() % pirata->inteligencia;
+
+        X = X + Y + Z;
 
         return X;
 
@@ -114,16 +119,16 @@ static void pirata_descanso(struct monstros *pirata){
 static void pirata_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Golpe com Espada = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Golpe com a perna de pau = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Golpe com o gancho = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Motim dos piratas = %d\n", X);
     }
 
 }
@@ -131,16 +136,16 @@ static void pirata_menu(int A, int X){
 static void pirata_muda_staminia(struct monstros *pirata, int A){
 
     if(A == 0){
-        pirata->staminia = pirata->staminia - 1;
+        pirata->staminia = pirata->staminia - 2;
     }
     if(A == 1){
         pirata->staminia = pirata->staminia - 2;
     }
     if(A == 2){
-        pirata->staminia = pirata->staminia - 3;
+        pirata->staminia = pirata->staminia - 2;
     }
     if(A == 3){
-        pirata->staminia = pirata->staminia - 4;
+        pirata->staminia = pirata->staminia - 6;
     }
 
 }
@@ -148,20 +153,20 @@ static void pirata_muda_staminia(struct monstros *pirata, int A){
 static int pirata_verifica_staminia(struct monstros *pirata, int A){
 
     if(A == 10){
-        return 4;
+        return 6;
     }
 
     if(A == 0){
-        return 1;
+        return 2;
     }
     if(A == 1){
         return 2;
     }
     if(A == 2){
-        return 3;
+        return 2;
     }
     if(A == 3){
-        return 4;
+        return 6;
     }
 
 }

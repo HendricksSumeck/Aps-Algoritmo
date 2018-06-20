@@ -5,7 +5,7 @@
 
 void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
 
-    int X, max = -2, aux1, aux2, A, fit = -9999;
+    int X, max = -2, aux1, aux2, A, fit = -9999, B;
     int Dano_monstro, resistencia_armadura;
     int (*funcoes_monstro[]) (Monstro*) = {monstro->ataque_fraco, monstro->ataque_forte, monstro->monstro_magia1, monstro->monstro_magia2};
 
@@ -35,7 +35,8 @@ void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
         if(fit > 0 || monstro->staminia == 10){
             monstro->monstro_menu(A, Dano_monstro);
             monstro->monstro_muda_staminia(monstro, A);
-            resistencia_armadura = (aventureiro->armadura * 50) / 100;
+            B = 10 + rand() % (50 - 10 +1);
+            resistencia_armadura = (aventureiro->armadura * B) / 100;
             Dano_monstro = Dano_monstro - resistencia_armadura;
             printf("%s: Defendeu %d de dano\n", aventureiro->nome,resistencia_armadura);
             if(Dano_monstro <= 0){

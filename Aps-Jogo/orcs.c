@@ -19,15 +19,15 @@ static int orcs_ataque_fraco(struct monstros *orcs){
 
     int X;
 
-    if(orcs->staminia < 1){
+    if(orcs->staminia < 4){
 
         return -1;
 
     }
 
-    if(orcs->staminia >= 1){
+    if(orcs->staminia >= 4){
 
-        X = rand() % orcs->forca;
+        X = rand() % orcs->forca + orcs->lvl;
 
         return X;
 
@@ -47,7 +47,7 @@ static int orcs_ataque_forte(struct monstros *orcs){
 
     if(orcs->staminia >= 2){
 
-        X = rand() % orcs->forca;
+        X = 2 + rand() % orcs->forca;
 
         return X;
 
@@ -57,27 +57,7 @@ static int orcs_ataque_forte(struct monstros *orcs){
 
 static int orcs_magia1(struct monstros *orcs){
 
-    int X;
-
-    if(orcs->staminia < 3){
-
-        return -1;
-
-    }
-
-    if(orcs->staminia >= 3){
-
-        X = rand() % orcs->forca;
-
-        return X;
-
-    }
-
-}
-
-static int orcs_magia2(struct monstros *orcs){
-
-    int X;
+    int X, Y;
 
     if(orcs->staminia < 4){
 
@@ -88,6 +68,32 @@ static int orcs_magia2(struct monstros *orcs){
     if(orcs->staminia >= 4){
 
         X = rand() % orcs->forca;
+        Y = rand() % orcs->forca;
+
+        X = X + Y;
+
+        return X;
+
+    }
+
+}
+
+static int orcs_magia2(struct monstros *orcs){
+
+    int X, Y;
+
+    if(orcs->staminia < 4){
+
+        return -1;
+
+    }
+
+    if(orcs->staminia >= 4){
+
+        X = rand() % orcs->forca + orcs->agilidade;
+        Y = rand() % orcs->forca + orcs->agilidade;
+
+        X = X + Y;
 
         return X;
 
@@ -114,16 +120,16 @@ static void orcs_descanso(struct monstros *orcs){
 static void orcs_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Machadada = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Explosão de Furia = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Corte Duplo = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Pião de Laminas = %d\n", X);
     }
 
 }
@@ -131,16 +137,16 @@ static void orcs_menu(int A, int X){
 static void orcs_muda_staminia(struct monstros *orcs, int A){
 
     if(A == 0){
-        orcs->staminia = orcs->staminia - 1;
+        orcs->staminia = orcs->staminia - 4;
     }
     if(A == 1){
         orcs->staminia = orcs->staminia - 2;
     }
     if(A == 2){
-        orcs->staminia = orcs->staminia - 3;
+        orcs->staminia = orcs->staminia - 4;
     }
     if(A == 3){
-        orcs->staminia = orcs->staminia - 4;
+        orcs->staminia = orcs->staminia - 5;
     }
 
 }
@@ -148,20 +154,20 @@ static void orcs_muda_staminia(struct monstros *orcs, int A){
 static int orcs_verifica_staminia(struct monstros *orcs, int A){
 
     if(A == 10){
-        return 4;
+        return 5;
     }
 
     if(A == 0){
-        return 1;
+        return 4;
     }
     if(A == 1){
         return 2;
     }
     if(A == 2){
-        return 3;
+        return 4;
     }
     if(A == 3){
-        return 4;
+        return 5;
     }
 
 }

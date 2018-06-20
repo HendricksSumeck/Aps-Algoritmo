@@ -9,7 +9,12 @@ PERSONAGEM *criar_personagem(){
     PERSONAGEM *meu_aventureiro;
 
     char *NOME;
-    char Muriel[10] = "Muriel";
+    char *nomes[] = {
+
+        "Muriel",
+        "muriel",
+
+    };
 
     NOME = (char*) malloc(sizeof(char) * 20);//Criar estaticamente não funçiona
 
@@ -21,7 +26,7 @@ PERSONAGEM *criar_personagem(){
     printf("\n\n\n\n                      Qual o seu nome?\n");
     scanf(" %[^\n]", NOME);
 
-    if(strcmp(NOME, Muriel) == 0){
+    if(strcmp(NOME, nomes[0]) == 0 || strcmp(NOME, nomes[1]) == 0){
 
         meu_aventureiro = new_muriel(NOME, "Ninja", 1, 10, 10, 10, 10 ,10);
 
@@ -42,16 +47,14 @@ PERSONAGEM *criar_personagem(){
     while(x <  49 || x > 52){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Digite sua escolha: ");
             x = getch();
-            printf("\n");
 
     }
 
 
     if(x == '1'){
 
-       meu_aventureiro = new_guerreiro(NOME, "Guerreiro", 1, 15, 4, 7, 4 ,4);
+       meu_aventureiro = new_guerreiro(NOME, "Guerreiro", 1, 15, 7, 7, 4 ,4);
 
     }
 

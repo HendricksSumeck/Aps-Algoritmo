@@ -6,20 +6,20 @@
 static void subir_lvl_guerreiro(struct personagem *guerreiro){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, numeroDeUps = 5;
+    int i, numeroDeUps = 4;
     char escolha;
 
     guerreiro->lvl++;
     guerreiro->HP = 15 + hp;
-    guerreiro->forca = 4 + dano;
-    guerreiro->armadura = 7 + armor;
+    guerreiro->forca = 7 + dano;
+    guerreiro->armadura = 5 + armor;
     guerreiro->inteligencia = 4 + inte;
     guerreiro->agilidade = 4 + agili;
     guerreiro->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 4; i++){
 
         printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("1- Mais 1 de HP\n");
@@ -35,9 +35,7 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
         while(escolha <  49 || escolha > 53){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Escolha uma opcao valida\n");
             escolha = getch();
-            printf("\n");
 
         }
 

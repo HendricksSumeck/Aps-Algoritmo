@@ -12,7 +12,7 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
 
         char escolha;
         int Dano_aventureiro, resistencia_armadura;
-        int flag = 0;
+        int flag = 0, B;
 
         while(flag == 0){
             flag = 1;
@@ -37,10 +37,11 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
             if(escolha != '5'){
 
                 Dano_aventureiro = escolha_ataque(escolha, aventureiro);
+                B = 10 + rand() % (50 - 10 + 1);
 
                 if(Dano_aventureiro >= 0){
 
-                    resistencia_armadura = (monstro->armadura * 50) / 100;
+                    resistencia_armadura = (monstro->armadura * B) / 100;
                     Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
                     printf("%s: Defendeu %d de dano\n", monstro->nome, resistencia_armadura);
                     if(Dano_aventureiro <= 0){

@@ -19,15 +19,15 @@ static int animal_ataque_fraco(struct monstros *animal){
 
     int X;
 
-    if(animal->staminia < 1){
+    if(animal->staminia < 2){
 
         return -1;
 
     }
 
-    if(animal->staminia >= 1){
+    if(animal->staminia >= 2){
 
-        X = rand() % animal->forca;
+        X = 1 + rand() % animal->agilidade;
 
         return X;
 
@@ -47,7 +47,7 @@ static int animal_ataque_forte(struct monstros *animal){
 
     if(animal->staminia >= 2){
 
-        X = rand() % animal->forca;
+        X = rand() % animal->forca + animal->agilidade;
 
         return X;
 
@@ -67,7 +67,7 @@ static int animal_magia1(struct monstros *animal){
 
     if(animal->staminia >= 3){
 
-        X = rand() % animal->forca;
+        X = animal->agilidade;
 
         return X;
 
@@ -79,13 +79,13 @@ static int animal_magia2(struct monstros *animal){
 
     int X;
 
-    if(animal->staminia < 4){
+    if(animal->staminia < 2){
 
         return -1;
 
     }
 
-    if(animal->staminia >= 4){
+    if(animal->staminia >= 2){
 
         X = rand() % animal->forca;
 
@@ -114,16 +114,16 @@ static void animal_descanso(struct monstros *animal){
 static void animal_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Mordida = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Arranhão = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Investida = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Rabada = %d\n", X);
     }
 
 }
@@ -131,7 +131,7 @@ static void animal_menu(int A, int X){
 static void animal_muda_staminia(struct monstros *animal, int A){
 
     if(A == 0){
-        animal->staminia = animal->staminia - 1;
+        animal->staminia = animal->staminia - 2;
     }
     if(A == 1){
         animal->staminia = animal->staminia - 2;
@@ -140,7 +140,7 @@ static void animal_muda_staminia(struct monstros *animal, int A){
         animal->staminia = animal->staminia - 3;
     }
     if(A == 3){
-        animal->staminia = animal->staminia - 4;
+        animal->staminia = animal->staminia - 2;
     }
 
 }
@@ -148,11 +148,11 @@ static void animal_muda_staminia(struct monstros *animal, int A){
 static int animal_verifica_staminia(struct monstros *animal, int A){
 
     if(A == 10){
-        return 4;
+        return 3;
     }
 
     if(A == 0){
-        return 1;
+        return 2;
     }
     if(A == 1){
         return 2;
@@ -161,7 +161,7 @@ static int animal_verifica_staminia(struct monstros *animal, int A){
         return 3;
     }
     if(A == 3){
-        return 4;
+        return 2;
     }
 
 }

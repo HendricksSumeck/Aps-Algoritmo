@@ -19,15 +19,15 @@ static int minotauro_ataque_fraco(struct monstros *minotauro){
 
     int X;
 
-    if(minotauro->staminia < 1){
+    if(minotauro->staminia < 3){
 
         return -1;
 
     }
 
-    if(minotauro->staminia >= 1){
+    if(minotauro->staminia >= 3){
 
-        X = rand() % minotauro->forca;
+        X = rand() % minotauro->forca + minotauro->agilidade;
 
         return X;
 
@@ -37,17 +37,21 @@ static int minotauro_ataque_fraco(struct monstros *minotauro){
 
 static int minotauro_ataque_forte(struct monstros *minotauro){
 
-    int X;
+    int X, Y, Z;
 
-    if(minotauro->staminia < 2){
+    if(minotauro->staminia < 4){
 
         return -1;
 
     }
 
-    if(minotauro->staminia >= 2){
+    if(minotauro->staminia >= 4){
 
-        X = rand() % minotauro->forca;
+        X = rand() % 4 + minotauro->lvl;
+        Y = rand() % 4 + minotauro->lvl;
+        Z = rand() % 4 + minotauro->lvl;
+
+        X = X + Y + Z;
 
         return X;
 
@@ -67,7 +71,7 @@ static int minotauro_magia1(struct monstros *minotauro){
 
     if(minotauro->staminia >= 3){
 
-        X = rand() % minotauro->forca;
+        X = 2 + rand() % minotauro->forca ;
 
         return X;
 
@@ -87,7 +91,7 @@ static int minotauro_magia2(struct monstros *minotauro){
 
     if(minotauro->staminia >= 4){
 
-        X = rand() % minotauro->forca;
+        X = minotauro->lvl + rand() % minotauro->forca;
 
         return X;
 
@@ -114,16 +118,16 @@ static void minotauro_descanso(struct monstros *minotauro){
 static void minotauro_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Investida Sangrenta = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Pancada Tripla = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Arremesso Sísmico = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Guilhotina = %d\n", X);
     }
 
 }
@@ -131,10 +135,10 @@ static void minotauro_menu(int A, int X){
 static void minotauro_muda_staminia(struct monstros *minotauro, int A){
 
     if(A == 0){
-        minotauro->staminia = minotauro->staminia - 1;
+        minotauro->staminia = minotauro->staminia - 3;
     }
     if(A == 1){
-        minotauro->staminia = minotauro->staminia - 2;
+        minotauro->staminia = minotauro->staminia - 4;
     }
     if(A == 2){
         minotauro->staminia = minotauro->staminia - 3;
@@ -152,10 +156,10 @@ static int minotauro_verifica_staminia(struct monstros *minotauro, int A){
     }
 
     if(A == 0){
-        return 1;
+        return 3;
     }
     if(A == 1){
-        return 2;
+        return 4;
     }
     if(A == 2){
         return 3;

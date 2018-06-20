@@ -47,7 +47,7 @@ static int goblin_ataque_forte(struct monstros *goblin){
 
     if(goblin->staminia >= 2){
 
-        X = rand() % goblin->forca;
+        X = rand() % goblin->agilidade;
 
         return X;
 
@@ -59,15 +59,15 @@ static int goblin_magia1(struct monstros *goblin){
 
     int X;
 
-    if(goblin->staminia < 3){
+    if(goblin->staminia < 2){
 
         return -1;
 
     }
 
-    if(goblin->staminia >= 3){
+    if(goblin->staminia >= 2){
 
-        X = rand() % goblin->forca;
+        X = rand() % goblin->forca + goblin->agilidade;
 
         return X;
 
@@ -79,15 +79,15 @@ static int goblin_magia2(struct monstros *goblin){
 
     int X;
 
-    if(goblin->staminia < 4){
+    if(goblin->staminia < 1){
 
         return -1;
 
     }
 
-    if(goblin->staminia >= 4){
+    if(goblin->staminia >= 1){
 
-        X = rand() % goblin->forca;
+        X = 2 + goblin->lvl;
 
         return X;
 
@@ -114,16 +114,16 @@ static void goblin_descanso(struct monstros *goblin){
 static void goblin_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Facada = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Chute Baixo = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Flechada = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Granada De Bosta = %d\n", X);
     }
 
 }
@@ -137,10 +137,10 @@ static void goblin_muda_staminia(struct monstros *goblin, int A){
         goblin->staminia = goblin->staminia - 2;
     }
     if(A == 2){
-        goblin->staminia = goblin->staminia - 3;
+        goblin->staminia = goblin->staminia - 2;
     }
     if(A == 3){
-        goblin->staminia = goblin->staminia - 4;
+        goblin->staminia = goblin->staminia - 1;
     }
 
 }
@@ -148,7 +148,7 @@ static void goblin_muda_staminia(struct monstros *goblin, int A){
 static int goblin_verifica_staminia(struct monstros *goblin, int A){
 
     if(A == 10){
-        return 4;
+        return 2;
     }
 
     if(A == 0){
@@ -158,10 +158,10 @@ static int goblin_verifica_staminia(struct monstros *goblin, int A){
         return 2;
     }
     if(A == 2){
-        return 3;
+        return 2;
     }
     if(A == 3){
-        return 4;
+        return 1;
     }
 
 }

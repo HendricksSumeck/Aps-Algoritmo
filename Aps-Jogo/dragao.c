@@ -19,15 +19,15 @@ static int dragao_ataque_fraco(struct monstros *dragao){
 
     int X;
 
-    if(dragao->staminia < 1){
+    if(dragao->staminia < 2){
 
         return -1;
 
     }
 
-    if(dragao->staminia >= 1){
+    if(dragao->staminia >= 2){
 
-        X = rand() % dragao->forca;
+        X = dragao->forca;
 
         return X;
 
@@ -39,15 +39,16 @@ static int dragao_ataque_forte(struct monstros *dragao){
 
     int X;
 
-    if(dragao->staminia < 2){
+    if(dragao->staminia < 3){
 
         return -1;
 
     }
 
-    if(dragao->staminia >= 2){
+    if(dragao->staminia >= 3){
 
-        X = rand() % dragao->forca;
+        X = rand() % dragao->inteligencia;
+        X = X * 1.5;
 
         return X;
 
@@ -59,15 +60,16 @@ static int dragao_magia1(struct monstros *dragao){
 
     int X;
 
-    if(dragao->staminia < 3){
+    if(dragao->staminia < 5){
 
         return -1;
 
     }
 
-    if(dragao->staminia >= 3){
+    if(dragao->staminia >= 5){
 
-        X = rand() % dragao->forca;
+        X = rand() % dragao->forca + dragao->inteligencia;
+        X = (dragao->forca + dragao->inteligencia) / X ;
 
         return X;
 
@@ -87,7 +89,7 @@ static int dragao_magia2(struct monstros *dragao){
 
     if(dragao->staminia >= 4){
 
-        X = rand() % dragao->forca;
+        X = dragao->inteligencia;
 
         return X;
 
@@ -114,16 +116,16 @@ static void dragao_descanso(struct monstros *dragao){
 static void dragao_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Bater de asas = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Sopro do Dragão = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Fenda do Espaço = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Dança do Dragão = %d\n", X);
     }
 
 }
@@ -131,13 +133,13 @@ static void dragao_menu(int A, int X){
 static void dragao_muda_staminia(struct monstros *dragao, int A){
 
     if(A == 0){
-        dragao->staminia = dragao->staminia - 1;
-    }
-    if(A == 1){
         dragao->staminia = dragao->staminia - 2;
     }
-    if(A == 2){
+    if(A == 1){
         dragao->staminia = dragao->staminia - 3;
+    }
+    if(A == 2){
+        dragao->staminia = dragao->staminia - 5;
     }
     if(A == 3){
         dragao->staminia = dragao->staminia - 4;
@@ -152,16 +154,16 @@ static int dragao_verifica_staminia(struct monstros *dragao, int A){
     }
 
     if(A == 0){
-        return 1;
-    }
-    if(A == 1){
         return 2;
     }
-    if(A == 2){
+    if(A == 1){
         return 3;
     }
+    if(A == 2){
+        return 5;
+    }
     if(A == 3){
-        return 4;
+        return 3;
     }
 
 }

@@ -6,7 +6,7 @@
 static void subir_lvl_muriel(struct personagem *muriel){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, numeroDeUps = 5;
+    int i, numeroDeUps = 4;
     char escolha;
 
     muriel->lvl++;
@@ -15,10 +15,11 @@ static void subir_lvl_muriel(struct personagem *muriel){
     muriel->armadura = 10 + armor;
     muriel->inteligencia = 10 + inte;
     muriel->agilidade = 10 + agili;
+    muriel->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 4; i++){
 
         printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("1- Mais 1 de HP\n");
@@ -34,9 +35,7 @@ static void subir_lvl_muriel(struct personagem *muriel){
         while(escolha <  49 || escolha > 53){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Escolha uma opcao valida\n");
             escolha = getch();
-            printf("\n");
 
         }
 
@@ -211,24 +210,22 @@ static void muriel_passiva(struct personagem *muriel, struct monstros *monstro){
 
         monstro->HP = monstro->HP - 1;
         printf("Muriel Jogou uma shuriken\n");
-
+        return 0;
     }
 
     if(monstro->HP > 0 && X == 1){
 
         monstro->HP = monstro->HP - 2;
         printf("Muriel Jogou duas shuriken\n");
-
+        return 0;
     }
 
     if(monstro->HP > 0 && X == 2){
 
         monstro->HP = monstro->HP - 3;
         printf("Muriel Jogou treis shuriken\n");
-
+        return 0;
     }
-
-    return 0;
 
 }
 

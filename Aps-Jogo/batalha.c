@@ -34,7 +34,8 @@ void verifica_death(struct personagem *aventureiro, struct monstros *monstro){
 
     if(aventureiro->HP <= 0){
 
-        printf("\n%s foi derrotado\n\n", aventureiro->nome);
+        printf("\n\nYou Death\n\n");
+        exit(0);
 
     }
 
@@ -94,7 +95,7 @@ void limpa_tela(void){
         system("cls");
     }
     while(A != 13){
-        printf("Press enter...\n");
+        printf("   Press enter...\n");
         A = getch();
         if(A == 13){
         system("cls");
@@ -125,5 +126,18 @@ void iniciar_batalha(struct personagem *aventureiro, struct monstros *monstro){
 
     //Ponteiro de struck ->
     //Só ponteiro *
+
+}
+
+void torre_negra(struct personagem *aventureiro){
+
+    static int i;
+    i = 0;
+    Monstro *meus_monstros[9];
+
+    meus_monstros[i] = gerar_monstro(aventureiro);
+    iniciar_batalha(aventureiro, meus_monstros[i]);//Função
+
+    i++;
 
 }

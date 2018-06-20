@@ -6,7 +6,7 @@
 static void subir_lvl_paladino(struct personagem *paladino){
 
     static int hp=0, dano=0, armor=0, inte=0, agili=0;
-    int i, numeroDeUps = 5;
+    int i, numeroDeUps = 4;
     char escolha;
 
     paladino->lvl++;
@@ -15,10 +15,11 @@ static void subir_lvl_paladino(struct personagem *paladino){
     paladino->armadura = 6 + armor;
     paladino->inteligencia = 6 + inte;
     paladino->agilidade = 6 + agili;
+    paladino->staminia = 10;
 
     printf("Parabens!!!\nVoce Subiu de lvl\n\n");
 
-    for(i = 0; i < 5; i++){
+    for(i = 0; i < 4; i++){
 
         printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("1- Mais 1 de HP\n");
@@ -34,9 +35,7 @@ static void subir_lvl_paladino(struct personagem *paladino){
         while(escolha <  49 || escolha > 53){
 
             printf("Nao existe esta opcao!!!\n");
-            printf("Escolha uma opcao valida\n");
             escolha = getch();
-            printf("\n");
 
         }
 
@@ -135,7 +134,7 @@ static int paladino_ataque_forte(struct personagem *paladino){
 
     if(paladino->staminia >= 3){
 
-    X = rand() % paladino->forca + paladino->inteligencia;
+    X = 1 + rand() % paladino->forca + paladino->inteligencia;
 
     printf("Lança Solar = %d\n", X);
 
@@ -169,9 +168,7 @@ static int paladino_magia1(struct personagem *paladino){
     while(z <  49 || z > 50){
 
         printf("Nao existe esta opcao!!!\n");
-        printf("Escolha uma opcao valida\n");
         z = getch();
-        printf("\n");
 
     }
 
@@ -205,7 +202,7 @@ static int paladino_magia2(struct personagem *paladino){
 
     if(paladino->staminia >= 4){
 
-    X = paladino->inteligencia * 2;
+    X = (paladino->inteligencia + paladino->agilidade + paladino->forca) / 3;
 
     printf("Punição Divina = %d\n", X);
 
@@ -235,6 +232,8 @@ static int paladino_passiva(struct personagem *paladino, struct monstros *monstr
         Z = paladino->inteligencia + paladino->forca + paladino->lvl;
         monstro->HP = monstro->HP - Z;
         printf("%s sofreu %d de dano\n", monstro->nome, Z);
+        limpa_tela();
+        system("START https://universoestendido.com.br/wp-content/uploads/2018/02/escanor-vs-galan.jpg");
 
     }
 

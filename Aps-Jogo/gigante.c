@@ -19,13 +19,13 @@ static int gigante_ataque_fraco(struct monstros *gigante){
 
     int X;
 
-    if(gigante->staminia < 1){
+    if(gigante->staminia < 5){
 
         return -1;
 
     }
 
-    if(gigante->staminia >= 1){
+    if(gigante->staminia >= 5){
 
         X = rand() % gigante->forca;
 
@@ -39,15 +39,15 @@ static int gigante_ataque_forte(struct monstros *gigante){
 
     int X;
 
-    if(gigante->staminia < 2){
+    if(gigante->staminia < 5){
 
         return -1;
 
     }
 
-    if(gigante->staminia >= 2){
+    if(gigante->staminia >= 5){
 
-        X = rand() % gigante->forca;
+        X = rand() % gigante->forca + gigante->lvl;
 
         return X;
 
@@ -59,15 +59,15 @@ static int gigante_magia1(struct monstros *gigante){
 
     int X;
 
-    if(gigante->staminia < 3){
+    if(gigante->staminia < 5){
 
         return -1;
 
     }
 
-    if(gigante->staminia >= 3){
+    if(gigante->staminia >= 5){
 
-        X = rand() % gigante->forca;
+        X = rand() % gigante->forca + gigante->agilidade;
 
         return X;
 
@@ -79,15 +79,15 @@ static int gigante_magia2(struct monstros *gigante){
 
     int X;
 
-    if(gigante->staminia < 4){
+    if(gigante->staminia < 6){
 
         return -1;
 
     }
 
-    if(gigante->staminia >= 4){
+    if(gigante->staminia >= 6){
 
-        X = rand() % gigante->forca;
+        X = gigante->forca;
 
         return X;
 
@@ -114,16 +114,16 @@ static void gigante_descanso(struct monstros *gigante){
 static void gigante_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Esmagamento = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Pisão = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Soco = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Terremoto = %d\n", X);
     }
 
 }
@@ -131,16 +131,16 @@ static void gigante_menu(int A, int X){
 static void gigante_muda_staminia(struct monstros *gigante, int A){
 
     if(A == 0){
-        gigante->staminia = gigante->staminia - 1;
+        gigante->staminia = gigante->staminia - 5;
     }
     if(A == 1){
-        gigante->staminia = gigante->staminia - 2;
+        gigante->staminia = gigante->staminia - 5;
     }
     if(A == 2){
-        gigante->staminia = gigante->staminia - 3;
+        gigante->staminia = gigante->staminia - 5;
     }
     if(A == 3){
-        gigante->staminia = gigante->staminia - 4;
+        gigante->staminia = gigante->staminia - 6;
     }
 
 }
@@ -148,20 +148,20 @@ static void gigante_muda_staminia(struct monstros *gigante, int A){
 static int gigante_verifica_staminia(struct monstros *gigante, int A){
 
     if(A == 10){
-        return 4;
+        return 6;
     }
 
     if(A == 0){
-        return 1;
+        return 5;
     }
     if(A == 1){
-        return 2;
+        return 5;
     }
     if(A == 2){
-        return 3;
+        return 5;
     }
     if(A == 3){
-        return 4;
+        return 6;
     }
 
 }

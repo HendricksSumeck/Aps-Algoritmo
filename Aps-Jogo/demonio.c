@@ -19,15 +19,15 @@ static int demonio_ataque_fraco(struct monstros *demonio){
 
     int X;
 
-    if(demonio->staminia < 1){
+    if(demonio->staminia < 4){
 
         return -1;
 
     }
 
-    if(demonio->staminia >= 1){
+    if(demonio->staminia >= 4){
 
-        X = rand() % demonio->forca;
+        X = rand() % demonio->forca + demonio->inteligencia;
 
         return X;
 
@@ -39,15 +39,15 @@ static int demonio_ataque_forte(struct monstros *demonio){
 
     int X;
 
-    if(demonio->staminia < 2){
+    if(demonio->staminia < 4){
 
         return -1;
 
     }
 
-    if(demonio->staminia >= 2){
+    if(demonio->staminia >= 4){
 
-        X = rand() % demonio->forca;
+        X = demonio->forca;
 
         return X;
 
@@ -59,15 +59,15 @@ static int demonio_magia1(struct monstros *demonio){
 
     int X;
 
-    if(demonio->staminia < 3){
+    if(demonio->staminia < 4){
 
         return -1;
 
     }
 
-    if(demonio->staminia >= 3){
+    if(demonio->staminia >= 4){
 
-        X = rand() % demonio->forca;
+        X = demonio->inteligencia;
 
         return X;
 
@@ -79,15 +79,16 @@ static int demonio_magia2(struct monstros *demonio){
 
     int X;
 
-    if(demonio->staminia < 4){
+    if(demonio->staminia < 6){
 
         return -1;
 
     }
 
-    if(demonio->staminia >= 4){
+    if(demonio->staminia >= 6){
 
-        X = rand() % demonio->forca;
+        X = (demonio->forca + demonio->agilidade + demonio->inteligencia) / 3;
+        demonio->HP = demonio->HP + (X/2);
 
         return X;
 
@@ -114,16 +115,17 @@ static void demonio_descanso(struct monstros *demonio){
 static void demonio_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("Hellblaze = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("Chicote Flamejante = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("Corromper Alma = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("Ceifar vida = %d\n", X);
+        printf("Você teve %d de sua vida roubada\n", X);
     }
 
 }
@@ -131,16 +133,16 @@ static void demonio_menu(int A, int X){
 static void demonio_muda_staminia(struct monstros *demonio, int A){
 
     if(A == 0){
-        demonio->staminia = demonio->staminia - 1;
+        demonio->staminia = demonio->staminia - 4;
     }
     if(A == 1){
-        demonio->staminia = demonio->staminia - 2;
+        demonio->staminia = demonio->staminia - 4;
     }
     if(A == 2){
-        demonio->staminia = demonio->staminia - 3;
+        demonio->staminia = demonio->staminia - 4;
     }
     if(A == 3){
-        demonio->staminia = demonio->staminia - 4;
+        demonio->staminia = demonio->staminia - 6;
     }
 
 }
@@ -148,20 +150,20 @@ static void demonio_muda_staminia(struct monstros *demonio, int A){
 static int demonio_verifica_staminia(struct monstros *demonio, int A){
 
     if(A == 10){
-        return 4;
+        return 6;
     }
 
     if(A == 0){
-        return 1;
+        return 4;
     }
     if(A == 1){
-        return 2;
+        return 4;
     }
     if(A == 2){
-        return 3;
+        return 4;
     }
     if(A == 3){
-        return 4;
+        return 6;
     }
 
 }
