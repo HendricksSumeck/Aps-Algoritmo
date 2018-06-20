@@ -31,13 +31,13 @@ int main(){
     Monstro *meus_monstros[2];
 
     inicio();
-    //historia_incio();
+    historia_incio();
 
     meu_aventureiro = criar_personagem();//Função
 
-    //meu_aventureiro = new_guerreiro("Hendrick", "Guerreiro", 1, 14, 5, 3, 5, 5);
+    meu_aventureiro = new_guerreiro("Hendrick", "Guerreiro", 1, 14, 5, 3, 5, 5);
 
-    //meu_aventureiro->aventureiro_nome(meu_aventureiro);//Função
+    meu_aventureiro->aventureiro_nome(meu_aventureiro);//Função
 
 
     meus_monstros[0] = gerar_monstro(meu_aventureiro);

@@ -7,19 +7,18 @@
 
 void historia_incio(void){
 
-    FILE *arquivo1;
-    char f;
+    FILE *texto;
+    char a;
 
     char frase[1000];
 
-    arquivo1 = fopen("textos/historia_inicio.txt", "r");
+    texto = fopen("textos/hist.txt", "r");
 
-    while(fscanf(arquivo1, "%c", &f) != EOF){
+    while(fscanf(texto, "%c", &a) != EOF){
 
-        printf("%c", f);
+        printf("%c", a);
 
     }
-
-    fclose(arquivo1);
+ fclose(texto);
 
 }

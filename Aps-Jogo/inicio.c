@@ -21,6 +21,7 @@ void inicio(void)
 
     }
 
+
     fclose(txt);
 
 

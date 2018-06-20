@@ -13,9 +13,12 @@ PERSONAGEM *criar_personagem(){
 
     NOME = (char*) malloc(sizeof(char) * 20);//Criar estaticamente não funçiona
 
+
+
     char x;
 
-    printf("Qual o seu nome\n");
+
+    printf("\n\n\n\n                      Qual o seu nome?\n");
     scanf(" %[^\n]", NOME);
 
     if(strcmp(NOME, Muriel) == 0){
@@ -26,11 +29,11 @@ PERSONAGEM *criar_personagem(){
 
     }
 
-    printf("Quem é você?\n");
-    printf("1-Guerreiro\n");
-    printf("2-Mago\n");
-    printf("3-Ladino\n");
-    printf("4-Paladino\n");
+    printf("                      Quem é você?\n");
+    printf("                      1-Guerreiro\n");
+    printf("                      2-Mago\n");
+    printf("                      3-Ladino\n");
+    printf("                      4-Paladino\n");
 
     printf("Qual e o seu passado: ");
     x = getch();
