@@ -34,7 +34,7 @@ void verifica_death(struct personagem *aventureiro, struct monstros *monstro){
 
     if(aventureiro->HP <= 0){
 
-        printf("\n\nYou Death\n\n");
+        died();
         exit(0);
 
     }

@@ -27,7 +27,7 @@ void julgamento(void){
 
     FILE *txt;
     char b;
-    char s;
+    char s, escolha;
 
     char fr[1000];
 
@@ -39,12 +39,22 @@ void julgamento(void){
 
     }
    fclose(txt);
-  limpa_tela();
+   printf("\n");
+   escolha = getch();
+   while(escolha < '1' || escolha >'2'){
+    printf("                      Faça sua escolha\n");
+    escolha = getch();
+   }
+   if (escolha == '2'){
 
-   scanf("%c", &s);
-   if (s== 02|| s==2){
-
+    system("cls");
     died();
+    exit(0);
+
+   }
+
+   if(escolha == '1'){
+    system("cls");
    }
 
 }
