@@ -39,28 +39,13 @@ void julgamento(void){
 
     }
    fclose(txt);
-   char s;
+  limpa_tela();
+
    scanf("%c", &s);
    if (s== 02|| s==2){
 
     died();
    }
-
-}
-void simnao(void){
-
-    FILE *sim;
-    char c;
-
-    char fra[1000];
-
-   sim = fopen("textos/simnao.txt", "r");
-
-    while(fscanf(sim, "%c", &c) != EOF){
-
-        printf("%c", c);
-    }
-   fclose(sim);
 
 }
 void died(void){
@@ -77,4 +62,22 @@ FILE *YOU;
         printf("%c", d);
     }
    fclose(YOU);
+}
+
+
+void simnao(void){
+
+    FILE *sim;
+    char c;
+
+    char fra[1000];
+
+   sim = fopen("textos/simnao.txt", "r");
+
+    while(fscanf(sim, "%c", &c) != EOF){
+
+        printf("%c", c);
+    }
+   fclose(sim);
+
 }
