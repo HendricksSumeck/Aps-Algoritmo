@@ -18,9 +18,8 @@ PERSONAGEM *criar_personagem(){
 
     NOME = (char*) malloc(sizeof(char) * 20);//Criar estaticamente não funçiona
 
-
-
     char x;
+
 
 
     printf("\n\n\n\n                      Qual o seu nome? :");

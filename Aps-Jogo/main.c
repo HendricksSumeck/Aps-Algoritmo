@@ -28,7 +28,7 @@ int main(){
 
     PERSONAGEM *meu_aventureiro;
 
-    //inicio();
+    inicio();
     historia_incio();
     julgamento();
     meu_aventureiro = criar_personagem();//Função

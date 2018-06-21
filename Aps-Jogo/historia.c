@@ -27,6 +27,7 @@ void julgamento(void){
 
     FILE *txt;
     char b;
+    char s;
 
     char fr[1000];
 
@@ -38,4 +39,42 @@ void julgamento(void){
 
     }
    fclose(txt);
+   char s;
+   scanf("%c", &s);
+   if (s== 02|| s==2){
+
+    died();
+   }
+
+}
+void simnao(void){
+
+    FILE *sim;
+    char c;
+
+    char fra[1000];
+
+   sim = fopen("textos/simnao.txt", "r");
+
+    while(fscanf(sim, "%c", &c) != EOF){
+
+        printf("%c", c);
+    }
+   fclose(sim);
+
+}
+void died(void){
+
+FILE *YOU;
+    char d;
+
+    char fra[1000];
+
+   YOU = fopen("textos/DIED.txt", "r");
+
+    while(fscanf(YOU, "%c", &d) != EOF){
+
+        printf("%c", d);
+    }
+   fclose(YOU);
 }

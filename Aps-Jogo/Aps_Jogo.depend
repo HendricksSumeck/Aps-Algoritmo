@@ -535,14 +535,14 @@
 	"Personagem.h"
 	"Monstros.h"
 
-1529590047 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
+1529592580 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"Personagem.h"
 
-1529468851 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\historia.c
+1529591805 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\historia.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -662,7 +662,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529590222 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
+1529590873 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
