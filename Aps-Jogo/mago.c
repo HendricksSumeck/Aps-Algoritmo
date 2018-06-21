@@ -255,7 +255,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
                 monstro->HP = monstro->HP - A;
                 mago->HP = mago->HP + A;
             }
-
+            z = getch();
             return 1;
         }
         if(z == '2'){
@@ -264,6 +264,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
             printf("Você sofreu 3 de dano\n");
             mago->HP = mago->HP - 3;
             monstro->HP = monstro->HP - A;
+            z = getch();
             return 1;
         }
         if(z == '3'){
@@ -272,6 +273,7 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
             printf("Você sofreu 5 de dano\n");
             mago->HP = mago->HP - 5;
             monstro->HP = monstro->HP - A;
+            z = getch();
             return 1;
         }
 

@@ -57,6 +57,7 @@ void *ataque1_monstro(struct personagem *aventureiro, struct monstros *monstro){
         X = aventureiro->aventureiro_passiva(aventureiro, monstro);
         if(aventureiro->HP > 0 && monstro->HP > 0){
             decisao_monstro(aventureiro, monstro);//Monstro
+            verifica_death(aventureiro, monstro);
             if(X==0){
                 decisao_player(aventureiro, monstro);
             }
