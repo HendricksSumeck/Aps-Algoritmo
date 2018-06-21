@@ -23,3 +23,20 @@ void historia_incio(void){
  limpa_tela();
 
 }
+void julgamento(void){
+
+    FILE *txt;
+    char b;
+
+    char fr[1000];
+
+    txt = fopen("textos/julgamento.txt", "r");
+
+    while(fscanf(txt, "%c", &b) != EOF){
+
+        printf("%c", b);
+
+   fclose(txt);
+
+}
+}
