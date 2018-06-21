@@ -36,7 +36,6 @@ void julgamento(void){
 
         printf("%c", b);
 
+    }
    fclose(txt);
-
-}
 }
