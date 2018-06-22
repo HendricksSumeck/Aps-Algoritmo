@@ -82,6 +82,10 @@ void charada(void){
 
         "ganhando",
         "vencendo",
+        "vencer",
+        "Vencer"
+        "ganhar",
+        "Ganhar",
         "Ganhando",
         "Vencendo",
         "ganhando o jogo",
@@ -95,7 +99,8 @@ void charada(void){
 
         scanf("  %[^\n]", s);
 
-        if (strcmp(s, frases[0]) == 0 || strcmp(s, frases[1]) == 0 || strcmp(s, frases[2]) == 0 || strcmp(s, frases[3]) == 0 || strcmp(s, frases[4]) == 0 || strcmp(s, frases[5]) == 0){
+        if (strcmp(s, frases[0]) == 0 || strcmp(s, frases[1]) == 0 || strcmp(s, frases[2]) == 0 || strcmp(s, frases[3]) == 0 || strcmp(s, frases[4]) == 0 ||
+            strcmp(s, frases[5]) == 0 || strcmp(s, frases[6]) == 0 || strcmp(s, frases[7]) == 0 || strcmp(s, frases[8]) == 0 || strcmp(s, frases[9]) == 0){
 
         system("cls");
 
@@ -113,7 +118,7 @@ void charada(void){
         }
        fclose(sim);
         }
-
+        died();
         exit(0);
 
     }
