@@ -87,7 +87,7 @@ static int gigante_magia2(struct monstros *gigante){
 
     if(gigante->staminia >= 6){
 
-        X = gigante->forca;
+        X = gigante->forca / 2;
 
         return X;
 
