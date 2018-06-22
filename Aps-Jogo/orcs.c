@@ -47,7 +47,7 @@ static int orcs_ataque_forte(struct monstros *orcs){
 
     if(orcs->staminia >= 2){
 
-        X = 2 + rand() % orcs->forca;
+        X = 1 + rand() % orcs->forca;
 
         return X;
 
@@ -70,7 +70,7 @@ static int orcs_magia1(struct monstros *orcs){
         X = rand() % orcs->forca;
         Y = rand() % orcs->forca;
 
-        X = X + Y;
+        X = (X + Y) / 2;
 
         return X;
 
@@ -93,7 +93,7 @@ static int orcs_magia2(struct monstros *orcs){
         X = rand() % orcs->agilidade;
         Y = rand() % orcs->forca;
 
-        X = X + Y;
+        X = (X + Y) / 2;
 
         return X;
 

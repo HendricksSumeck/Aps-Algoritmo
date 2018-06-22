@@ -159,6 +159,7 @@ static int muriel_ataque_forte(struct personagem *muriel){
 
 }
 
+
 static int muriel_magia1(struct personagem *muriel){
 
     int X;

@@ -38,7 +38,7 @@ PERSONAGEM *criar_personagem(){
 
     }
       printf ("\n\n\n\n                              De uma classe tera que ser, e uma habilidade especial\n"
-              "                              poderá ter, agora tente se defender.");
+              "                              poderá ter");
 
     printf("\n                              Escolha a sua classe? ");
 

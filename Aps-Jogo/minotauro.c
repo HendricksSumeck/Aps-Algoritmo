@@ -39,19 +39,19 @@ static int minotauro_ataque_forte(struct monstros *minotauro){
 
     int X, Y, Z;
 
-    if(minotauro->staminia < 4){
+    if(minotauro->staminia < 5){
 
         return -1;
 
     }
 
-    if(minotauro->staminia >= 4){
+    if(minotauro->staminia >= 5){
 
         X = rand() % 4 + minotauro->lvl;
         Y = rand() % 4 + minotauro->lvl;
         Z = rand() % 4 + minotauro->lvl;
 
-        X = X + Y + Z;
+        X = (X + Y + Z) / 3;
 
         return X;
 
@@ -71,7 +71,7 @@ static int minotauro_magia1(struct monstros *minotauro){
 
     if(minotauro->staminia >= 3){
 
-        X = 2 + rand() % minotauro->forca ;
+        X = 1 + rand() % minotauro->forca ;
 
         return X;
 
@@ -138,7 +138,7 @@ static void minotauro_muda_staminia(struct monstros *minotauro, int A){
         minotauro->staminia = minotauro->staminia - 3;
     }
     if(A == 1){
-        minotauro->staminia = minotauro->staminia - 4;
+        minotauro->staminia = minotauro->staminia - 5;
     }
     if(A == 2){
         minotauro->staminia = minotauro->staminia - 3;
@@ -152,14 +152,14 @@ static void minotauro_muda_staminia(struct monstros *minotauro, int A){
 static int minotauro_verifica_staminia(struct monstros *minotauro, int A){
 
     if(A == 10){
-        return 4;
+        return 5;
     }
 
     if(A == 0){
         return 3;
     }
     if(A == 1){
-        return 4;
+        return 5;
     }
     if(A == 2){
         return 3;

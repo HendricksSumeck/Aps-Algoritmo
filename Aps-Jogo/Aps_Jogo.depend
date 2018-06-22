@@ -350,14 +350,14 @@
 
 1529082149 c:\users\hendr\desktop\aps-algoritmo\aps-jogo\monstros.h
 
-1529598559 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
 	<string.h>
 	"Personagem.h"
 
-1529430478 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_player.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -382,7 +382,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529599132 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\historia.c
+1529599381 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\historia.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -390,7 +390,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529598559 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -400,12 +400,12 @@
 	"Personagem.h"
 	<windows.h>
 
-1529082262 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\ogro.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\ogro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529599205 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -414,37 +414,37 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529430557 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_monstro.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\decisao_monstro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 	"Personagem.h"
 
-1529430974 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\guerreiro.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\guerreiro.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529430965 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\ladino.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\ladino.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529538566 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\mago.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\mago.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529431269 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\paladino.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\paladino.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529430949 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\muriel.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\muriel.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -518,7 +518,7 @@
 	"Personagem.h"
 	"Monstros.h"
 
-1529679539 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
+1529684070 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -566,52 +566,52 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529519583 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\orcs.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\orcs.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529434166 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\demonio.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\demonio.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529520444 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\djinn.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\djinn.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529437031 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\dragao.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\dragao.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529436263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gigante.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\gigante.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529437334 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\goblin.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\goblin.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529438871 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\minotauro.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\minotauro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529519646 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\pirata.c
+1529684264 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\pirata.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529521533 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\troll.c
+1529684264 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\troll.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529432727 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\animais.c
+1529684263 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\animais.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
@@ -662,7 +662,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529682565 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
+1529683678 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
