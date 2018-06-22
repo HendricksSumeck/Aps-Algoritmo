@@ -225,18 +225,18 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
 
     if(monstro->HP > 0){
 
-        printf("Ele puxa uma faca de seu bolso\n");
-        printf("Você quer usar uma magia de sangue?\n");
-        printf("0- Não\n");
-        printf("1- Drenar Vida\n");
-        printf("2- Amaterasu\n");
-        printf("3- Toque Demoniaco\n");
+        printf("                              Ele puxa uma faca de seu bolso\n");
+        printf("                              Você quer usar uma magia de sangue?\n");
+        printf("                              0- Não\n");
+        printf("                              1- Drenar Vida\n");
+        printf("                              2- Amaterasu\n");
+        printf("                              3- Toque Demoniaco\n");
 
         z = getch();
 
         while(z <  40 || z > 51){
 
-            printf("Nao existe esta opcao!!!\n");
+            printf("                              Nao existe esta opcao!!!\n");
             z = getch();
 
         }
@@ -247,11 +247,11 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
         if(z == '1'){
             A = mago->inteligencia - monstro->inteligencia;
             if(A <= 0){
-                printf("Você e muito fraco, não consegue drenar vida\n");
-                printf("Você sofreu 2 de dano\n");
+                printf("                              Você e muito fraco, não consegue drenar vida\n");
+                printf("                              Você sofreu 2 de dano\n");
                 mago->HP = mago->HP - 2;
             }else{
-                printf("Você drenou %d de vida do %s\n", A, monstro->nome);
+                printf("                              Você drenou %d de vida do %s\n", A, monstro->nome);
                 monstro->HP = monstro->HP - A;
                 mago->HP = mago->HP + A;
             }
@@ -260,8 +260,8 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
         }
         if(z == '2'){
             A = mago->inteligencia - monstro->inteligencia;
-            printf("Amaterasu esta queimando %s sofreu %d de dano\n", monstro->nome, A);
-            printf("Você sofreu 3 de dano\n");
+            printf("                              Amaterasu esta queimando %s sofreu %d de dano\n", monstro->nome, A);
+            printf("                              Você sofreu 3 de dano\n");
             mago->HP = mago->HP - 3;
             monstro->HP = monstro->HP - A;
             z = getch();
@@ -269,8 +269,8 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
         }
         if(z == '3'){
             A = mago->inteligencia;
-            printf("%s foi tocado por um demonio sofrendo %d de dano\n", monstro->nome, A);
-            printf("Você sofreu 5 de dano\n");
+            printf("                              %s foi tocado por um demonio sofrendo %d de dano\n", monstro->nome, A);
+            printf("                              Você sofreu 5 de dano\n");
             mago->HP = mago->HP - 5;
             monstro->HP = monstro->HP - A;
             z = getch();
@@ -284,16 +284,16 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
 static void mago_descanso(struct personagem *mago){
 
     if(mago->staminia == 10){
-        printf("Voce ja esta descansado\n");
+        printf("                              Voce ja esta descansado\n");
     }
 
     if(mago->staminia == 9){
         mago->staminia++;
-        printf("Voce recuperou 1 de stamina\n");
+        printf("                              Voce recuperou 1 de stamina\n");
     }
     if(mago->staminia < 9){
         mago->staminia = mago->staminia + 2;
-        printf("Voce recuperou 2 de stamina\n");
+        printf("                              Voce recuperou 2 de stamina\n");
     }
 }
 

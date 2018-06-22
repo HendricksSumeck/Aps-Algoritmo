@@ -4,13 +4,13 @@
 
 static void ogro_nome_monstro(struct monstros *ogro){
 
-    printf("%s\n", ogro->nome);
-    printf("LVL = %d\n", ogro->lvl);
-    printf("HP = %d\n", ogro->HP);
-    printf("Forca = %d\n", ogro->forca);
-    printf("Armadura = %d\n", ogro->armadura);
-    printf("Inteligencia = %d\n", ogro->inteligencia);
-    printf("Agilidade = %d\n", ogro->agilidade);
+    printf("                              %s\n", ogro->nome);
+    printf("                              LVL = %d\n", ogro->lvl);
+    printf("                              HP = %d\n", ogro->HP);
+    printf("                              Forca = %d\n", ogro->forca);
+    printf("                              Armadura = %d\n", ogro->armadura);
+    printf("                              Inteligencia = %d\n", ogro->inteligencia);
+    printf("                              Agilidade = %d\n", ogro->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int ogro_magia2(struct monstros *ogro){
 static void ogro_descanso(struct monstros *ogro){
 
     if(ogro->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(ogro->staminia == 9){
         ogro->staminia++;
-        printf("Ogro descansou\n");
+        printf("                              Ogro descansou\n");
     }
     if(ogro->staminia < 9){
         ogro->staminia = ogro->staminia + 1;
-        printf("Ogro descansou\n", ogro->staminia);
+        printf("                              Ogro descansou\n", ogro->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void ogro_descanso(struct monstros *ogro){
 static void ogro_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("                              Soco = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhao = %d\n", X);
+        printf("                              Arranhao = %d\n", X);
     }
     if(A == 2){
-        printf("Tapa na orelha = %d\n", X);
+        printf("                              Tapa na orelha = %d\n", X);
     }
     if(A == 3){
-        printf("Jogar pedra = %d\n", X);
+        printf("                              Jogar pedra = %d\n", X);
     }
 
 }

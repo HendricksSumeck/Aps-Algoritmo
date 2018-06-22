@@ -4,13 +4,13 @@
 
 static void dragao_nome_monstro(struct monstros *dragao){
 
-    printf("%s\n", dragao->nome);
-    printf("LVL = %d\n", dragao->lvl);
-    printf("HP = %d\n", dragao->HP);
-    printf("Forca = %d\n", dragao->forca);
-    printf("Armadura = %d\n", dragao->armadura);
-    printf("Inteligencia = %d\n", dragao->inteligencia);
-    printf("Agilidade = %d\n", dragao->agilidade);
+    printf("                              %s\n", dragao->nome);
+    printf("                              LVL = %d\n", dragao->lvl);
+    printf("                              HP = %d\n", dragao->HP);
+    printf("                              Forca = %d\n", dragao->forca);
+    printf("                              Armadura = %d\n", dragao->armadura);
+    printf("                              Inteligencia = %d\n", dragao->inteligencia);
+    printf("                              Agilidade = %d\n", dragao->agilidade);
     printf("\n");
 
 }
@@ -100,15 +100,15 @@ static int dragao_magia2(struct monstros *dragao){
 static void dragao_descanso(struct monstros *dragao){
 
     if(dragao->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(dragao->staminia == 9){
         dragao->staminia++;
-        printf("dragao descansou\n");
+        printf("                              dragao descansou\n");
     }
     if(dragao->staminia < 9){
         dragao->staminia = dragao->staminia + 1;
-        printf("dragao descansou\n", dragao->staminia);
+        printf("                              dragao descansou\n", dragao->staminia);
     }
 
 }
@@ -116,16 +116,16 @@ static void dragao_descanso(struct monstros *dragao){
 static void dragao_menu(int A, int X){
 
     if(A == 0){
-        printf("Bater de asas = %d\n", X);
+        printf("                              Bater de asas = %d\n", X);
     }
     if(A == 1){
-        printf("Sopro do Dragão = %d\n", X);
+        printf("                              Sopro do Dragão = %d\n", X);
     }
     if(A == 2){
-        printf("Fenda do Espaço = %d\n", X);
+        printf("                              Fenda do Espaço = %d\n", X);
     }
     if(A == 3){
-        printf("Dança do Dragão = %d\n", X);
+        printf("                              Dança do Dragão = %d\n", X);
     }
 
 }

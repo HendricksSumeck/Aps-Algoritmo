@@ -4,13 +4,13 @@
 
 static void troll_nome_monstro(struct monstros *troll){
 
-    printf("%s\n", troll->nome);
-    printf("LVL = %d\n", troll->lvl);
-    printf("HP = %d\n", troll->HP);
-    printf("Forca = %d\n", troll->forca);
-    printf("Armadura = %d\n", troll->armadura);
-    printf("Inteligencia = %d\n", troll->inteligencia);
-    printf("Agilidade = %d\n", troll->agilidade);
+    printf("                              %s\n", troll->nome);
+    printf("                              LVL = %d\n", troll->lvl);
+    printf("                              HP = %d\n", troll->HP);
+    printf("                              Forca = %d\n", troll->forca);
+    printf("                              Armadura = %d\n", troll->armadura);
+    printf("                              Inteligencia = %d\n", troll->inteligencia);
+    printf("                              Agilidade = %d\n", troll->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int troll_magia2(struct monstros *troll){
 static void troll_descanso(struct monstros *troll){
 
     if(troll->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(troll->staminia == 9){
         troll->staminia++;
-        printf("troll descansou\n");
+        printf("                              troll descansou\n");
     }
     if(troll->staminia < 9){
         troll->staminia = troll->staminia + 1;
-        printf("troll descansou\n", troll->staminia);
+        printf("                              troll descansou\n", troll->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void troll_descanso(struct monstros *troll){
 static void troll_menu(int A, int X){
 
     if(A == 0){
-        printf("Soco = %d\n", X);
+        printf("                              Soco = %d\n", X);
     }
     if(A == 1){
-        printf("Esmagar = %d\n", X);
+        printf("                              Esmagar = %d\n", X);
     }
     if(A == 2){
-        printf("Agarramento = %d\n", X);
+        printf("                              Agarramento = %d\n", X);
     }
     if(A == 3){
-        printf("Espancar = %d\n", X);
+        printf("                              Espancar = %d\n", X);
     }
 
 }

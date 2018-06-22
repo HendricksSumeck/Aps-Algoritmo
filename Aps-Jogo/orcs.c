@@ -4,13 +4,13 @@
 
 static void orcs_nome_monstro(struct monstros *orcs){
 
-    printf("%s\n", orcs->nome);
-    printf("LVL = %d\n", orcs->lvl);
-    printf("HP = %d\n", orcs->HP);
-    printf("Forca = %d\n", orcs->forca);
-    printf("Armadura = %d\n", orcs->armadura);
-    printf("Inteligencia = %d\n", orcs->inteligencia);
-    printf("Agilidade = %d\n", orcs->agilidade);
+    printf("                              %s\n", orcs->nome);
+    printf("                              LVL = %d\n", orcs->lvl);
+    printf("                              HP = %d\n", orcs->HP);
+    printf("                              Forca = %d\n", orcs->forca);
+    printf("                              Armadura = %d\n", orcs->armadura);
+    printf("                              Inteligencia = %d\n", orcs->inteligencia);
+    printf("                              Agilidade = %d\n", orcs->agilidade);
     printf("\n");
 
 }
@@ -104,15 +104,15 @@ static int orcs_magia2(struct monstros *orcs){
 static void orcs_descanso(struct monstros *orcs){
 
     if(orcs->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(orcs->staminia == 9){
         orcs->staminia++;
-        printf("orcs descansou\n");
+        printf("                              orcs descansou\n");
     }
     if(orcs->staminia < 9){
         orcs->staminia = orcs->staminia + 1;
-        printf("orcs descansou\n", orcs->staminia);
+        printf("                              orcs descansou\n", orcs->staminia);
     }
 
 }
@@ -120,16 +120,16 @@ static void orcs_descanso(struct monstros *orcs){
 static void orcs_menu(int A, int X){
 
     if(A == 0){
-        printf("Machadada = %d\n", X);
+        printf("                              Machadada = %d\n", X);
     }
     if(A == 1){
-        printf("Explosão de Furia = %d\n", X);
+        printf("                              Explosão de Furia = %d\n", X);
     }
     if(A == 2){
-        printf("Corte Duplo = %d\n", X);
+        printf("                              Corte Duplo = %d\n", X);
     }
     if(A == 3){
-        printf("Pião de Laminas = %d\n", X);
+        printf("                              Pião de Laminas = %d\n", X);
     }
 
 }

@@ -21,47 +21,47 @@ static void subir_lvl_ladino(struct personagem *ladino){
 
     for(i = 0; i < 4; i++){
 
-        printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
-        printf("1- Mais 1 de HP\n");
-        printf("2- Mais 1 de Forca\n");
-        printf("3- Mais 1 de armadura\n");
-        printf("4- Mais 1 de inteligencia\n");
-        printf("5- Mais 1 de agilidade\n");
+        printf("                              Voce possui: %d pontos para upar\n\n", numeroDeUps);
+        printf("                              1- Mais 1 de HP\n");
+        printf("                              2- Mais 1 de Forca\n");
+        printf("                              3- Mais 1 de armadura\n");
+        printf("                              4- Mais 1 de inteligencia\n");
+        printf("                              5- Mais 1 de agilidade\n");
 
-        printf("Digite sua escolha: ");
+        printf("                              Digite sua escolha: ");
         escolha = getch();
         printf("\n");
 
         while(escolha <  49 || escolha > 53){
 
-            printf("Nao existe esta opcao!!!\n");
+            printf("                              Nao existe esta opcao!!!\n");
             escolha = getch();
 
         }
 
         if(escolha == '1'){
             ladino->HP++;
-            printf("\nHP = %d\n", ladino->HP);
+            printf("                              \nHP = %d\n", ladino->HP);
             hp++;
         }
         if(escolha == '2'){
             ladino->forca++;
-            printf("\nForca = %d\n", ladino->forca);
+            printf("\n                              Forca = %d\n", ladino->forca);
             dano++;
         }
         if(escolha == '3'){
             ladino->armadura++;
-            printf("\nArmadura = %d\n", ladino->armadura);
+            printf("\n                              Armadura = %d\n", ladino->armadura);
             armor++;
         }
         if(escolha == '4'){
             ladino->inteligencia++;
-            printf("\nIntelifencia = %d\n", ladino->inteligencia);
+            printf("\n                              Intelifencia = %d\n", ladino->inteligencia);
             inte++;
         }
         if(escolha == '5'){
             ladino->agilidade++;
-            printf("\aAgilidade = %d\n", ladino->agilidade);
+            printf("\n                              Agilidade = %d\n", ladino->agilidade);
             agili++;
         }
         numeroDeUps--;
@@ -72,28 +72,28 @@ static void subir_lvl_ladino(struct personagem *ladino){
 
 static void menu_ladino(struct personagem *ladino){
 
-    printf("Seu turno \n\n");
-    printf("Escolha o seu ataque:\n");
-    printf("1-Golpe Rápido com Adaga\t");
-    printf("2-Flechas Rápidas\n");
-    printf("3-Chuva de Flechas\t");
-    printf("4-Corte Mortal\n");
-    printf("5-Descansar\n");
+    printf("                              Seu turno \n\n");
+    printf("                              Escolha o seu ataque:\n");
+    printf("                              1-Golpe Rápido com Adaga\t");
+    printf("                              2-Flechas Rápidas\n");
+    printf("                              3-Chuva de Flechas\t");
+    printf("                              4-Corte Mortal\n");
+    printf("                              5-Descansar\n");
     printf("\n");
 
 }
 
 static void nome_ladino(struct personagem *ladino){
 
-    printf("Nome = %s\n", ladino->nome);
-    printf("Classe = %s\n", ladino->classe);
-    printf("LVL = %d\n", ladino->lvl);
-    printf("HP = %d\n", ladino->HP);
-    printf("Forca = %d\n", ladino->forca);
-    printf("Armadura = %d\n", ladino->armadura);
-    printf("Inteligencia = %d\n", ladino->inteligencia);
-    printf("Agilidade = %d\n", ladino->agilidade);
-    printf("Staminia = %d\n", ladino->staminia);
+    printf("                              Nome = %s\n", ladino->nome);
+    printf("                              Classe = %s\n", ladino->classe);
+    printf("                              LVL = %d\n", ladino->lvl);
+    printf("                              HP = %d\n", ladino->HP);
+    printf("                              Forca = %d\n", ladino->forca);
+    printf("                              Armadura = %d\n", ladino->armadura);
+    printf("                              Inteligencia = %d\n", ladino->inteligencia);
+    printf("                              Agilidade = %d\n", ladino->agilidade);
+    printf("                              Staminia = %d\n", ladino->staminia);
     printf("\n");
 
 }
@@ -104,7 +104,7 @@ static int ladino_ataque_fraco(struct personagem *ladino){
 
     if(ladino->staminia < 2){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
     }
 
@@ -117,7 +117,7 @@ static int ladino_ataque_fraco(struct personagem *ladino){
         X = ladino->lvl + rand() % ladino->agilidade;
         X = X * 2;
 
-        printf("Golpe Rápido com Adaga Critico = %d\n", X);
+        printf("                              Golpe Rápido com Adaga Critico = %d\n", X);
 
         ladino->staminia = ladino->staminia - 2;
 
@@ -127,7 +127,7 @@ static int ladino_ataque_fraco(struct personagem *ladino){
 
         X = 1 + rand() % ladino->agilidade;
 
-        printf("Golpe Rápido com Adaga = %d\n", X);
+        printf("                              Golpe Rápido com Adaga = %d\n", X);
 
         ladino->staminia = ladino->staminia - 2;
 
@@ -141,7 +141,7 @@ static int ladino_ataque_forte(struct personagem *ladino){
 
     if(ladino->staminia < 2){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -155,7 +155,7 @@ static int ladino_ataque_forte(struct personagem *ladino){
         X = ladino->lvl + rand() % ladino->agilidade;
         X = X * 2;
 
-        printf("Flechas Rápidas Critico = %d\n", X);
+        printf("                              Flechas Rápidas Critico = %d\n", X);
 
         ladino->staminia = ladino->staminia - 2;
 
@@ -165,7 +165,7 @@ static int ladino_ataque_forte(struct personagem *ladino){
 
     X = ladino->lvl + rand() % ladino->agilidade;
 
-    printf("Flechas Rápidas = %d\n", X);
+    printf("                              Flechas Rápidas = %d\n", X);
 
     ladino->staminia = ladino->staminia - 2;
 
@@ -181,7 +181,7 @@ static int ladino_magia1(struct personagem *ladino){
 
     if(ladino->staminia < 3){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -196,7 +196,7 @@ static int ladino_magia1(struct personagem *ladino){
         X = X + 5;
         X = X * 2;
 
-        printf("Chuva de Flechas Critico = %d\n", X);
+        printf("                              Chuva de Flechas Critico = %d\n", X);
 
         ladino->staminia = ladino->staminia - 3;
 
@@ -207,7 +207,7 @@ static int ladino_magia1(struct personagem *ladino){
     X = rand() % ladino->agilidade;
     X = X + 5;
 
-    printf("Chuva de Flechas = %d\n", X);
+    printf("                              Chuva de Flechas = %d\n", X);
 
     ladino->staminia = ladino->staminia - 3;
 
@@ -223,7 +223,7 @@ static int ladino_magia2(struct personagem *ladino){
 
     if(ladino->staminia < 5){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -237,7 +237,7 @@ static int ladino_magia2(struct personagem *ladino){
             X = ladino->agilidade;
             X = X * 2;
 
-            printf("Corte Mortal Critico = %d\n", X);
+            printf("                              Corte Mortal Critico = %d\n", X);
 
             ladino->staminia = ladino->staminia - 5;
 
@@ -247,7 +247,7 @@ static int ladino_magia2(struct personagem *ladino){
 
     X = ladino->agilidade;
 
-    printf("Corte Mortal = %d\n", X);
+    printf("                              Corte Mortal = %d\n", X);
 
     ladino->staminia = ladino->staminia - 5;
 
@@ -266,16 +266,16 @@ static int ladino_passiva(struct personagem *ladino, struct monstros *monstro){
 static void ladino_descanso(struct personagem *ladino){
 
     if(ladino->staminia == 10){
-        printf("Voce ja esta descansado\n");
+        printf("                              Voce ja esta descansado\n");
     }
 
     if(ladino->staminia == 9){
         ladino->staminia++;
-        printf("Voce recuperou 1 de stamina\n");
+        printf("                              Voce recuperou 1 de stamina\n");
     }
     if(ladino->staminia < 9){
         ladino->staminia = ladino->staminia + 2;
-        printf("Voce recuperou 2 de stamina\n");
+        printf("                              Voce recuperou 2 de stamina\n");
     }
 }
 

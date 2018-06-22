@@ -17,51 +17,51 @@ static void subir_lvl_muriel(struct personagem *muriel){
     muriel->agilidade = 10 + agili;
     muriel->staminia = 10;
 
-    printf("Parabens!!!\nVoce Subiu de lvl\n\n");
+    printf("                              Parabens!!!\nVoce Subiu de lvl\n\n");
 
     for(i = 0; i < 4; i++){
 
-        printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
-        printf("1- Mais 1 de HP\n");
-        printf("2- Mais 1 de Forca\n");
-        printf("3- Mais 1 de armadura\n");
-        printf("4- Mais 1 de inteligencia\n");
-        printf("5- Mais 1 de agilidade\n");
+        printf("                              Voce possui: %d pontos para upar\n\n", numeroDeUps);
+        printf("                              1- Mais 1 de HP\n");
+        printf("                              2- Mais 1 de Forca\n");
+        printf("                              3- Mais 1 de armadura\n");
+        printf("                              4- Mais 1 de inteligencia\n");
+        printf("                              5- Mais 1 de agilidade\n");
 
-        printf("Digite sua escolha: ");
+        printf("                              Digite sua escolha: ");
         escolha = getch();
         printf("\n");
 
         while(escolha <  49 || escolha > 53){
 
-            printf("Nao existe esta opcao!!!\n");
+            printf("                              Nao existe esta opcao!!!\n");
             escolha = getch();
 
         }
 
         if(escolha == '1'){
             muriel->HP++;
-            printf("\nHP = %d\n", muriel->HP);
+            printf("\n                              HP = %d\n", muriel->HP);
             hp++;
         }
         if(escolha == '2'){
             muriel->forca++;
-            printf("\nForca = %d\n", muriel->forca);
+            printf("\n                              Forca = %d\n", muriel->forca);
             dano++;
         }
         if(escolha == '3'){
             muriel->armadura++;
-            printf("\nArmadura = %d\n", muriel->armadura);
+            printf("\n                              Armadura = %d\n", muriel->armadura);
             armor++;
         }
         if(escolha == '4'){
             muriel->inteligencia++;
-            printf("\nIntelifencia = %d\n", muriel->inteligencia);
+            printf("\n                              Intelifencia = %d\n", muriel->inteligencia);
             inte++;
         }
         if(escolha == '5'){
             muriel->agilidade++;
-            printf("\aAgilidade = %d\n", muriel->agilidade);
+            printf("\a                              Agilidade = %d\n", muriel->agilidade);
             agili++;
         }
         numeroDeUps--;
@@ -72,28 +72,28 @@ static void subir_lvl_muriel(struct personagem *muriel){
 
 static void menu_muriel(struct personagem *muriel){
 
-    printf("Seu turno \n\n");
-    printf("Escolha o seu ataque:\n");
-    printf("1-Rasengan\t");
-    printf("2-Chidori\n");
-    printf("3-Magykyo Sharingan\t");
-    printf("4-Katsu - Biribinha do Demonio\n");
-    printf("5-Descansar\n");
+    printf("                              Seu turno \n\n");
+    printf("                              Escolha o seu ataque:\n");
+    printf("                              1-Rasengan\t");
+    printf("                              2-Chidori\n");
+    printf("                              3-Magykyo Sharingan\t");
+    printf("                              4-Katsu - Biribinha do Demonio\n");
+    printf("                              5-Descansar\n");
     printf("\n");
 
 }
 
 static void nome_muriel(struct personagem *muriel){
 
-    printf("Nome = %s\n", muriel->nome);
-    printf("Classe = %s\n", muriel->classe);
-    printf("LVL = %d\n", muriel->lvl);
-    printf("HP = %d\n", muriel->HP);
-    printf("Forca = %d\n", muriel->forca);
-    printf("Armadura = %d\n", muriel->armadura);
-    printf("Inteligencia = %d\n", muriel->inteligencia);
-    printf("Agilidade = %d\n", muriel->agilidade);
-    printf("Staminia = %d\n", muriel->staminia);
+    printf("                              Nome = %s\n", muriel->nome);
+    printf("                              Classe = %s\n", muriel->classe);
+    printf("                              LVL = %d\n", muriel->lvl);
+    printf("                              HP = %d\n", muriel->HP);
+    printf("                              Forca = %d\n", muriel->forca);
+    printf("                              Armadura = %d\n", muriel->armadura);
+    printf("                              Inteligencia = %d\n", muriel->inteligencia);
+    printf("                              Agilidade = %d\n", muriel->agilidade);
+    printf("                              Staminia = %d\n", muriel->staminia);
     printf("\n");
 
 }
@@ -104,7 +104,7 @@ static int muriel_ataque_fraco(struct personagem *muriel){
 
     if(muriel->staminia < 2){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -114,7 +114,7 @@ static int muriel_ataque_fraco(struct personagem *muriel){
         X = rand() % muriel->agilidade;
         X = X + muriel->lvl;
 
-        printf("Rasengan = %d\n", X);
+        printf("                              Rasengan = %d\n", X);
 
         muriel->staminia = muriel->staminia - 2;
 
@@ -129,7 +129,7 @@ static int muriel_ataque_forte(struct personagem *muriel){
 
     if(muriel->staminia < 2){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -139,7 +139,7 @@ static int muriel_ataque_forte(struct personagem *muriel){
         X = rand() % muriel->forca;
         X = X + muriel->lvl;
 
-        printf("Chidori = %d\n", X);
+        printf("                              Chidori = %d\n", X);
 
         muriel->staminia = muriel->staminia - 2;
 
@@ -155,7 +155,7 @@ static int muriel_magia1(struct personagem *muriel){
 
     if(muriel->staminia < 3){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -165,7 +165,7 @@ static int muriel_magia1(struct personagem *muriel){
         X = rand() % muriel->inteligencia;
         X = X + muriel->lvl;
 
-        printf("Magykyo Sharingan = %d\n", X);
+        printf("                              Magykyo Sharingan = %d\n", X);
 
         muriel->staminia = muriel->staminia - 3;
 
@@ -181,7 +181,7 @@ static int muriel_magia2(struct personagem *muriel){
 
     if(muriel->staminia < 5){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -190,7 +190,7 @@ static int muriel_magia2(struct personagem *muriel){
 
         X = (muriel->agilidade  + muriel->forca + muriel->inteligencia) / 3;
 
-        printf("Katsu - Biribinha do Demonio = %d\n", X);
+        printf("                              Katsu - Biribinha do Demonio = %d\n", X);
 
         muriel->staminia = muriel->staminia - 5;
 
@@ -209,21 +209,21 @@ static void muriel_passiva(struct personagem *muriel, struct monstros *monstro){
     if(monstro->HP > 0 && X == 0){
 
         monstro->HP = monstro->HP - 1;
-        printf("Muriel Jogou uma shuriken\n");
+        printf("                              Muriel Jogou uma shuriken\n");
         return 0;
     }
 
     if(monstro->HP > 0 && X == 1){
 
         monstro->HP = monstro->HP - 2;
-        printf("Muriel Jogou duas shuriken\n");
+        printf("                              Muriel Jogou duas shuriken\n");
         return 0;
     }
 
     if(monstro->HP > 0 && X == 2){
 
         monstro->HP = monstro->HP - 3;
-        printf("Muriel Jogou treis shuriken\n");
+        printf("                              Muriel Jogou treis shuriken\n");
         return 0;
     }
 
@@ -232,16 +232,16 @@ static void muriel_passiva(struct personagem *muriel, struct monstros *monstro){
 static int muriel_descanso(struct personagem *muriel){
 
     if(muriel->staminia == 10){
-        printf("Voce ja esta descansado\n");
+        printf("                              Voce ja esta descansado\n");
     }
 
     if(muriel->staminia == 9){
         muriel->staminia++;
-        printf("Voce recuperou 1 de stamina\n");
+        printf("                              Voce recuperou 1 de stamina\n");
     }
     if(muriel->staminia < 9){
         muriel->staminia = muriel->staminia + 2;
-        printf("Voce recuperou 2 de stamina\n");
+        printf("                              Voce recuperou 2 de stamina\n");
     }
 }
 

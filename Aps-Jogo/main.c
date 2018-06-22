@@ -28,9 +28,9 @@ int main(){
 
     PERSONAGEM *meu_aventureiro;
 
-    inicio();
-    historia_incio();
-    julgamento();
+    //inicio();
+    //historia_incio();
+    //julgamento();
     meu_aventureiro = criar_personagem();//Função
 
     torre_negra(meu_aventureiro);

@@ -4,13 +4,13 @@
 
 static void animal_nome_monstro(struct monstros *animal){
 
-    printf("%s\n", animal->nome);
-    printf("LVL = %d\n", animal->lvl);
-    printf("HP = %d\n", animal->HP);
-    printf("Forca = %d\n", animal->forca);
-    printf("Armadura = %d\n", animal->armadura);
-    printf("Inteligencia = %d\n", animal->inteligencia);
-    printf("Agilidade = %d\n", animal->agilidade);
+    printf("                              %s\n", animal->nome);
+    printf("                              LVL = %d\n", animal->lvl);
+    printf("                              HP = %d\n", animal->HP);
+    printf("                              Forca = %d\n", animal->forca);
+    printf("                              Armadura = %d\n", animal->armadura);
+    printf("                              Inteligencia = %d\n", animal->inteligencia);
+    printf("                              Agilidade = %d\n", animal->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int animal_magia2(struct monstros *animal){
 static void animal_descanso(struct monstros *animal){
 
     if(animal->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(animal->staminia == 9){
         animal->staminia++;
-        printf("animal descansou\n");
+        printf("                              animal descansou\n");
     }
     if(animal->staminia < 9){
         animal->staminia = animal->staminia + 1;
-        printf("animal descansou\n", animal->staminia);
+        printf("                              animal descansou\n", animal->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void animal_descanso(struct monstros *animal){
 static void animal_menu(int A, int X){
 
     if(A == 0){
-        printf("Mordida = %d\n", X);
+        printf("                              Mordida = %d\n", X);
     }
     if(A == 1){
-        printf("Arranhão = %d\n", X);
+        printf("                              Arranhão = %d\n", X);
     }
     if(A == 2){
-        printf("Investida = %d\n", X);
+        printf("                              Investida = %d\n", X);
     }
     if(A == 3){
-        printf("Rabada = %d\n", X);
+        printf("                              Rabada = %d\n", X);
     }
 
 }

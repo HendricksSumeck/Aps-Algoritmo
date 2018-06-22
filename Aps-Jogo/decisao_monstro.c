@@ -12,7 +12,7 @@ void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
     if(monstro->HP > 0){
 
         printf("\n");
-        printf("Turno do inimigo\n\n");
+        printf("                              Turno do inimigo\n\n");
 
         for(X = 0; X < 4; X++){
 
@@ -38,12 +38,12 @@ void decisao_monstro(struct personagem *aventureiro, struct monstros *monstro){
             B = 10 + rand() % (50 - 10 +1);
             resistencia_armadura = (aventureiro->armadura * B) / 100;
             Dano_monstro = Dano_monstro - resistencia_armadura;
-            printf("%s: Defendeu %d de dano\n", aventureiro->nome,resistencia_armadura);
+                printf("                              %s: Defendeu %d de dano\n", aventureiro->nome,resistencia_armadura);
             if(Dano_monstro <= 0){
-                printf("%s: nao sofreu dano\n\n", aventureiro->nome);
+                printf("                              %s: nao sofreu dano\n\n", aventureiro->nome);
             }else{
                 aventureiro->HP = aventureiro->HP - Dano_monstro;
-                printf("%s: Sofreu %d de dano\n\n", aventureiro->nome, Dano_monstro);
+                printf("                              %s: Sofreu %d de dano\n\n", aventureiro->nome, Dano_monstro);
             }
 
         }else monstro->monstro_descanso(monstro);

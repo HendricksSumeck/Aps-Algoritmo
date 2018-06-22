@@ -4,13 +4,13 @@
 
 static void pirata_nome_monstro(struct monstros *pirata){
 
-    printf("%s\n", pirata->nome);
-    printf("LVL = %d\n", pirata->lvl);
-    printf("HP = %d\n", pirata->HP);
-    printf("Forca = %d\n", pirata->forca);
-    printf("Armadura = %d\n", pirata->armadura);
-    printf("Inteligencia = %d\n", pirata->inteligencia);
-    printf("Agilidade = %d\n", pirata->agilidade);
+    printf("                              %s\n", pirata->nome);
+    printf("                              LVL = %d\n", pirata->lvl);
+    printf("                              HP = %d\n", pirata->HP);
+    printf("                              Forca = %d\n", pirata->forca);
+    printf("                              Armadura = %d\n", pirata->armadura);
+    printf("                              Inteligencia = %d\n", pirata->inteligencia);
+    printf("                              Agilidade = %d\n", pirata->agilidade);
     printf("\n");
 
 }
@@ -103,15 +103,15 @@ static int pirata_magia2(struct monstros *pirata){
 static void pirata_descanso(struct monstros *pirata){
 
     if(pirata->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(pirata->staminia == 9){
         pirata->staminia++;
-        printf("pirata descansou\n");
+        printf("                              pirata descansou\n");
     }
     if(pirata->staminia < 9){
         pirata->staminia = pirata->staminia + 1;
-        printf("pirata descansou\n", pirata->staminia);
+        printf("                              pirata descansou\n", pirata->staminia);
     }
 
 }
@@ -119,16 +119,16 @@ static void pirata_descanso(struct monstros *pirata){
 static void pirata_menu(int A, int X){
 
     if(A == 0){
-        printf("Golpe com Espada = %d\n", X);
+        printf("                              Golpe com Espada = %d\n", X);
     }
     if(A == 1){
-        printf("Golpe com a perna de pau = %d\n", X);
+        printf("                              Golpe com a perna de pau = %d\n", X);
     }
     if(A == 2){
-        printf("Golpe com o gancho = %d\n", X);
+        printf("                              Golpe com o gancho = %d\n", X);
     }
     if(A == 3){
-        printf("Motim dos piratas = %d\n", X);
+        printf("                              Motim dos piratas = %d\n", X);
     }
 
 }

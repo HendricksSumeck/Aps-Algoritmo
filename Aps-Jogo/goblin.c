@@ -4,13 +4,13 @@
 
 static void goblin_nome_monstro(struct monstros *goblin){
 
-    printf("%s\n", goblin->nome);
-    printf("LVL = %d\n", goblin->lvl);
-    printf("HP = %d\n", goblin->HP);
-    printf("Forca = %d\n", goblin->forca);
-    printf("Armadura = %d\n", goblin->armadura);
-    printf("Inteligencia = %d\n", goblin->inteligencia);
-    printf("Agilidade = %d\n", goblin->agilidade);
+    printf("                              %s\n", goblin->nome);
+    printf("                              LVL = %d\n", goblin->lvl);
+    printf("                              HP = %d\n", goblin->HP);
+    printf("                              Forca = %d\n", goblin->forca);
+    printf("                              Armadura = %d\n", goblin->armadura);
+    printf("                              Inteligencia = %d\n", goblin->inteligencia);
+    printf("                              Agilidade = %d\n", goblin->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int goblin_magia2(struct monstros *goblin){
 static void goblin_descanso(struct monstros *goblin){
 
     if(goblin->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(goblin->staminia == 9){
         goblin->staminia++;
-        printf("goblin descansou\n");
+        printf("                              goblin descansou\n");
     }
     if(goblin->staminia < 9){
         goblin->staminia = goblin->staminia + 1;
-        printf("goblin descansou\n", goblin->staminia);
+        printf("                              goblin descansou\n", goblin->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void goblin_descanso(struct monstros *goblin){
 static void goblin_menu(int A, int X){
 
     if(A == 0){
-        printf("Facada = %d\n", X);
+        printf("                              Facada = %d\n", X);
     }
     if(A == 1){
-        printf("Chute Baixo = %d\n", X);
+        printf("                              Chute Baixo = %d\n", X);
     }
     if(A == 2){
-        printf("Flechada = %d\n", X);
+        printf("                              Flechada = %d\n", X);
     }
     if(A == 3){
-        printf("Granada De Bosta = %d\n", X);
+        printf("                              Granada De Bosta = %d\n", X);
     }
 
 }

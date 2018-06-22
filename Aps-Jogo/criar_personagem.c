@@ -21,9 +21,13 @@ PERSONAGEM *criar_personagem(){
     char x;
 
 
-
-    printf("\n\n\n\n                      Qual o seu nome? :");
-    scanf(" %[^\n]", NOME);
+    printf ("\n\n\n\n                              Se você esta aqui entao respondeu SIM, agora será\n"
+            "                              obrigado a lutar para mim...\n"
+            "                              Uma luta irá acontecer, Risco de vida ira correr\n"
+            "                              Um monstro será escolhido e ninguém nunca viu\n"
+            "                              aldo parecido\n");
+    printf("\n                              Qual o seu nome? ");
+    scanf("  %[^\n]", NOME);
 
     if(strcmp(NOME, nomes[0]) == 0 || strcmp(NOME, nomes[1]) == 0){
 
@@ -32,20 +36,23 @@ PERSONAGEM *criar_personagem(){
         return meu_aventureiro;
 
     }
+      printf ("\n\n\n\n                              De uma classe tera que ser, e uma habilidade especial\n"
+              "                              poderá ter, agora tente se defender.");
 
-    printf("                      Quem é você?\n");
-    printf("                      1-Guerreiro\n");
-    printf("                      2-Mago\n");
-    printf("                      3-Ladino\n");
-    printf("                      4-Paladino\n");
+    printf("\n                              Escolha a sua classe? ");
 
-    printf("                      Qual e o seu passado: ");
+    printf("\n                              1-Guerreiro\n");
+    printf("                              2-Mago\n");
+    printf("                              3-Ladino\n");
+    printf("                              4-Paladino\n");
+
+
     x = getch();
     printf("\n");
 
     while(x <  49 || x > 52){
 
-            printf("                      Nao existe esta opcao!!!");
+            printf("                              Nao existe esta opcao!!!");
             x = getch();
             printf("\n");
     }

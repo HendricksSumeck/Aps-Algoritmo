@@ -19,13 +19,13 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
             aventureiro->aventureiro_menu(aventureiro);
 
             //scanf("%d", &escolha);
-            printf("Digite sua escolha: ");
+            printf("                              Digite sua escolha: ");
             escolha = getch();
             printf("\n");
 
             while(escolha <  49 || escolha > 53){
 
-                printf("Digite um valor valido");
+                printf("                              Digite um valor valido");
                 escolha = getch();
                 printf("\n");
             }
@@ -43,12 +43,12 @@ void decisao_player(struct personagem *aventureiro, struct monstros *monstro){
 
                     resistencia_armadura = (monstro->armadura * B) / 100;
                     Dano_aventureiro = Dano_aventureiro - resistencia_armadura;
-                    printf("%s: Defendeu %d de dano\n", monstro->nome, resistencia_armadura);
+                    printf("                              %s: Defendeu %d de dano\n", monstro->nome, resistencia_armadura);
                     if(Dano_aventureiro <= 0){
-                        printf("%s: nao sofreu dano\n", monstro->nome);
+                        printf("                              %s: nao sofreu dano\n", monstro->nome);
                     }else{
                         monstro->HP = monstro->HP - Dano_aventureiro;
-                        printf("%s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
+                        printf("                              %s: Sofreu %d de dano\n", monstro->nome, Dano_aventureiro);
                     }
 
                 }else{

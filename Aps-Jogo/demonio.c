@@ -4,13 +4,13 @@
 
 static void demonio_nome_monstro(struct monstros *demonio){
 
-    printf("%s\n", demonio->nome);
-    printf("LVL = %d\n", demonio->lvl);
-    printf("HP = %d\n", demonio->HP);
-    printf("Forca = %d\n", demonio->forca);
-    printf("Armadura = %d\n", demonio->armadura);
-    printf("Inteligencia = %d\n", demonio->inteligencia);
-    printf("Agilidade = %d\n", demonio->agilidade);
+    printf("                              %s\n", demonio->nome);
+    printf("                              LVL = %d\n", demonio->lvl);
+    printf("                              HP = %d\n", demonio->HP);
+    printf("                              Forca = %d\n", demonio->forca);
+    printf("                              Armadura = %d\n", demonio->armadura);
+    printf("                              Inteligencia = %d\n", demonio->inteligencia);
+    printf("                              Agilidade = %d\n", demonio->agilidade);
     printf("\n");
 
 }
@@ -99,15 +99,15 @@ static int demonio_magia2(struct monstros *demonio){
 static void demonio_descanso(struct monstros *demonio){
 
     if(demonio->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(demonio->staminia == 9){
         demonio->staminia++;
-        printf("demonio descansou\n");
+        printf("                              demonio descansou\n");
     }
     if(demonio->staminia < 9){
         demonio->staminia = demonio->staminia + 1;
-        printf("demonio descansou\n", demonio->staminia);
+        printf("                              demonio descansou\n", demonio->staminia);
     }
 
 }
@@ -115,17 +115,17 @@ static void demonio_descanso(struct monstros *demonio){
 static void demonio_menu(int A, int X){
 
     if(A == 0){
-        printf("Hellblaze = %d\n", X);
+        printf("                              Hellblaze = %d\n", X);
     }
     if(A == 1){
-        printf("Chicote Flamejante = %d\n", X);
+        printf("                              Chicote Flamejante = %d\n", X);
     }
     if(A == 2){
-        printf("Corromper Alma = %d\n", X);
+        printf("                              Corromper Alma = %d\n", X);
     }
     if(A == 3){
-        printf("Ceifar vida = %d\n", X);
-        printf("Você teve %d de sua vida roubada\n", X);
+        printf("                              Ceifar vida = %d\n", X);
+        printf("                              Você teve %d de sua vida roubada\n", X);
     }
 
 }

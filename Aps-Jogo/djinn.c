@@ -4,13 +4,13 @@
 
 static void djinn_nome_monstro(struct monstros *djinn){
 
-    printf("%s\n", djinn->nome);
-    printf("LVL = %d\n", djinn->lvl);
-    printf("HP = %d\n", djinn->HP);
-    printf("Forca = %d\n", djinn->forca);
-    printf("Armadura = %d\n", djinn->armadura);
-    printf("Inteligencia = %d\n", djinn->inteligencia);
-    printf("Agilidade = %d\n", djinn->agilidade);
+    printf("                              %s\n", djinn->nome);
+    printf("                              LVL = %d\n", djinn->lvl);
+    printf("                              HP = %d\n", djinn->HP);
+    printf("                              Forca = %d\n", djinn->forca);
+    printf("                              Armadura = %d\n", djinn->armadura);
+    printf("                              Inteligencia = %d\n", djinn->inteligencia);
+    printf("                              Agilidade = %d\n", djinn->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int djinn_magia2(struct monstros *djinn){
 static void djinn_descanso(struct monstros *djinn){
 
     if(djinn->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(djinn->staminia == 9){
         djinn->staminia++;
-        printf("djinn descansou\n");
+        printf("                              djinn descansou\n");
     }
     if(djinn->staminia < 9){
         djinn->staminia = djinn->staminia + 1;
-        printf("djinn descansou\n", djinn->staminia);
+        printf("                              djinn descansou\n", djinn->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void djinn_descanso(struct monstros *djinn){
 static void djinn_menu(int A, int X){
 
     if(A == 0){
-        printf("Choque Psíquico = %d\n", X);
+        printf("                              Choque Psíquico = %d\n", X);
     }
     if(A == 1){
-        printf("Raio Psíquico = %d\n", X);
+        printf("                              Raio Psíquico = %d\n", X);
     }
     if(A == 2){
-        printf("Poder Cósmico = %d\n", X);
+        printf("                              Poder Cósmico = %d\n", X);
     }
     if(A == 3){
-        printf("Comedor de Sonhos = %d\n", X);
+        printf("                              Comedor de Sonhos = %d\n", X);
     }
 
 }

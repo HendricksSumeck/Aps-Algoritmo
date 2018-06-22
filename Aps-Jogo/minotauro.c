@@ -4,13 +4,13 @@
 
 static void minotauro_nome_monstro(struct monstros *minotauro){
 
-    printf("%s\n", minotauro->nome);
-    printf("LVL = %d\n", minotauro->lvl);
-    printf("HP = %d\n", minotauro->HP);
-    printf("Forca = %d\n", minotauro->forca);
-    printf("Armadura = %d\n", minotauro->armadura);
-    printf("Inteligencia = %d\n", minotauro->inteligencia);
-    printf("Agilidade = %d\n", minotauro->agilidade);
+    printf("                              %s\n", minotauro->nome);
+    printf("                              LVL = %d\n", minotauro->lvl);
+    printf("                              HP = %d\n", minotauro->HP);
+    printf("                              Forca = %d\n", minotauro->forca);
+    printf("                              Armadura = %d\n", minotauro->armadura);
+    printf("                              Inteligencia = %d\n", minotauro->inteligencia);
+    printf("                              Agilidade = %d\n", minotauro->agilidade);
     printf("\n");
 
 }
@@ -102,15 +102,15 @@ static int minotauro_magia2(struct monstros *minotauro){
 static void minotauro_descanso(struct monstros *minotauro){
 
     if(minotauro->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(minotauro->staminia == 9){
         minotauro->staminia++;
-        printf("minotauro descansou\n");
+        printf("                              minotauro descansou\n");
     }
     if(minotauro->staminia < 9){
         minotauro->staminia = minotauro->staminia + 1;
-        printf("minotauro descansou\n", minotauro->staminia);
+        printf("                              minotauro descansou\n", minotauro->staminia);
     }
 
 }
@@ -118,16 +118,16 @@ static void minotauro_descanso(struct monstros *minotauro){
 static void minotauro_menu(int A, int X){
 
     if(A == 0){
-        printf("Investida Sangrenta = %d\n", X);
+        printf("                              Investida Sangrenta = %d\n", X);
     }
     if(A == 1){
-        printf("Pancada Tripla = %d\n", X);
+        printf("                              Pancada Tripla = %d\n", X);
     }
     if(A == 2){
-        printf("Arremesso Sísmico = %d\n", X);
+        printf("                              Arremesso Sísmico = %d\n", X);
     }
     if(A == 3){
-        printf("Guilhotina = %d\n", X);
+        printf("                              Guilhotina = %d\n", X);
     }
 
 }

@@ -4,13 +4,13 @@
 
 static void gigante_nome_monstro(struct monstros *gigante){
 
-    printf("%s\n", gigante->nome);
-    printf("LVL = %d\n", gigante->lvl);
-    printf("HP = %d\n", gigante->HP);
-    printf("Forca = %d\n", gigante->forca);
-    printf("Armadura = %d\n", gigante->armadura);
-    printf("Inteligencia = %d\n", gigante->inteligencia);
-    printf("Agilidade = %d\n", gigante->agilidade);
+    printf("                              %s\n", gigante->nome);
+    printf("                              LVL = %d\n", gigante->lvl);
+    printf("                              HP = %d\n", gigante->HP);
+    printf("                              Forca = %d\n", gigante->forca);
+    printf("                              Armadura = %d\n", gigante->armadura);
+    printf("                              Inteligencia = %d\n", gigante->inteligencia);
+    printf("                              Agilidade = %d\n", gigante->agilidade);
     printf("\n");
 
 }
@@ -98,15 +98,15 @@ static int gigante_magia2(struct monstros *gigante){
 static void gigante_descanso(struct monstros *gigante){
 
     if(gigante->staminia == 10){
-        printf("Impossivel descansar\n");
+        printf("                              Impossivel descansar\n");
     }
     if(gigante->staminia == 9){
         gigante->staminia++;
-        printf("gigante descansou\n");
+        printf("                              gigante descansou\n");
     }
     if(gigante->staminia < 9){
         gigante->staminia = gigante->staminia + 1;
-        printf("gigante descansou\n", gigante->staminia);
+        printf("                              gigante descansou\n", gigante->staminia);
     }
 
 }
@@ -114,16 +114,16 @@ static void gigante_descanso(struct monstros *gigante){
 static void gigante_menu(int A, int X){
 
     if(A == 0){
-        printf("Esmagamento = %d\n", X);
+        printf("                              Esmagamento = %d\n", X);
     }
     if(A == 1){
-        printf("Pisão = %d\n", X);
+        printf("                              Pisão = %d\n", X);
     }
     if(A == 2){
-        printf("Soco = %d\n", X);
+        printf("                              Soco = %d\n", X);
     }
     if(A == 3){
-        printf("Terremoto = %d\n", X);
+        printf("                              Terremoto = %d\n", X);
     }
 
 }

@@ -41,7 +41,7 @@ void verifica_death(struct personagem *aventureiro, struct monstros *monstro){
 
     if(monstro->HP <= 0){
 
-        printf("\n%s foi derrotado\n\n", monstro->nome);
+        printf("\n                              %s foi derrotado\n\n", monstro->nome);
 
     }
 
@@ -51,9 +51,9 @@ void *ataque1_monstro(struct personagem *aventureiro, struct monstros *monstro){
     int i = 1, X = 0;
     int Dano_aventureiro, Dano_monstro;
     while(aventureiro->HP > 0 && monstro->HP > 0){
-        printf("Turno: %d\n\n", i);
-        printf("Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
-        printf("Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
+        printf("                              Turno: %d\n\n", i);
+        printf("                              Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
+        printf("                              Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
         X = aventureiro->aventureiro_passiva(aventureiro, monstro);
         if(aventureiro->HP > 0 && monstro->HP > 0){
             decisao_monstro(aventureiro, monstro);//Monstro
@@ -72,9 +72,9 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
     int i = 1, X = 0;
     char A;
     while(aventureiro->HP > 0 && monstro->HP > 0){
-        printf("Turno: %d\n\n", i);
-        printf("Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
-        printf("Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
+        printf("                              Turno: %d\n\n", i);
+        printf("                              Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
+        printf("                               Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
         X = aventureiro->aventureiro_passiva(aventureiro, monstro);
         if(aventureiro->HP > 0 && monstro->HP > 0){
             if(X==0){
