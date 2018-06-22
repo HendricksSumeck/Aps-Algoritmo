@@ -74,7 +74,7 @@ void *ataque1_plyaer(struct personagem *aventureiro, struct monstros *monstro){
     while(aventureiro->HP > 0 && monstro->HP > 0){
         printf("                              Turno: %d\n\n", i);
         printf("                              Vida %s = %d \t Stamina = %d\n", aventureiro->nome, aventureiro->HP, aventureiro->staminia);
-        printf("                               Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
+        printf("                              Vida %s = %d \t Stamina = %d\n\n", monstro->nome, monstro->HP, monstro->staminia);
         X = aventureiro->aventureiro_passiva(aventureiro, monstro);
         if(aventureiro->HP > 0 && monstro->HP > 0){
             if(X==0){

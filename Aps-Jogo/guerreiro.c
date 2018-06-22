@@ -31,7 +31,8 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
 
 
     for(i = 0; i < 4; i++){
-
+        printf("                              Como recompença pela luta, terá pontos "
+               "                              para aumentar sua habilidade");
         printf("                              Voce possui: %d pontos para upar\n\n", numeroDeUps);
         printf("                              1- Mais 1 de HP\n");
         printf("                              2- Mais 1 de Forca\n");
@@ -82,8 +83,8 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
 }
 
 static void menu_guerreiro(struct personagem *guerreiro){
-
     printf("                              Seu turno \n\n");
+    printf("                              ");
     printf("                              Escolha o seu ataque:\n");
     printf("                              1-Espadada\t");
     printf("                              2-Golpe com escudo\n");

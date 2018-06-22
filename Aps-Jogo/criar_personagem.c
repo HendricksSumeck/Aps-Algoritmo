@@ -9,6 +9,7 @@ PERSONAGEM *criar_personagem(){
     PERSONAGEM *meu_aventureiro;
 
     char *NOME;
+    int A;
     char *nomes[] = {
 
         "Muriel",
@@ -23,7 +24,7 @@ PERSONAGEM *criar_personagem(){
 
     printf ("\n\n\n\n                              Se você esta aqui entao respondeu SIM, agora será\n"
             "                              obrigado a lutar para mim...\n"
-            "                              Uma luta irá acontecer, Risco de vida ira correr\n"
+            "                              Uma luta irá acontecer, a sua vida está em risco\n"
             "                              Um monstro será escolhido e ninguém nunca viu\n"
             "                              aldo parecido\n");
     printf("\n                              Qual o seu nome? ");
@@ -56,6 +57,7 @@ PERSONAGEM *criar_personagem(){
             x = getch();
             printf("\n");
     }
+
 
 
     if(x == '1'){

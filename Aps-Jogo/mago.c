@@ -17,51 +17,59 @@ static void subir_lvl_mago(struct personagem *mago){
     mago->agilidade = 3 + agili;
     mago->staminia = 10;
 
-    printf("Parabens!!!\nVoce Subiu de lvl\n\n");
+    printf("                              Parabens!!!\nVoce Subiu de lvl\n"
+"                                   .''.            \n"
+"       .''.      .        *''*    :_\/_:     .      \n"
+"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
+"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
+" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
+" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
+"  '..'  ':::'     * /\ *     .'/.\'.   '            \n"
+"      *            *..*         :                   \n");
 
     for(i = 0; i < 4; i++){
 
-        printf("Voce possui: %d pontos para upar\n\n", numeroDeUps);
-        printf("1- Mais 1 de HP\n");
-        printf("2- Mais 1 de Forca\n");
-        printf("3- Mais 1 de armadura\n");
-        printf("4- Mais 1 de inteligencia\n");
-        printf("5- Mais 1 de agilidade\n");
+        printf("                              Voce possui: %d pontos para upar\n\n", numeroDeUps);
+        printf("                              1- Mais 1 de HP\n");
+        printf("                              2- Mais 1 de Forca\n");
+        printf("                              3- Mais 1 de armadura\n");
+        printf("                              4- Mais 1 de inteligencia\n");
+        printf("                              5- Mais 1 de agilidade\n");
 
-        printf("Digite sua escolha: ");
+        printf("                              Digite sua escolha: ");
         escolha = getch();
         printf("\n");
 
         while(escolha <  49 || escolha > 53){
 
-            printf("Nao existe esta opcao!!!\n");
+            printf("                              Nao existe esta opcao!!!\n");
             escolha = getch();
 
         }
 
         if(escolha == '1'){
             mago->HP++;
-            printf("\nHP = %d\n", mago->HP);
+            printf("\n                              HP = %d\n", mago->HP);
             hp++;
         }
         if(escolha == '2'){
             mago->forca++;
-            printf("\nForca = %d\n", mago->forca);
+            printf("\n                              Forca = %d\n", mago->forca);
             dano++;
         }
         if(escolha == '3'){
             mago->armadura++;
-            printf("\nArmadura = %d\n", mago->armadura);
+            printf("\n                              Armadura = %d\n", mago->armadura);
             armor++;
         }
         if(escolha == '4'){
             mago->inteligencia++;
-            printf("\nIntelifencia = %d\n", mago->inteligencia);
+            printf("\n                              Intelifencia = %d\n", mago->inteligencia);
             inte++;
         }
         if(escolha == '5'){
             mago->agilidade++;
-            printf("\aAgilidade = %d\n", mago->agilidade);
+            printf("\a                              Agilidade = %d\n", mago->agilidade);
             agili++;
         }
         numeroDeUps--;
@@ -72,28 +80,28 @@ static void subir_lvl_mago(struct personagem *mago){
 
 static void menu_mago(struct personagem *mago){
 
-    printf("Seu turno \n\n");
-    printf("Escolha o seu ataque:\n");
-    printf("1-Bola de fogo\t");
-    printf("2-Inferno\n");
-    printf("3-Meteoro arcano\t");
-    printf("4-Suspiro do Dragão\n");
-    printf("5-Descansar\n");
+    printf("                              Seu turno \n\n");
+    printf("                              Escolha o seu ataque:\n");
+    printf("                              1-Bola de fogo\t");
+    printf("                              2-Inferno\n");
+    printf("                              3-Meteoro arcano\t");
+    printf("                              4-Suspiro do Dragão\n");
+    printf("                              5-Descansar\n");
     printf("\n");
 
 }
 
 static void nome_mago(struct personagem *mago){
 
-    printf("Nome = %s\n", mago->nome);
-    printf("Classe = %s\n", mago->classe);
-    printf("LVL = %d\n", mago->lvl);
-    printf("HP = %d\n", mago->HP);
-    printf("Forca = %d\n", mago->forca);
-    printf("Armadura = %d\n", mago->armadura);
-    printf("Inteligencia = %d\n", mago->inteligencia);
-    printf("Agilidade = %d\n", mago->agilidade);
-    printf("Staminia = %d\n", mago->staminia);
+    printf("                              Nome = %s\n", mago->nome);
+    printf("                              Classe = %s\n", mago->classe);
+    printf("                              LVL = %d\n", mago->lvl);
+    printf("                              HP = %d\n", mago->HP);
+    printf("                              Forca = %d\n", mago->forca);
+    printf("                              Armadura = %d\n", mago->armadura);
+    printf("                              Inteligencia = %d\n", mago->inteligencia);
+    printf("                              Agilidade = %d\n", mago->agilidade);
+    printf("                              Staminia = %d\n", mago->staminia);
     printf("\n");
 
 }
@@ -104,7 +112,7 @@ static int mago_ataque_fraco(struct personagem *mago){
 
     if(mago->staminia < 2){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
     }
 
@@ -112,7 +120,7 @@ static int mago_ataque_fraco(struct personagem *mago){
 
         X = rand() % mago->inteligencia;
 
-        printf("Bola de Fogo = %d\n", X);
+        printf("                              Bola de Fogo = %d\n", X);
 
         mago->staminia = mago->staminia - 2;
 
@@ -126,7 +134,7 @@ static int mago_ataque_forte(struct personagem *mago){
 
     if(mago->staminia < 4){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -135,7 +143,7 @@ static int mago_ataque_forte(struct personagem *mago){
 
     X = mago->forca + rand() % mago->inteligencia;
 
-    printf("Área Infernal = %d\n", X);
+    printf("                              Área Infernal = %d\n", X);
 
     mago->staminia = mago->staminia - 4;
 
@@ -151,7 +159,7 @@ static int mago_magia1(struct personagem *mago){
 
     if(mago->staminia <= 0){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -159,7 +167,7 @@ static int mago_magia1(struct personagem *mago){
     if(mago->staminia == 1){
 
         X = mago->lvl + rand() % 2;
-        printf("1 Meteoro Arcano = %d\n", X);
+        printf("                              1 Meteoro Arcano = %d\n", X);
         mago->staminia = mago->staminia - 1;
         return X;
 
@@ -169,7 +177,7 @@ static int mago_magia1(struct personagem *mago){
 
         X = mago->lvl + rand() % 2;
         Y = mago->lvl + rand() % 3;
-        printf("2 Meteoros Arcanos = %d\n", X);
+        printf("                              2 Meteoros Arcanos = %d\n", X);
         mago->staminia = mago->staminia - 2;
         return X + Y;
 
@@ -183,7 +191,7 @@ static int mago_magia1(struct personagem *mago){
 
     X = X + Y + Z;
 
-    printf("3 Meteoros Arcanos = %d\n", X);
+    printf("                              3 Meteoros Arcanos = %d\n", X);
 
     mago->staminia = mago->staminia - 3;
 
@@ -199,7 +207,7 @@ static int mago_magia2(struct personagem *mago){
 
     if(mago->staminia < 5){
 
-        printf("Voce nao conseguiu atacar\n");
+        printf("                              Voce nao conseguiu atacar\n");
         return -1;
 
     }
@@ -208,7 +216,7 @@ static int mago_magia2(struct personagem *mago){
 
     X = rand() % mago->inteligencia * mago->lvl;
 
-    printf("Suspiro do Dragão = %d\n", X);
+    printf("                              Suspiro do Dragão = %d\n", X);
 
     mago->staminia = mago->staminia - 5;
 
@@ -225,8 +233,9 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
 
     if(monstro->HP > 0){
 
-        printf("                              Ele puxa uma faca de seu bolso\n");
-        printf("                              Você quer usar uma magia de sangue?\n");
+        printf("                              Você poderá lutar com oque estiver com você\n");
+        printf("                              Ou poderá usar magia de sangue\n");
+        printf("                              Irá usar magia de sangue? Se sim qual:\n");
         printf("                              0- Não\n");
         printf("                              1- Drenar Vida\n");
         printf("                              2- Amaterasu\n");
