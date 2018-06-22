@@ -458,7 +458,7 @@
 
 1529379345 c:\users\sonho\desktop\aps-algoritmo\aps-jogo\personagem.h
 
-1529682545 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\batalha.c
+1529686391 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\batalha.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -500,7 +500,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529681872 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\guerreiro.c
+1529686391 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\guerreiro.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -518,7 +518,7 @@
 	"Personagem.h"
 	"Monstros.h"
 
-1529684070 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
+1529686391 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -529,7 +529,7 @@
 	<stdlib.h>
 	"Monstros.h"
 
-1529679539 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\paladino.c
+1529686391 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\paladino.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -644,7 +644,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\gigante.c
+1529685623 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\gigante.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
@@ -662,7 +662,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529683678 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
+1529686391 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -672,12 +672,12 @@
 	"Personagem.h"
 	<windows.h>
 
-1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\minotauro.c
+1529685624 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\minotauro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\orcs.c
+1529685624 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\orcs.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"

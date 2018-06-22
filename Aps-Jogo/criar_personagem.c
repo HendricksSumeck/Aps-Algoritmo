@@ -22,11 +22,11 @@ PERSONAGEM *criar_personagem(){
     char x;
 
 
-    printf ("\n\n\n\n                              Se você esta aqui entao respondeu SIM, agora será\n"
+    printf ("\n\n\n\n                              Se você esta aqui então respondeu SIM, agora será\n"
             "                              obrigado a lutar para mim...\n"
             "                              Uma luta irá acontecer, a sua vida está em risco\n"
             "                              Um monstro será escolhido e ninguém nunca viu\n"
-            "                              aldo parecido\n");
+            "                              algo parecido...\n");
     printf("\n                              Qual o seu nome? ");
     scanf("  %[^\n]", NOME);
 
