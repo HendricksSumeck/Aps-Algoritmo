@@ -75,19 +75,29 @@ FILE *YOU;
 }
 
 
-void simnao(void){
 
-    FILE *sim;
-    char c;
+void charada(void){
+    char s;
+   printf("                               ninguem nunca me viu, talvez verá, voce precisou de mim\n"
+          "                               agora terá seu fim, apenas vivo sairá, se a mim derrotar.\n"
+          "                               Agora como me destruirá?\n");
+          scanf("%c", s);
+        if (s==ganhando||s==vencendo||s==ganhando o jogo){
+        FILE *sim;
+         char c;
 
-    char fra[1000];
+        char fra[1000];
 
-   sim = fopen("textos/simnao.txt", "r");
+        sim = fopen("textos/simnao.txt", "r");
 
-    while(fscanf(sim, "%c", &c) != EOF){
+        while(fscanf(sim, "%c", &c) != EOF){
 
         printf("%c", c);
-    }
-   fclose(sim);
+       }
+       fclose(sim);
+        }
 
-}
+
+    }
+
+

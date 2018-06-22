@@ -43,31 +43,7 @@ int main(){
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);
-
-    void charada(){
-    char s;
-   printf("                               ninguem nunca me viu, talvez verá, voce precisou de mim, agora terá seu fim, apenas vivo sairá, se a mim derrotar.
-          "                               Agora como me destruirá?");
-          scanf("%c", s);
-        if (s==ganhando||s==vencendo||s==ganhando o jogo){
-        FILE *sim;
-         char c;
-
-        char fra[1000];
-
-        sim = fopen("textos/simnao.txt", "r");
-
-        while(fscanf(sim, "%c", &c) != EOF){
-
-        printf("%c", c);
-       }
-       fclose(sim);
-        }
-
-
-    }
-
-
+    charada();
     //ver_monstros(meu_aventureiro);
 
 
