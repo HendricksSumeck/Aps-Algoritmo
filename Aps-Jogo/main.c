@@ -33,6 +33,7 @@ int main(){
     julgamento();
     meu_aventureiro = criar_personagem();//Função
 
+
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);

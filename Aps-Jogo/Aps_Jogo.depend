@@ -350,7 +350,7 @@
 
 1529686040 c:\users\hendr\desktop\aps-algoritmo\aps-jogo\monstros.h
 
-1529686964 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
+1529697610 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\criar_personagem.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -390,7 +390,7 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529694042 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
+1529697882 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\main.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>
@@ -405,7 +405,7 @@
 	<stdlib.h>
 	"Monstros.h"
 
-1529687770 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
+1529699119 source:c:\users\hendr\desktop\aps-algoritmo\aps-jogo\batalha.c
 	<stdio.h>
 	<stdlib.h>
 	<time.h>

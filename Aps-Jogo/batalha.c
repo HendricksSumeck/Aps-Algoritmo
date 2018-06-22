@@ -134,6 +134,7 @@ void torre_negra(struct personagem *aventureiro){
 
     static int i;
     i = 0;
+    printf("                              %d Monstro\n", i+1);
     Monstro *meus_monstros[11];
 
     meus_monstros[i] = gerar_monstro(aventureiro);
