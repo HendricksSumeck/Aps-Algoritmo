@@ -117,8 +117,9 @@ void charada(void){
 
         }
        fclose(sim);
+        }else{
+            died();
         }
-        died();
         exit(0);
 
     }
