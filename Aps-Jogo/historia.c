@@ -77,14 +77,30 @@ FILE *YOU;
 
 
 void charada(void){
-    char s;
-   printf("                               ninguem nunca me viu, talvez verá, voce precisou de mim\n"
+    char s[20];
+    char *frases[] = {
+
+        "ganhando",
+        "vencendo",
+        "Ganhando",
+        "Vencendo",
+        "ganhando o jogo",
+        "Ganhando o jogo"
+
+    };
+
+    printf("                               ninguem nunca me viu, talvez verá, voce precisou de mim\n"
           "                               agora terá seu fim, apenas vivo sairá, se a mim derrotar.\n"
-          "                               Agora como me destruirá?\n");
-          scanf("%c", s);
-        if (s==ganhando||s==vencendo||s==ganhando o jogo){
+          "                               Agora como me destruirá?:");
+
+        scanf("  %[^\n]", s);
+
+        if (strcmp(s, frases[0]) == 0 || strcmp(s, frases[1]) == 0 || strcmp(s, frases[2]) == 0 || strcmp(s, frases[3]) == 0 || strcmp(s, frases[4]) == 0 || strcmp(s, frases[5]) == 0){
+
+        system("cls");
+
         FILE *sim;
-         char c;
+        char c;
 
         char fra[1000];
 
@@ -93,10 +109,12 @@ void charada(void){
         while(fscanf(sim, "%c", &c) != EOF){
 
         printf("%c", c);
-       }
+
+        }
        fclose(sim);
         }
 
+        exit(0);
 
     }
 
