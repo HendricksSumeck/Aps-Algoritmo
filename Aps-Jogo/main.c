@@ -35,6 +35,14 @@ int main(){
 
     torre_negra(meu_aventureiro);
     torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
+    torre_negra(meu_aventureiro);
 
     //ver_monstros(meu_aventureiro);
 
