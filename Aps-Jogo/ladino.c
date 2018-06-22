@@ -17,7 +17,7 @@ static void subir_lvl_ladino(struct personagem *ladino){
     ladino->agilidade = 10 + agili;
     ladino->staminia = 10;
 
-    printf("                              Parabens!!!\nVoce Subiu de lvl\n"
+    printf("                              Parabens!!! Voce Subiu de lvl\n"
 "                                                                 .''.            \n"
 "                                     .''.      .        *''*    :_\/_:     .      \n"
 "                                    :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"

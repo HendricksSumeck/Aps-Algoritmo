@@ -17,8 +17,8 @@ static void subir_lvl_muriel(struct personagem *muriel){
     muriel->agilidade = 10 + agili;
     muriel->staminia = 10;
 
-    printf("                              Parabens!!!\nVoce Subiu de lvl\n"
-"                                   .''.            \n"
+    printf("                              Parabens!!! Voce Subiu de lvl\n"
+"                                                                 .''.            \n"
 "       .''.      .        *''*    :_\/_:     .      \n"
 "      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
 "  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
