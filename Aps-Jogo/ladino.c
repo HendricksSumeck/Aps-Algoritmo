@@ -82,10 +82,10 @@ static void menu_ladino(struct personagem *ladino){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Golpe Rápido com Adaga\t\n");
-    printf("                              2-Flechas Rápidas\n");
-    printf("                              3-Chuva de Flechas\t\n");
-    printf("                              4-Corte Mortal\n");
+    printf("                              1-Golpe Rápido com Adaga (-2 Stamina)\n");
+    printf("                              2-Flechas Rápidas (-2 Stamina)\n");
+    printf("                              3-Chuva de Flechas (-3 Stamina)\n");
+    printf("                              4-Corte Mortal (-5 Stamina)\n");
     printf("                              5-Descansar\n");
     printf("\n");
 

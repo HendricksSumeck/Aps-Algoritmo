@@ -85,10 +85,10 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
 static void menu_guerreiro(struct personagem *guerreiro){
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Espadada\t\n");
-    printf("                              2-Golpe com escudo\n");
-    printf("                              3-Golpe Devastador\t\n");
-    printf("                              4-Ataque do Dragão\n");
+    printf("                              1-Espadada (-2 Stamina)\n");
+    printf("                              2-Golpe com escudo (-3 Stamina)\n");
+    printf("                              3-Golpe Devastador (-4 Stamina)\n");
+    printf("                              4-Ataque do Dragão (-7 Stamina)\n");
     printf("                              5-Descansar\n");
     printf("\n");
 

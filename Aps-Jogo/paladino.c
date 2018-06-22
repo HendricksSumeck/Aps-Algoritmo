@@ -82,10 +82,10 @@ static void menu_paladino(struct personagem *paladino){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Curar\t\n");
-    printf("                              2-Lança Solar\n");
-    printf("                              3-Benção dos Ceus\t\n");
-    printf("                              4-Punição Divina\n");
+    printf("                              1-Curar (-3 Stamina)\n");
+    printf("                              2-Lança Solar (-3 Stamina)\n");
+    printf("                              3-Benção dos Ceus (-4 Stamina)\n");
+    printf("                              4-Punição Divina (-4 Stamina)\n");
     printf("                              5-Descansar\n");
     printf("\n");
 

@@ -84,10 +84,10 @@ static void menu_muriel(struct personagem *muriel){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Rasengan\t");
-    printf("                              2-Chidori\n");
-    printf("                              3-Magykyo Sharingan\t");
-    printf("                              4-Katsu - Biribinha do Demonio\n");
+    printf("                              1-Rasengan (-2 Stamina)\n");
+    printf("                              2-Chidori (-2 Stamina)\n");
+    printf("                              3-Magykyo Sharingan (-3 Stamina)\n");
+    printf("                              4-Katsu - Biribinha do Demonio (-5 Stamina)\n");
     printf("                              5-Descansar\n");
     printf("\n");
 
@@ -220,21 +220,21 @@ static void muriel_passiva(struct personagem *muriel, struct monstros *monstro){
     if(monstro->HP > 0 && X == 0){
 
         monstro->HP = monstro->HP - 1;
-        printf("                              Muriel Jogou uma shuriken\n");
+        printf("                              Muriel Jogou um stalinho\n");
         return 0;
     }
 
     if(monstro->HP > 0 && X == 1){
 
         monstro->HP = monstro->HP - 2;
-        printf("                              Muriel Jogou duas shuriken\n");
+        printf("                              Muriel Jogou dois stalinhos\n");
         return 0;
     }
 
     if(monstro->HP > 0 && X == 2){
 
         monstro->HP = monstro->HP - 3;
-        printf("                              Muriel Jogou treis shuriken\n");
+        printf("                              Muriel Jogou treis stalinhos\n");
         return 0;
     }
 

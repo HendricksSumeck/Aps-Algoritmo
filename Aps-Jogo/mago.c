@@ -82,10 +82,10 @@ static void menu_mago(struct personagem *mago){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Bola de fogo\t");
-    printf("                              2-Inferno\n");
-    printf("                              3-Meteoro arcano\t");
-    printf("                              4-Suspiro do Dragão\n");
+    printf("                              1-Bola de fogo (-2 Stamina)\n");
+    printf("                              2-Inferno (-4 Stamina)\n");
+    printf("                              3-Meteoro arcano (-3 Stamina)\n");
+    printf("                              4-Suspiro do Dragão (-5 Stamina)\n");
     printf("                              5-Descansar\n");
     printf("\n");
 
@@ -237,9 +237,9 @@ static int mago_passiva(struct personagem *mago, struct monstros *monstro){
         printf("                              Ou poderá usar magia de sangue\n");
         printf("                              Irá usar magia de sangue? Se sim qual:\n");
         printf("                              0- Não\n");
-        printf("                              1- Drenar Vida\n");
-        printf("                              2- Amaterasu\n");
-        printf("                              3- Toque Demoniaco\n");
+        printf("                              1- Drenar Vida (-2 Vida caso falhe)\n");
+        printf("                              2- Amaterasu (-3 Vida)\n");
+        printf("                              3- Toque Demoniaco (-5 Vida)\n");
 
         z = getch();
 
