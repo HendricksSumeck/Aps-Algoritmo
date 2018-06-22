@@ -500,36 +500,36 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529667635 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\guerreiro.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\guerreiro.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\ladino.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\ladino.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\mago.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\mago.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\muriel.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
 	"Monstros.h"
 
-1529095869 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\ogro.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\ogro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590050 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\paladino.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\paladino.c
 	<stdio.h>
 	<stdlib.h>
 	"Personagem.h"
@@ -616,22 +616,22 @@
 	<stdlib.h>
 	"Monstros.h"
 
-1529590047 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\animais.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\animais.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\demonio.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\demonio.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\djinn.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\djinn.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\dragao.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\dragao.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
@@ -644,12 +644,12 @@
 	"Monstros.h"
 	"Personagem.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\gigante.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\gigante.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\goblin.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\goblin.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
@@ -672,22 +672,22 @@
 	"Personagem.h"
 	<windows.h>
 
-1529590048 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\minotauro.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\minotauro.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590050 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\orcs.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\orcs.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590050 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\pirata.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\pirata.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
 
-1529590050 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\troll.c
+1529669490 source:c:\users\sonho\desktop\aps-algoritmo\aps-jogo\troll.c
 	<stdio.h>
 	<stdlib.h>
 	"Monstros.h"
