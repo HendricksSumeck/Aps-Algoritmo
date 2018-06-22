@@ -18,14 +18,14 @@ static void subir_lvl_paladino(struct personagem *paladino){
     paladino->staminia = 10;
 
     printf("                              Parabens!!!\nVoce Subiu de lvl\n"
-"                                   .''.            \n"
-"       .''.      .        *''*    :_\/_:     .      \n"
-"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
-"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
-" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
-" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
-"  '..'  ':::'     * /\ *     .'/.\'.   '            \n"
-"      *            *..*         :                   \n");
+"                                                                 .''.            \n"
+"                                     .''.      .        *''*    :_\/_:     .      \n"
+"                                    :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
+"                                .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
+"                               :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
+"                               : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
+"                                '..'  ':::'     * /\ *     .'/.\'.   '            \n"
+"                                    *            *..*         :                   \n");
 
     for(i = 0; i < 4; i++){
 
@@ -82,9 +82,9 @@ static void menu_paladino(struct personagem *paladino){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Curar\t");
+    printf("                              1-Curar\t\n");
     printf("                              2-Lança Solar\n");
-    printf("                              3-Benção dos Ceus\t");
+    printf("                              3-Benção dos Ceus\t\n");
     printf("                              4-Punição Divina\n");
     printf("                              5-Descansar\n");
     printf("\n");
@@ -144,7 +144,7 @@ static int paladino_ataque_forte(struct personagem *paladino){
 
     X = 1 + rand() % paladino->forca + paladino->inteligencia;
 
-    printf("Lança Solar = %d\n", X);
+    printf("                              Lança Solar = %d\n", X);
 
     paladino->staminia = paladino->staminia - 3;
 

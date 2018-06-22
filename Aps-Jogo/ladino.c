@@ -18,14 +18,14 @@ static void subir_lvl_ladino(struct personagem *ladino){
     ladino->staminia = 10;
 
     printf("                              Parabens!!!\nVoce Subiu de lvl\n"
-"                                   .''.            \n"
-"       .''.      .        *''*    :_\/_:     .      \n"
-"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
-"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
-" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
-" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
-"  '..'  ':::'     * /\ *     .'/.\'.   '            \n"
-"      *            *..*         :                   \n");
+"                                                                 .''.            \n"
+"                                     .''.      .        *''*    :_\/_:     .      \n"
+"                                    :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
+"                                .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
+"                               :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
+"                               : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
+"                                '..'  ':::'     * /\ *     .'/.\'.   '            \n"
+"                                    *            *..*         :                   \n");
 
     for(i = 0; i < 4; i++){
 
@@ -82,9 +82,9 @@ static void menu_ladino(struct personagem *ladino){
 
     printf("                              Seu turno \n\n");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Golpe Rápido com Adaga\t");
+    printf("                              1-Golpe Rápido com Adaga\t\n");
     printf("                              2-Flechas Rápidas\n");
-    printf("                              3-Chuva de Flechas\t");
+    printf("                              3-Chuva de Flechas\t\n");
     printf("                              4-Corte Mortal\n");
     printf("                              5-Descansar\n");
     printf("\n");

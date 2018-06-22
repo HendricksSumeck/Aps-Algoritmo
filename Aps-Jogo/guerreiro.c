@@ -17,23 +17,23 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
     guerreiro->agilidade = 4 + agili;
     guerreiro->staminia = 10;
 
-    printf("                              Parabens!!!\nVoce Subiu de lvl\n"
-"                                   .''.            \n"
-"       .''.      .        *''*    :_\/_:     .      \n"
-"      :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
-"  .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
-" :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
-" : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
-"  '..'  ':::'     * /\ *     .'/.\'.   '            \n"
-"      *            *..*         :                   \n");
+    printf("                              Parabens!!! Voce Subiu de lvl\n"
+"                                                                 .''.            \n"
+"                                     .''.      .        *''*    :_\/_:     .      \n"
+"                                    :_\/_:   _\(/_  .:.*_\/_*   : /\ :  .'.:.'.   \n"
+"                                .''.: /\ :   ./)\   ':'* /\ * :  '..'.  -=:o:=-   \n"
+"                               :_\/_:'.:::.    ' *''*    * '.\'/.' _\(/_'.':'.'   \n"
+"                               : /\ : :::::     *_\/_*     -= o =-  /)\    '  *   \n"
+"                                '..'  ':::'     * /\ *     .'/.\'.   '            \n"
+"                                    *            *..*         :                   \n");
 
 
 
 
     for(i = 0; i < 4; i++){
-        printf("                              Como recompença pela luta, terá pontos "
-               "                              para aumentar sua habilidade");
-        printf("                              Voce possui: %d pontos para upar\n\n", numeroDeUps);
+        printf("                              Como recompença pela luta, terá pontos\n "
+               "                             para aumentar sua habilidade!!!\n");
+        printf("                              Voce possui: %d pontos para upar:\n\n", numeroDeUps);
         printf("                              1- Mais 1 de HP\n");
         printf("                              2- Mais 1 de Forca\n");
         printf("                              3- Mais 1 de armadura\n");
@@ -53,27 +53,27 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
 
         if(escolha == '1'){
             guerreiro->HP++;
-            printf("\nHP = %d\n", guerreiro->HP);
+            printf("\n                              HP = %d\n", guerreiro->HP);
             hp++;
         }
         if(escolha == '2'){
             guerreiro->forca++;
-            printf("\nForca = %d\n", guerreiro->forca);
+            printf("\n                              Forca = %d\n", guerreiro->forca);
             dano++;
         }
         if(escolha == '3'){
             guerreiro->armadura++;
-            printf("\nArmadura = %d\n", guerreiro->armadura);
+            printf("\n                              Armadura = %d\n", guerreiro->armadura);
             armor++;
         }
         if(escolha == '4'){
             guerreiro->inteligencia++;
-            printf("\nIntelifencia = %d\n", guerreiro->inteligencia);
+            printf("\n                              Intelifencia = %d\n", guerreiro->inteligencia);
             inte++;
         }
         if(escolha == '5'){
             guerreiro->agilidade++;
-            printf("\aAgilidade = %d\n", guerreiro->agilidade);
+            printf("\a                              Agilidade = %d\n", guerreiro->agilidade);
             agili++;
         }
         numeroDeUps--;
@@ -84,11 +84,10 @@ static void subir_lvl_guerreiro(struct personagem *guerreiro){
 
 static void menu_guerreiro(struct personagem *guerreiro){
     printf("                              Seu turno \n\n");
-    printf("                              ");
     printf("                              Escolha o seu ataque:\n");
-    printf("                              1-Espadada\t");
+    printf("                              1-Espadada\t\n");
     printf("                              2-Golpe com escudo\n");
-    printf("                              3-Golpe Devastador\t");
+    printf("                              3-Golpe Devastador\t\n");
     printf("                              4-Ataque do Dragão\n");
     printf("                              5-Descansar\n");
     printf("\n");
