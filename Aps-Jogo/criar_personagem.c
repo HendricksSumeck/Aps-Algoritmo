@@ -22,25 +22,30 @@ PERSONAGEM *criar_personagem(){
     char x;
 
 
-    printf ("\n\n\n\n                              Se você esta aqui então respondeu SIM, agora será\n"
-            "                              obrigado a lutar para mim...\n"
-            "                              Uma luta irá acontecer, a sua vida está em risco\n"
-            "                              Um monstro será escolhido e ninguém nunca viu\n"
-            "                              algo parecido...\n");
-    printf("\n                              Qual o seu nome? ");
+    printf ("\n\n\n\n                              Como você aceitou a minha ajuda, irei cobrar a minha divida...\n"
+            "                              Ágora você está em minha residencia, carinhosamente chamada Torre Negra...\n"
+            "                              Aqui e onde você pagara sua divida...\n"
+            "                              Lute com 10 criaturas, e as mate...\n"
+            "                              E você estara livre para voltar para sua vida mediocre\n");
+    printf("\n                              Entao qual o seu nome? ");
     scanf("  %[^\n]", NOME);
 
     if(strcmp(NOME, nomes[0]) == 0 || strcmp(NOME, nomes[1]) == 0){
+
+        printf ("\n\n\n\n                              Quem diria, um nobre em minha residencia...\n"
+                "                              Nunca esperaria ver um lorde do inferno aqui...\n"
+                "                              Como um ser como você foi parar naquela situação lamentavel...\n"
+                "                              Mas isso pouco importa vá lá e lute...\n"
+                "                              Nos proporcione um otimo espetaculo...\n");
 
         meu_aventureiro = new_muriel(NOME, "Ninja", 1, 10, 10, 10, 10 ,10);
 
         return meu_aventureiro;
 
     }
-      printf ("\n\n\n\n                              De uma classe tera que ser, e uma habilidade especial\n"
-              "                              poderá ter");
-
-    printf("\n                              Escolha a sua classe? ");
+      printf ("\n\n\n\n                              Um bom nome para você...\n"
+              "                              Mas agora me conte quem e você, na verdade quem você era...\n");
+    printf("\n                              Eu era um: ");
 
     printf("\n                              1-Guerreiro\n");
     printf("                              2-Mago\n");
@@ -84,7 +89,10 @@ PERSONAGEM *criar_personagem(){
 
     }
 
-    printf("\n");
+    printf("\n\n\n\n                              Muito bem %s...\n", meu_aventureiro->nome);
+    printf("                              Vamos, vamos...\n"
+           "                              Vá e lute, monstre o seu poder para o publico...\n");
 
+    limpa_tela();
     return meu_aventureiro;
 }
